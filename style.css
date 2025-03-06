@@ -1,0 +1,12 @@
+.header{
+    text-align: center;
+    color: red;
+}
+.header a,p{
+    float: right;
+}
+.header img{
+    float: left;
+    width: 20px;
+    height: 18px;
+}
