@@ -10,7 +10,7 @@
     <body>
         <?php
             include './connect.php';
-            $res = $connexion -> query("SELECT * FROM visiteur WHERE nom = '$_POST[login]' AND password = '$_POST[password]'");
+            $res = $connexion -> query("SELECT * FROM visiteur WHERE nom = '$_POST[login]' AND password = '$_POST[password]'") or die("test");
             $res = $res -> fetch();
             if ($res["idRole"] == 2){
                 $_COOKIE["info_log"] = $res;
