@@ -11,7 +11,7 @@
         <p>tg</p>
         <?php
             include './connect.php';
-            //$res = $connexion -> query("SELECT * FROM visiteur WHERE nom = '$_POST[login]' AND password = '$_POST[password]'");
+            $res = $connexion -> query("SELECT * FROM visiteur WHERE nom = '$_POST[login]' AND password = '$_POST[password]'");
             //$res = $res -> fetch();
             //echo "<p>test</p>";
             //if ($res["idRole"] == 2){
