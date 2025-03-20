@@ -8,9 +8,31 @@
         <title>Intranet GSB</title>
     </head>
     <body>
+        <p>tg</p>
         <?php
-            $hash = password_hash(password_hash($_POST["login"], PASSWORD_ARGON2I).password_hash($_POST["password"], PASSWORD_ARGON2I), PASSWORD_ARGON2I);
-            echo $hash."<br>";
+        try{
+            include './connect.php';
+            $res = $connexion -> query("SELECT * FROM visiteur WHERE nom = '$_POST[login]' AND password = '$_POST[password]'");
+            $res = $res -> fetch();
+            echo "<p>test</p>";
+            if ($res["idRole"] == 2){
+                $_COOKIE["info_log"] = $res;
+                //echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/comptable")</script>';
+                echo $_COOKIE["info_log"]["nom"]."<br>";
+                echo $_COOKIE["info_log"]["prenom"]."<br>";
+                echo $_COOKIE["info_log"]["idRole"]."<br>";
+                echo $_COOKIE["info_log"]["password"]."<br>";
+            }
+            $_COOKIE["info_log"] = $res;
+            //echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/comptable")</script>';
+            echo $_COOKIE["info_log"]["nom"]."<br>";
+            echo $_COOKIE["info_log"]["prenom"]."<br>";
+            echo $_COOKIE["info_log"]["idRole"]."<br>";
+            echo $_COOKIE["info_log"]["password"]."<br>";}
+            catch(Echec $e){
+                echo $e;
+                echo "à la là";
+            }
         ?>
     </body>
 </html>

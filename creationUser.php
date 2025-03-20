@@ -12,27 +12,25 @@
         <input type="text" name="nom" placeholder="nom">
         <input type="text" name="prenom" placeholder="prenom">
         <input type="text" name="addresse" placeholder="addresse">
-        <input type="text" name="name" placeholder="">
-        <input type="text" name="name">
-        <input type="text" name="name">
-        <input type="text" name="name">
-        <input type="text" name="name">
-        <input type="text" name="name">
-        <input type="text" name="name">
-        <input type="text" name="name">
+        <input type="text" name="ville" placeholder="ville">
+        <input type="text" name="cp" placeholder="cp">
+        <input type="date" name="dateEmbauche" placeholder="dateEmbauche">
+        <input type="number" name="role" placeholder="role">
         <input type="submit" value="click" name="submit">
     </form>
 
     <?php
-    function display()
-    {
-        echo "hello ".$_POST["studentname"];
-    }
-    
-    if(isset($_POST['submit']))
-    {
-        display();
-    } 
+        function add()
+        {
+            include './connect.php';
+            $hash = password_hash(password_hash($_POST["username"], PASSWORD_ARGON2I).password_hash($_POST["password"], PASSWORD_ARGON2I), PASSWORD_ARGON2I);
+            $connexion-> exec("INSERT INTO visiteur VALUES(null, \"$_POST[nom]\", \"$_POST[prenom]\", \"$_POST[addresse]\", \"$_POST[ville]\", \"$_POST[cp]\", \"$_POST[dateEmbauche]\", \"$hash\",$_POST[role])");
+        }
+        
+        if(isset($_POST['submit']))
+        {
+            add();
+        } 
     ?>
 </body>
 </html>
