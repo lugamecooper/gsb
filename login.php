@@ -8,6 +8,7 @@
         <title>Intranet GSB</title>
     </head>
     <body>
+        <p>tg</p>
         <?php
             include './connect.php';
             $res = $connexion -> query("SELECT * FROM visiteur WHERE nom = '$_POST[login]' AND password = '$_POST[password]'") or die("test");
