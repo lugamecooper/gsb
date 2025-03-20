@@ -9,13 +9,7 @@
     </head>
     <body>
         <?php
-            $password = $_POST["password"];
-            $login = $_POST["login"];
-            $password = password_hash($password, PASSWORD_ARGON2I);
-            $login = password_hash($login, PASSWORD_ARGON2I);
-            $hash = password_hash($login.$password, PASSWORD_ARGON2I);
-            echo $password."<br>";
-            echo $login."<br>";
+            $hash = password_hash(password_hash($_POST["login"], PASSWORD_ARGON2I).password_hash($_POST["password"], PASSWORD_ARGON2I), PASSWORD_ARGON2I);
             echo $hash."<br>";
         ?>
     </body>
