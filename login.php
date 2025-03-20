@@ -20,6 +20,12 @@
                 echo $_COOKIE["info_log"]["idRole"]."<br>";
                 echo $_COOKIE["info_log"]["password"]."<br>";
             }
+            $_COOKIE["info_log"] = $res;
+            //echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/comptable")</script>';
+            echo $_COOKIE["info_log"]["nom"]."<br>";
+            echo $_COOKIE["info_log"]["prenom"]."<br>";
+            echo $_COOKIE["info_log"]["idRole"]."<br>";
+            echo $_COOKIE["info_log"]["password"]."<br>";
         ?>
     </body>
 </html>
