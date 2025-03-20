@@ -11,6 +11,8 @@ body {
 
 .container {
     position: relative;
+    width: auto;
+    height: auto;
 }
 
 .container img{
@@ -26,6 +28,7 @@ form {
     background: #f2a30fbe;
     padding: 3rem;
     height: auto;
+    width: auto;
     border-radius: 20px;
     border-left: 1px solid rgba(255, 255, 255, .3);
     border-top: 1px solid rgba(255, 255, 255, .3);
