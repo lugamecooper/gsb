@@ -10,8 +10,9 @@
     <body>
         <p>tg</p>
         <?php
+        try{
             include './connect.php';
-            $res = $connexion -> query("SELECT * FROM visiteur WHERE nom = '$_POST[login]' AND password = '$_POST[password]'") or die("test");
+            $res = $connexion -> query("SELECT * FROM visiteur WHERE nom = '$_POST[login]' AND password = '$_POST[password]'");
             $res = $res -> fetch();
             echo "<p>test</p>";
             if ($res["idRole"] == 2){
@@ -27,7 +28,11 @@
             echo $_COOKIE["info_log"]["nom"]."<br>";
             echo $_COOKIE["info_log"]["prenom"]."<br>";
             echo $_COOKIE["info_log"]["idRole"]."<br>";
-            echo $_COOKIE["info_log"]["password"]."<br>";
+            echo $_COOKIE["info_log"]["password"]."<br>";}
+            catch(Echec $e){
+                echo $e;
+                echo "à la là";
+            }
         ?>
     </body>
 </html>
