@@ -21,7 +21,7 @@ body {
 }
 
 .logo {
-    object-position: center top;;
+    object-position: center top;
 }
 
 form {
@@ -64,7 +64,6 @@ a:active {
 
 input {
     background-color: #0b2b8ca8;
-    background: #0b2b8ca8;
     border: none;
     border-left: 1px solid rgba(255, 255, 255, .3);
     border-top: 1px solid rgba(255, 255, 255, .3);
@@ -85,20 +84,20 @@ input {
 input:hover,
 input[type="email"]:focus,
 input[type="password"]:focus{
-  box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
-  background-color: #D90452;
+    box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+    background-color: #D90452;
 }
     
-input[type="button"] {
-  margin-top: 10px;
-  width: 150px;
-  font-size: 1rem;
-  cursor: pointer;
-  background-color: #0b2b8cdc;
+input[type="submit"] {
+    margin-top: 10px;
+    width: 150px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #0b2b8cdc;
 }
 
 ::placeholder {
-  color: #fff;
+    color: #fff;
 }
 
 .drop {
@@ -111,4 +110,4 @@ input[type="button"] {
     box-shadow: 10px 10px 60px -8px rgba(0,0,0,0.2);
     position: absolute;
     transition: all 0.2s ease;
-  }
+}
