@@ -22,7 +22,7 @@
             //    echo $_COOKIE["info_log"]["idRole"]."<br>";
             //    echo $_COOKIE["info_log"]["password"]."<br>";
             //}
-            echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/comptable")</script>';
+            //echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/comptable")</script>';
         ?>
     </body>
 </html>
