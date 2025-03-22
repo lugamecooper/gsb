@@ -11,17 +11,16 @@
         <p>tg</p>
         <?php
             include './connect.php';
-            $res = $connexion -> query("SELECT * FROM visiteur WHERE nom = '$_POST[login]' AND password = '$_POST[password]'");
-            //$res = $res -> fetch();
-            //echo "<p>test</p>";
-            //if ($res["idRole"] == 2){
-            //    $_COOKIE["info_log"] = $res;
-            //    /
-            //    echo $_COOKIE["info_log"]["nom"]."<br>";
-            //    echo $_COOKIE["info_log"]["prenom"]."<br>";
-            //    echo $_COOKIE["info_log"]["idRole"]."<br>";
-            //    echo $_COOKIE["info_log"]["password"]."<br>";
-            //}
+            $res = $connexion -> query("SELECT * FROM Visiteur WHERE nom = '$_POST[login]' AND password = '$_POST[password]'");
+            $res = $res -> fetch();
+            echo "<p>test</p>";
+            if ($res["idRole"] == 2){
+                $_COOKIE["info_log"] = $res;
+                echo $_COOKIE["info_log"]["nom"]."<br>";
+                echo $_COOKIE["info_log"]["prenom"]."<br>";
+                echo $_COOKIE["info_log"]["idRole"]."<br>";
+                echo $_COOKIE["info_log"]["password"]."<br>";
+            }
             //echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/comptable")</script>';
         ?>
     </body>
