@@ -7,21 +7,34 @@
         <link rel="stylesheet" href="style.css">
         <title>Intranet GSB</title>
     </head>
+    <div class="loader"></div> 
+    <br>
+    <br>
+    <br>
     <body>
-        <p>tg</p>
         <?php
             include './connect.php';
             $res = $connexion -> query("SELECT * FROM Visiteur WHERE nom = '$_POST[login]' AND password = '$_POST[password]'");
             $res = $res -> fetch();
-            echo "<p>test</p>";
             if ($res["idRole"] == 2){
-                $_COOKIE["info_log"] = $res;
-                echo $_COOKIE["info_log"]["nom"]."<br>";
-                echo $_COOKIE["info_log"]["prenom"]."<br>";
-                echo $_COOKIE["info_log"]["idRole"]."<br>";
-                echo $_COOKIE["info_log"]["password"]."<br>";
+                session_start();
+                $_SESSION["idRole"]=2;
+                $_SESSION["idUser"]=$res["IdVisiteur"];
+                echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/comptable")</script>';
             }
-            //echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/comptable")</script>';
+            if ($res["idRole"] == 1){
+                session_start();
+                $_SESSION["idRole"]=2;
+                $_SESSION["idUser"]=$res["IdVisiteur"];
+                echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/visiteur")</script>';
+            }
+            if ($res["idRole"] == 3){
+                session_start();
+                $_SESSION["idRole"]=2;
+                $_SESSION["idUser"]=$res["IdVisiteur"];
+                echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/comptable")</script>';
+            }
+            echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=mots de passe ou login incorect")</script>';
         ?>
     </body>
 </html>
