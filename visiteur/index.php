@@ -4,15 +4,13 @@
     error_reporting(E_ERROR | E_PARSE);
     session_start();
     try{
-        if ($_SESSION["idRole"] == 1){
+        if ($_SESSION["idRole"] == 1 || $_SESSION["idRole"] == 3){
             NULL;
         }
-        elseif ($_SESSION["idRole"] == 2){
+        else if ($_SESSION["idRole"] == 2){
             echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/comptable")</script>';
         }
-        else{
-            echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=veulliez vous connecter")</script>';
-        }
+        echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=veulliez vous connecter")</script>';
     }catch (Echec) {
         echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter")</script>';
     }
