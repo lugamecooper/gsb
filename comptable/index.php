@@ -14,7 +14,7 @@
             echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=veulliez vous connecter")</script>';
         }
     }catch (Echec) {
-        echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=erreur veuillez vous connecter")</script>';
+        echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter")</script>';
     }
 ?>
 <html lang="fr">
@@ -57,8 +57,5 @@
                 Détail des fiches mises en paiement <br>
                 Bouton pour marquer comme "Remboursé"</p>
         </div>
-        <?php 
-        echo $_SESSION["idRole"];
-        ?>
     </body>
 </html>

@@ -1,4 +1,22 @@
 <!DOCTYPE html>
+<?php 
+    include './connect.php';
+    error_reporting(E_ERROR | E_PARSE);
+    session_start();
+    try{
+        if ($_SESSION["idRole"] == 1){
+            NULL;
+        }
+        elseif ($_SESSION["idRole"] == 2){
+            echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/comptable)</script>';
+        }
+        else{
+            echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=veulliez vous connecter")</script>';
+        }
+    }catch (Echec) {
+        echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter")</script>';
+    }
+?>
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
