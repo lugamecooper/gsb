@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php 
     include './connect.php';
-    //error_reporting(E_ERROR | E_PARSE);
+    error_reporting(E_ERROR | E_PARSE);
     session_start();
     try{
         if ($_SESSION["idRole"] == 1){
@@ -59,7 +59,7 @@
                 Tableau avec les frais forfaitisés et hors forfait <br>
                 Indicateur d’état de la fiche (saisie, validée, mise en
                 paiement, remboursée)</p>
-            <?php echo $_SESSION["idRole"]; ?>
+            <?php echo "id role : ".$_SESSION["idRole"]; ?>
         </div>
     </body>
 </html>
