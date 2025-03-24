@@ -7,10 +7,12 @@
         if ($_SESSION["idRole"] == 1 || $_SESSION["idRole"] == 3){
             NULL;
         }
-        else if ($_SESSION["idRole"] == 2){
+        elseif ($_SESSION["idRole"] == 2){
             echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/comptable")</script>';
         }
-        echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=veulliez vous connecter")</script>';
+        else{
+            echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=veulliez vous connecter")</script>';
+        }
     }catch (Echec) {
         echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter")</script>';
     }
