@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php 
     include './connect.php';
-    error_reporting(E_ERROR | E_PARSE);
+    //error_reporting(E_ERROR | E_PARSE);
     session_start();
     try{
         if ($_SESSION["idRole"] == 1){
