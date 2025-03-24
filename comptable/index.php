@@ -7,10 +7,10 @@
         exit;
     }
 
-    if ($_SESSION["idRole"] == 1 || $_SESSION["idRole"] == 3) {
+    if ($_SESSION["idRole"] == 2 || $_SESSION["idRole"] == 3) {
         return;
-    } elseif ($_SESSION["idRole"] == 2) {
-        header("Location: https://gsb.lucas-lestiennes.fr/comptable");
+    } elseif ($_SESSION["idRole"] == 1) {
+        header("Location: https://gsb.lucas-lestiennes.fr/visiteur");
         exit;
     } else {
         header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
