@@ -57,5 +57,8 @@
                 Détail des fiches mises en paiement <br>
                 Bouton pour marquer comme "Remboursé"</p>
         </div>
+        <?php 
+        echo $_SESSION["idRole"];
+        ?>
     </body>
 </html>
