@@ -61,5 +61,6 @@
                 paiement, remboursée)</p>
 
         </div>
+        <?php echo $_SESSION["idRole"];?>
     </body>
 </html>
