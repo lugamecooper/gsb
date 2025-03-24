@@ -6,6 +6,7 @@
         <link rel="icon" type="image/x-icon" href="./src/logo.ico">
         <link rel="stylesheet" href="style.css">
         <title> Intranet GSB </title>
+        <title> Intranet GSB </title>
     </head>
     <body>
 
