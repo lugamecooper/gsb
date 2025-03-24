@@ -2,6 +2,7 @@
 <?php 
     include './connect.php';
     error_reporting(E_ERROR | E_PARSE);
+    session_start();
     try{
         if ($_SESSION["idRole"] == 2){
             NULL;
@@ -10,8 +11,7 @@
             echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/visiteur)</script>';
         }
         else{
-            echo "id role : ".$_SESSION;
-            //echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=veulliez vous connecter")</script>';
+            echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=veulliez vous connecter")</script>';
         }
     }catch (Echec) {
         echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=erreur veuillez vous connecter")</script>';
