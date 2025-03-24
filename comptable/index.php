@@ -6,6 +6,12 @@
         if ($_SESSION["idRole"] == 2){
             echo "<p>$_GET[erreur]</p>";
         }
+        elseif ($_SESSION["idRole"] == 1){
+            echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/visiteur)</script>';
+        }
+        else{
+            echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=veulliez vous connecter")</script>';
+        }
     }catch (Echec) {
         echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=veulliez vous connecter")</script>';
     }
