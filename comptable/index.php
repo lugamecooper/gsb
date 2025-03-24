@@ -4,7 +4,7 @@
     error_reporting(E_ERROR | E_PARSE);
     try{
         if ($_SESSION["idRole"] == 2){
-            echo "<p>$_GET[erreur]</p>";
+            NULL;
         }
         elseif ($_SESSION["idRole"] == 1){
             echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/visiteur)</script>';
