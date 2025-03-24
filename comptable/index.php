@@ -10,7 +10,7 @@
             echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/visiteur)</script>';
         }
         else{
-            echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=veulliez vous connecter")</script>';
+            echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=$_SESSION[idRole]")</script>';
         }
     }catch (Echec) {
         echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=erreur veuillez vous connecter")</script>';
