@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <?php 
     include './connect.php';
-    error_reporting(E_ERROR | E_PARSE);
-    try{
-        if ($_SESSION["idRole"] == 2){
-            NULL;
-        }
-        elseif ($_SESSION["idRole"] == 1){
-            echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/visiteur)</script>';
-        }
-        else{
-            echo $_SESSION["idRole"];
-            //echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=veulliez vous connecter")</script>';
-        }
-    }catch (Echec) {
-        echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=erreur veuillez vous connecter")</script>';
+    session_start();
+    if (!isset($_SESSION["idRole"])) {
+        header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
+    }
+
+    if ($_SESSION["idRole"] == 2 || $_SESSION["idRole"] == 3) {
+        NULL;
+    } elseif ($_SESSION["idRole"] == 1) {
+        header("Location: https://gsb.lucas-lestiennes.fr/visiteur");
+    } else {
+        header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
     }
 ?>
 <html lang="fr">

@@ -1,4 +1,19 @@
 <!DOCTYPE html>
+<?php 
+    include './connect.php';
+    session_start();
+    if (!isset($_SESSION["idRole"])) {
+        header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
+    }
+    
+    if ($_SESSION["idRole"] == 1 || $_SESSION["idRole"] == 3) {
+        NULL;
+    } elseif ($_SESSION["idRole"] == 2) {
+        header("Location: https://gsb.lucas-lestiennes.fr/comptable");
+    } else {
+        header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
+    }
+?>
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
@@ -22,7 +37,7 @@
                     d'utilisateur</a></li>
             <li style="float:right"><a class="active" href="#fonction">Visiteur médical</a></li>
             <li style="float:right"><a class="active"
-                    href="#logout">Déconnection</a></li>
+                    href="../logoff.php">Déconnection</a></li>
         </ul>
 
         <div class="container">
@@ -41,7 +56,6 @@
                 Tableau avec les frais forfaitisés et hors forfait <br>
                 Indicateur d’état de la fiche (saisie, validée, mise en
                 paiement, remboursée)</p>
-
         </div>
     </body>
 </html>
