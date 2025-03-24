@@ -40,7 +40,7 @@
                     d'utilisateur</a></li>
             <li style="float:right"><a class="active" href="#fonction">Visiteur médical</a></li>
             <li style="float:right"><a class="active"
-                    href="#logout">Déconnection</a></li>
+                    href="../logoff.php">Déconnection</a></li>
         </ul>
 
         <div class="container">
