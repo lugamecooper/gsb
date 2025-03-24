@@ -7,7 +7,7 @@
     }
     
     if ($_SESSION["idRole"] == 1 || $_SESSION["idRole"] == 3) {
-        return;
+        NULL;
     } elseif ($_SESSION["idRole"] == 2) {
         header("Location: https://gsb.lucas-lestiennes.fr/comptable");
     } else {
