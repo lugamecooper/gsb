@@ -59,7 +59,6 @@
                 Tableau avec les frais forfaitisés et hors forfait <br>
                 Indicateur d’état de la fiche (saisie, validée, mise en
                 paiement, remboursée)</p>
-                <?php echo "<p>"."id role : ".$_SESSION["idRole"]."</p>"; ?>
         </div>
     </body>
 </html>
