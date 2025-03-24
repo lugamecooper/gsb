@@ -6,6 +6,7 @@
     try{
         if ($_SESSION["idRole"] == 2){
             NULL;
+            echo "test";
         }
         elseif ($_SESSION["idRole"] == 1){
             echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/visiteur)</script>';
