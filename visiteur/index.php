@@ -8,7 +8,7 @@
             NULL;
         }
         elseif ($_SESSION["idRole"] == 2){
-            echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/comptable)</script>';
+            echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/comptable")</script>';
         }
         else{
             echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=veulliez vous connecter")</script>';
@@ -61,6 +61,5 @@
                 paiement, remboursée)</p>
 
         </div>
-        <?php echo $_SESSION["idRole"];?>
     </body>
 </html>
