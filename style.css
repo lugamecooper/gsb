@@ -44,7 +44,7 @@ body {
     border-radius: 20px;
 }
 
-
+/* classe pour la barre de chargement */
 /* HTML: <div class="loader"></div> */
 .loader {
     --s: 25px;
