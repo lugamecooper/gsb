@@ -1,4 +1,15 @@
 <!DOCTYPE html>
+<?php 
+    include './connect.php';
+    error_reporting(E_ERROR | E_PARSE);
+    try{
+        if ($_SESSION["idRole"] == 2){
+            echo "<p>$_GET[erreur]</p>";
+        }
+    }catch (Echec) {
+        echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=veulliez vous connecter")</script>';
+    }
+?>
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
