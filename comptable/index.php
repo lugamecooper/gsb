@@ -13,7 +13,7 @@
             echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=veulliez vous connecter")</script>';
         }
     }catch (Echec) {
-        echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=veulliez vous connecter")</script>';
+        echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=erreur veuillez vous connecter")</script>';
     }
 ?>
 <html lang="fr">
