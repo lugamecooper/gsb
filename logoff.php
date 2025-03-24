@@ -1,0 +1,4 @@
+<?php 
+    session_destroy();
+    echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=veulliez vous connecter")</script>';
+?>

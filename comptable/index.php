@@ -32,7 +32,7 @@
             <li style="float:right"><a class="active" href="#utilisateur">Nom d'utilisateur</a></li>
             <li style="float:right"><a class="active" href="#fonction">Comptable</a></li>
             <li style="float:right"><a class="active"
-                    href="#logout">Déconnection</a></li>
+                    href="../logoff.php">Déconnection</a></li>
         </ul>
 
         <div class="container">
