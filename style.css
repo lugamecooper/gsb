@@ -1,78 +1,85 @@
 body {
-    background: linear-gradient(to right, #731D55 0%, #F2A30F 100%);
-    font-family: 'Roboto', sans-serif; /* Police moderne */
+    background: linear-gradient(#D9D1B8);
+    font-family: arial, sans-serif;
+    overflow-y: hidden;
+}
+
+.login_form{
+    margin-top: auto;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    justify-content: center;
+    height: 98vh;
 }
-
-.login_form {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 40px;
+.login_form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login_form .logo{
+    padding-bottom: 40px;
+}
+.login_form p{
+    font-size: 30px;
+    color: #0B4040;
+}
+.login_form input{
+    margin: 7px;
     border-radius: 15px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.2); /* Ombre derrière le formulaire */
-    width: 350px;
-    transition: transform 0.3s ease;
+    border-style: none;
+    width: 186px;
+    height: 30px;
+    color: #0B4040;
+    background-color: #2ea69a;
+    text-align: center; 
+}
+.login_form input::placeholder{
+    color: #0B4040;
+}
+.login_form input[type=submit]{
+    width: 236px;
+    height: 35px;
+    margin-top: 10px;
+    border-radius: 20px;
 }
 
-.login_form .logo {
-    width: auto;
-    max-width: 100%;
-    margin-bottom: 30px;
-    transition: all 0.3s ease;
-}
 
-@media (min-width: 768px) {
-    .login_form {
-        width: 400px;
-    }
-}
-
-.login_form p {
-    font-size: 26px;
-    color: #333;
-    margin-bottom: 25px;
-    font-weight: 700;
-    text-align: center;
-    letter-spacing: 1px; /* Espacement entre les lettres */
-}
-
-.login_form input {
-    width: calc(100% - 20px); /* Ajoute une marge à droite */
-    padding: 18px;
-    margin: 10px auto; /* Centrage horizontal */
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    font-size: 18px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.login_form input:focus {
-    border-color: #F26E22; /* Utiliser la couleur spécifiée */
-    outline: none;
-    box-shadow: 0 0 5px rgba(242, 110, 34, 0.5); /* Ombre légère lors du focus */
-}
-
-.login_form button {
-    width: calc(100% - 20px); /* Ajoute une marge à droite */
-    padding: 20px;
-    background-color: #0DD9D9; /* Utiliser la couleur spécifiée */
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.login_form button:hover {
-    background-color: #0D0D0D; /* Utiliser la couleur spécifiée */
-    transform: translateY(-3px);
-}
-
-.login_form button:active {
-    background-color: #F2A30F; /* Utiliser la couleur spécifiée */
-    transform: translateY(0);
-}
+/* HTML: <div class="loader"></div> */
+.loader {
+    --s: 25px;
+    --g :5px;  
+    
+    width: calc(3*(1.353*var(--s) + var(--g)));
+    display: grid;
+    justify-items: end;
+    aspect-ratio: 3;
+    overflow: hidden;
+    --_m: linear-gradient(90deg,#0000,#000 15px calc(100% - 15px),#0000);
+    -webkit-mask: var(--_m);
+            mask: var(--_m);
+  }
+  .loader:before { 
+    content: "";
+    width: 200%;
+    background:
+      linear-gradient(90deg,#ff1818 50%,#0000 0),
+      conic-gradient(from -90deg at var(--s) calc(0.353*var(--s)),
+        #fff 135deg,#666 0 270deg,#aaa 0); 
+    background-blend-mode: multiply;
+    --_m:
+      linear-gradient(to bottom right,
+         #0000 calc(0.25*var(--s)),#000 0 calc(100% - calc(0.25*var(--s)) - 1.414*var(--g)),#0000 0),
+      conic-gradient(from -90deg at right var(--g) bottom var(--g),#000 90deg,#0000 0);
+    -webkit-mask: var(--_m);
+            mask: var(--_m);
+    background-size:   calc(100%/3) 100%, calc(100%/6) 100%;
+    -webkit-mask-size: calc(100%/6) 100%;
+            mask-size: calc(100%/6) 100%;
+    -webkit-mask-composite: source-in;
+            mask-composite: intersect;
+    animation: l10 1s infinite linear;
+  }
+  @keyframes l10 {
+    to {transform:translate(calc(100%/3))}
+  }
