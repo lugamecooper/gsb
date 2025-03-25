@@ -5,13 +5,14 @@
     if (!isset($_SESSION["IdVisiteur"])) {
         header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
     }
-
-    if ($_SESSION["idRole"] == 2 || $_SESSION["idRole"] == 3) {
-        NULL;
-    } elseif ($_SESSION["idRole"] == 1) {
-        header("Location: https://gsb.lucas-lestiennes.fr/visiteur");
-    } else {
-        header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
+    else{
+        if ($_SESSION["idRole"] == 2 || $_SESSION["idRole"] == 3) {
+            NULL;
+        } elseif ($_SESSION["idRole"] == 1) {
+            header("Location: https://gsb.lucas-lestiennes.fr/visiteur");
+        } else {
+            header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
+        }
     }
 ?>
 <html lang="fr">
