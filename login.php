@@ -14,6 +14,11 @@
     <body>
         <?php
             include './connect.php';
+            session_start();
+            $_SESSION["idRole"] = NULL;
+            $_SESSION["idUser"] = NULL;
+            session_abort();
+            session_destroy();
             $res = $connexion -> query("SELECT * FROM Visiteur WHERE nom = '$_POST[login]' AND password = '$_POST[password]'");
             $res = $res -> fetch();
             if ($res["idRole"] == 2){
