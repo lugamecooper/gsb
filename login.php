@@ -18,20 +18,20 @@
             $res = $res -> fetch();
             if ($res["idRole"] == 2){
                 session_start();
-                $_SESSION["idRole"]=2;
-                $_SESSION["idUser"]=$res["IdVisiteur"];
+                $_SESSION["idRole"]= 2;
+                $_SESSION["idUser"]= $res["IdVisiteur"];
                 echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/comptable")</script>';
             }
             if ($res["idRole"] == 1){
                 session_start();
-                $_SESSION["idRole"]=1;
-                $_SESSION["idUser"]=$res["IdVisiteur"];
+                $_SESSION["idRole"]= 1;
+                $_SESSION["idUser"]= $res["IdVisiteur"];
                 echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/visiteur")</script>';
             }
             if ($res["idRole"] == 3){
                 session_start();
-                $_SESSION["idRole"]=3;
-                $_SESSION["idUser"]=$res["IdVisiteur"];
+                $_SESSION["idRole"]= 3;
+                $_SESSION["idUser"]= $res["IdVisiteur"];
                 echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/comptable")</script>';
             }
             echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=mots de passe ou login incorect")</script>';
