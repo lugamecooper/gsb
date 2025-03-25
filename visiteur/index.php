@@ -15,47 +15,36 @@
     }
 ?>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Intranet - Visiteurs médicaux</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-
-        <div class="header">
-            <h1>Intranet visiteurs médicaux</h1>
-        </div>
-
-        <ul>
-            <li><a href=".\">Acceuil</a></li>
-            <li><a href=".\saisie_frais">Saisi de frais</a></li>
-            <li><a href=".\saisie_frais">Consultation fiche de frais</a></li>
-            <li style="float:right"><a class="active"
-                    href="#logo">LOGO</a></li>
-            <li style="float:right"><a class="active" href="#utilisateur">Nom
-                    d'utilisateur</a></li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intranet - Visiteurs médicaux</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Intranet visiteurs médicaux</h1>
+    </div>
+    <ul class="nav-bar">
+        <li><a href=".\">Acceuil</a></li>
+        <li><a href=".\saisie_frais">Saisi de frais</a></li>
+        <li><a href=".\saisie_frais">Consultation fiche de frais</a></li>
+        <div class="user-info">
+            <li style="float:right"><a class="active" href="#logo">LOGO</a></li>
+            <li style="float:right"><a class="active" href="#utilisateur">Nom d'utilisateur</a></li>
             <li style="float:right"><a class="active" href="#fonction">Visiteur médical</a></li>
-            <li style="float:right"><a class="active"
-                    href="../logoff.php">Déconnection</a></li>
-        </ul>
-
-        <div class="container">
-            <h3>Saisie des frais</h3>
-
-            <p> Formulaire pour entrer les frais forfaitisés (quantité pour
-                chaque type) <br>
-                Formulaire pour ajouter des frais hors forfait (date,
-                libellé,montant) <br>
-                Liste des frais saisis avec possibilité de
-                modification/suppression</p>
-
-            <h3>Consultation des fiches de frais</h3>
-
-            <p>Sélecteur de mois pour afficher une fiche de frais <br>
-                Tableau avec les frais forfaitisés et hors forfait <br>
-                Indicateur d’état de la fiche (saisie, validée, mise en
-                paiement, remboursée)</p>
+            <li style="float:right"><a class="active" href="../logoff.php">Déconnection</a></li>
         </div>
-    </body>
+    </ul>
+    <div class="container">
+        <h3>Saisie des frais</h3>
+        <p>Formulaire pour entrer les frais forfaitisés (quantité pour chaque type) <br>
+           Formulaire pour ajouter des frais hors forfait (date, libellé,montant) <br>
+           Liste des frais saisis avec possibilité de modification/suppression</p>
+        <h3>Consultation des fiches de frais</h3>
+        <p>Sélecteur de mois pour afficher une fiche de frais <br>
+           Tableau avec les frais forfaitisés et hors forfait <br>
+           Indicateur d'état de la fiche (saisie, validée, mise en paiement, remboursée)</p>
+    </div>
+</body>
 </html>
