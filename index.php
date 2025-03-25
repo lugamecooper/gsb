@@ -16,6 +16,11 @@
                     <input type="password" name="password" placeholder="Mot de passe"><br>
                     <input type="submit" value="Connexion"><br>
                     <?php
+                        session_start();
+                        $_SESSION["idRole"] = NULL;
+                        $_SESSION["idUser"] = NULL;
+                        session_abort();
+                        session_destroy();
                         error_reporting(E_ERROR | E_PARSE);
                         try{
                             if ($_GET["erreur"]){
