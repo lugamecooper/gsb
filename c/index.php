@@ -9,7 +9,7 @@
         if ($_SESSION["idRole"] == 2 || $_SESSION["idRole"] == 3) {
             NULL;
         } elseif ($_SESSION["idRole"] == 1) {
-            header("Location: https://gsb.lucas-lestiennes.fr/visiteur");
+            header("Location: https://gsb.lucas-lestiennes.fr/v");
         } else {
             header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
         }
