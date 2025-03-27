@@ -33,14 +33,18 @@
             <li><a href=".\saisie_frais">Saisi de frais</a></li>
             <li><a href=".\saisie_frais">Consultation fiche de frais</a></li>
             <div class="user-info">
-                <li style="float:right"><a class="active"
-                        href="#logo">LOGO</a></li>
-                <li style="float:right"><a class="active"
-                        href="#utilisateur">Nom d'utilisateur</a></li>
-                <li style="float:right"><a class="active"
-                        href="#fonction">Visiteur médical</a></li>
-                <li style="float:right"><a class="active"
-                        href="../logoff.php">Déconnection</a></li>
+                <li style="float:right">
+                    <a class="active"href="#logo">LOGO</a>
+                </li>
+                <li style="float:right">
+                    <a class="active" href="#utilisateur">Nom d'utilisateur</a>
+                </li>
+                <li style="float:right">
+                    <a class="active" href="#fonction">Visiteur médical</a>
+                </li>
+                <li style="float:right">
+                    <a class="active" href="../logoff.php">Déconnection</a>
+                </li>
             </div>
         </ul>
 
