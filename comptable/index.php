@@ -27,7 +27,7 @@
         <div class="header">
             <h1>Intranet Comptable</h1>
         </div>
-
+        
         <ul class="nav-bar">
             <li><a href=".\">Acceuil</a></li>
             <li><a href=".\suivi_paiments">Suivi paiements</a></li>
