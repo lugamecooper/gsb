@@ -32,16 +32,16 @@
             <li><a href=".\saisie_frais">Consultation fiche de frais</a></li>
             <div class="user-info">
                 <li style="float:right">
-                    <a class="active" href="#logo">LOGO</a>
+                    <p>LOGO</p>
                 </li>
                 <li style="float:right">
-                    <a class="active" href="#utilisateur">Nom d'utilisateur</a>
+                    <p>Nom d'utilisateur</p>
                 </li>
                 <li style="float:right">
-                    <a class="active" href="#fonction">Visiteur médical</a>
+                    <a href="#fonction">Visiteur médical</a>
                 </li>
                 <li style="float:right">
-                    <a class="active" href="../logoff.php">Déconnection</a>
+                    <a href="../logoff.php">Déconnection</a>
                 </li>
             </div>
         </ul>
