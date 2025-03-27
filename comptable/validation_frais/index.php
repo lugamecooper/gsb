@@ -13,9 +13,9 @@
         </div>
 
         <ul>
-            <li><a href=".\">Acceuil</a></li>
-            <li><a href=".\validation_frais.html">Validation des fiches de frais</a></li>
-            <li><a href=".\suivi_paiements.html">Suivi des paiements</a></li>
+            <li><a href="../../">Acceuil</a></li>
+            <li><a href="./validation_frais">Validation des fiches de frais</a></li>
+            <li><a href="./suivi_paiements">Suivi des paiements</a></li>
             <li style="float:right"><a class="active"
                     href="#logo">LOGO</a></li>
             <li style="float:right"><a class="active" href="#utilisateur">Nom d'utilisateur</a></li>
