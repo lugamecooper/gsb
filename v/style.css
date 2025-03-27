@@ -88,7 +88,8 @@ p {
 }
 
 .right-aligned {
-    list-style: flex;
+    list-style: none;
+    display: flex;
     margin-left: auto;
 }
 
