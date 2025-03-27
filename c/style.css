@@ -19,33 +19,46 @@ body {
     text-align: center;
 }
 
-.nav-bar {
-    list-style-type: none;
+
+.navbar {
+    background-color: #e0dcb8; /* Couleur de fond plus claire avec texture */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    overflow: hidden;
     padding: 10px 20px;
+    border-bottom: 2px solid #8b9457; /* Bordure basse pour séparation */
 }
 
-.nav-bar li a {
-    color: white;
-    text-decoration: none;
-    padding: 14px 20px;
-    display: block;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.nav-bar li a:hover {
-    background-color: #575757;
-    transform: scale(1.05);
-}
-
-.user-info {
+.centered-links {
+    list-style: none;
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    gap: 30px;
 }
+
+.right-aligned {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+    gap: 20px;
+}
+
+.centered-links li a,
+.right-aligned li a {
+    color: #5a4e3d; /* Couleur sombre pour les liens */
+    text-decoration: none; /* Supprimer le soulignement */
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.7); /* Fond semi-transparent pour détacher les liens */
+    transition: background-color 0.3s ease;
+}
+
+.centered-links li a:hover,
+.right-aligned li a:hover {
+    background-color: rgba(255, 255, 255, 1); /* Changement de fond au survol */
+}
+
 
 .container {
     max-width: 800px;

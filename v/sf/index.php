@@ -12,25 +12,19 @@
             <h1>Intranet visiteurs médicaux</h1>
         </div>
 
-        <ul class="nav-bar">
-            <li><a href="../">Acceuil</a></li>
-            <li><a href="./">Saisi de frais</a></li>
-            <li><a href="../cf">Consultation fiche de frais</a></li>
-            <div class="user-info">
-                <li style="float:right">
-                    <p>LOGO</p>
-                </li>
-                <li style="float:right">
-                    <p>Nom d'utilisateur</p>
-                </li>
-                <li style="float:right">
-                    <a href="#fonction">Visiteur médical</a>
-                </li>
-                <li style="float:right">
-                    <a href="../logoff.php">Déconnection</a>
-                </li>
-            </div>
-        </ul>
+        <nav class="navbar">
+            <ul class="centered-links">
+                <li><a href="../">Acceuil</a></li>
+                <li><a href="./">Saisi de frais</a></li>
+                <li><a href="../cf">Consultation fiche de frais</a></li>
+            </ul>
+            <ul class="right-aligned">
+                <li><p>LOGO</p></li>
+                <li><p>Nom d'utilisateur</p></li>
+                <li><a href="#fonction">Visiteur médical</a></li>
+                <li><a href="../logoff.php">Déconnection</a></li>
+            </ul>
+        </nav>
 
         <div class="container">
             <form action="#" method="post">
