@@ -21,12 +21,12 @@ body {
 
 
 .navbar {
-    background-color: #e0dcb8; /* Couleur de fond plus claire avec texture */
+    background-color: #F2A30F; /* Couleur de fond plus claire avec texture */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    border-bottom: 2px solid #8b9457; /* Bordure basse pour séparation */
+    padding: 20px 20px;
+    border-bottom: 2px solid #731D55; /* Bordure basse pour séparation */
 }
 
 .centered-links {
