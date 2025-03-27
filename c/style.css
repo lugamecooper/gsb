@@ -46,7 +46,7 @@ body {
 
 .centered-links li a,
 .right-aligned li a {
-    color: #5a4e3d; /* Couleur sombre pour les liens */
+    color: #F27405; /* Couleur sombre pour les liens */
     text-decoration: none; /* Supprimer le soulignement */
     font-weight: bold;
     padding: 8px 16px;
