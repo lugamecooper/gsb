@@ -14,7 +14,7 @@
 
         <ul>
             <li><a href="../">Acceuil</a></li>
-            <li><a href="../suivi_paiements">Suivi des paiements</a></li>
+            <li><a href="../sp">Suivi des paiements</a></li>
             <li><a href="./">Validation des fiches de frais</a></li>
             <li style="float:right"><a class="active"
                     href="#logo">LOGO</a></li>
