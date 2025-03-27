@@ -40,7 +40,7 @@
                     <a class="active" href="#utilisateur">Nom d'utilisateur</a>
                 </li>
                 <li style="float:right">
-                    <a class="active" href="#fonction">Visiteur médical</a>
+                    <a class="active" href="#fonction">Comptable</a>
                 </li>
                 <li style="float:right">
                     <a class="active" href="../logoff.php">Déconnection</a>
