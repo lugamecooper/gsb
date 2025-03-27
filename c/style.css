@@ -26,7 +26,6 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    border-top: 1px solid #731702;
     border-bottom: 2px solid #731702; /* Bordure basse pour séparation */
 }
 
@@ -46,7 +45,7 @@ body {
 
 .centered-links li a,
 .right-aligned li a {
-    color: #F27405; /* Couleur sombre pour les liens */
+    color: #5a4e3d; /* Couleur sombre pour les liens */
     text-decoration: none; /* Supprimer le soulignement */
     font-weight: bold;
     padding: 8px 16px;
