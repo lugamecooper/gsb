@@ -13,7 +13,7 @@
         </div>
 
         <ul>
-            <li><a href="../../">Acceuil</a></li>
+            <li><a href="../">Acceuil</a></li>
             <li><a href="./saisie_frais">Saisi de frais</a></li>
             <li><a href="./">Consultation fiche de frais</a></li>
             <li style="float:right"><a class="active"

@@ -13,7 +13,7 @@
         </div>
 
         <ul>
-            <li><a href="../../">Acceuil</a></li>
+            <li><a href="../">Acceuil</a></li>
             <li><a href="./">Suivi paiements</a></li>
             <li><a href="./validation_frais">Validation frais</a></li>
             <li style="float:right"><a class="active"
