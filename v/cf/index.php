@@ -12,7 +12,7 @@
             <h1>Intranet visiteurs médicaux</h1>
         </div>
 
-        <ul>
+        <ul  class="nav-bar">
             <li><a href="../">Acceuil</a></li>
             <li><a href="../sf">Saisi de frais</a></li>
             <li><a href="./">Consultation fiche de frais</a></li>

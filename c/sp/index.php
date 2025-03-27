@@ -12,9 +12,9 @@
             <h1>Intranet Comptable</h1>
         </div>
 
-        <ul>
+        <ul class="nav-bar">
             <li><a href="../">Acceuil</a></li>
-            <li><a href="./">Suivi paiements</a></li>
+            <li><a href="./">Suivi des paiements</a></li>
             <li><a href="../vf">Validation des fiches de frais</a></li>
             <li style="float:right"><a class="active"
                     href="#logo">LOGO</a></li>
