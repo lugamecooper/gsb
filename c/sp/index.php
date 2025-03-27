@@ -16,12 +16,20 @@
             <li><a href="../">Acceuil</a></li>
             <li><a href="./">Suivi des paiements</a></li>
             <li><a href="../vf">Validation des fiches de frais</a></li>
-            <li style="float:right"><a class="active"
-                    href="#logo">LOGO</a></li>
-            <li style="float:right"><a class="active" href="#utilisateur">Nom d'utilisateur</a></li>
-            <li style="float:right"><a class="active" href="#fonction">Comptable</a></li>
-            <li style="float:right"><a class="active"
-                    href="#logout">Déconnection</a></li>
+            <div class="user-info">
+                <li style="float:right">
+                    <p>LOGO</p>
+                </li>
+                <li style="float:right">
+                    <p>Nom d'utilisateur</p>
+                </li>
+                <li style="float:right">
+                    <a href="#fonction">Comptable</a>
+                </li>
+                <li style="float:right">
+                    <a href="../logoff.php">Déconnection</a>
+                </li>
+            </div>
         </ul>
 
         <div class="container">

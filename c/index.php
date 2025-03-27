@@ -34,16 +34,16 @@
             <li><a href=".\vf">Validation des fiches de frais</a></li>
             <div class="user-info">
                 <li style="float:right">
-                    <a class="active"href="#logo">LOGO</a>
+                    <p>LOGO</p>
                 </li>
                 <li style="float:right">
-                    <a class="active" href="#utilisateur">Nom d'utilisateur</a>
+                    <p>Nom d'utilisateur</p>
                 </li>
                 <li style="float:right">
-                    <a class="active" href="#fonction">Comptable</a>
+                    <a href="#fonction">Comptable</a>
                 </li>
                 <li style="float:right">
-                    <a class="active" href="../logoff.php">Déconnection</a>
+                    <a href="../logoff.php">Déconnection</a>
                 </li>
             </div>
         </ul>
