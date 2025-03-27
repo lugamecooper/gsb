@@ -71,7 +71,7 @@ p {
 
 
 
-nav.navbar {
+.navbar {
     background-color: #e0dcb8; /* Couleur de fond plus claire avec texture */
     display: flex;
     justify-content: space-between;
@@ -80,20 +80,20 @@ nav.navbar {
     border-bottom: 2px solid #8b9457; /* Bordure basse pour séparation */
 }
 
-ul.centered-links {
+.centered-links {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 30px;
 }
 
-ul.right-aligned {
+.right-aligned {
     list-style: none;
     margin-left: auto;
 }
 
-ul.centered-links li a,
-ul.right-aligned li a {
+.centered-links li a,
+.right-aligned li a {
     color: #5a4e3d; /* Couleur sombre pour les liens */
     text-decoration: none; /* Supprimer le soulignement */
     font-weight: bold;
@@ -103,7 +103,7 @@ ul.right-aligned li a {
     transition: background-color 0.3s ease;
 }
 
-ul.centered-links li a:hover,
-ul.right-aligned li a:hover {
+.centered-links li a:hover,
+.right-aligned li a:hover {
     background-color: rgba(255, 255, 255, 1); /* Changement de fond au survol */
 }
