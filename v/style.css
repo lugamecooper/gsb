@@ -65,3 +65,45 @@ p {
     line-height: 1.5;
     color: #666;
 }
+
+
+
+
+
+
+nav.navbar {
+    background-color: #e0dcb8; /* Couleur de fond plus claire avec texture */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid #8b9457; /* Bordure basse pour séparation */
+}
+
+ul.centered-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+ul.right-aligned {
+    list-style: none;
+    margin-left: auto;
+}
+
+ul.centered-links li a,
+ul.right-aligned li a {
+    color: #5a4e3d; /* Couleur sombre pour les liens */
+    text-decoration: none; /* Supprimer le soulignement */
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.7); /* Fond semi-transparent pour détacher les liens */
+    transition: background-color 0.3s ease;
+}
+
+ul.centered-links li a:hover,
+ul.right-aligned li a:hover {
+    background-color: rgba(255, 255, 255, 1); /* Changement de fond au survol */
+}
