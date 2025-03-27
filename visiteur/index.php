@@ -47,17 +47,17 @@
         </ul>
         <div class="container">
             <h3>Saisie des frais</h3>
-            <p>Formulaire pour entrer les frais forfaitisés (quantité pour
-                chaque type) <br>
-                Formulaire pour ajouter des frais hors forfait (date,
-                libellé,montant) <br>
-                Liste des frais saisis avec possibilité de
-                modification/suppression</p>
+            <p>
+                Formulaire pour entrer les frais forfaitisés (quantité pour chaque type) <br>
+                Formulaire pour ajouter des frais hors forfait (date, libellé,montant) <br>
+                Liste des frais saisis avec possibilité de modification/suppression
+            </p>
             <h3>Consultation des fiches de frais</h3>
-            <p>Sélecteur de mois pour afficher une fiche de frais <br>
+            <p>
+                Sélecteur de mois pour afficher une fiche de frais <br>
                 Tableau avec les frais forfaitisés et hors forfait <br>
-                Indicateur d'état de la fiche (saisie, validée, mise en
-                paiement, remboursée)</p>
+                Indicateur d'état de la fiche (saisie, validée, mise en paiement, remboursée)
+            </p>
         </div>
     </body>
 </html>
