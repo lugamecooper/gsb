@@ -15,7 +15,7 @@
         <ul class="nav-bar">
             <li><a href="../">Acceuil</a></li>
             <li><a href="./">Saisi de frais</a></li>
-            <li><a href="./consultation_frais">Consultation fiche de frais</a></li>
+            <li><a href="../consultation_frais">Consultation fiche de frais</a></li>
             <div class="user-info">
                 <li style="float:right">
                     <p>LOGO</p>
