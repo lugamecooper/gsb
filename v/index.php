@@ -37,7 +37,7 @@
                 <li><p>LOGO</p></li>
                 <li><p>Nom d'utilisateur</p></li>
                 <li><a href="#fonction">Visiteur médical</a></li>
-                <li><a href="../logoff.php">Déconnection</a></li>
+                <li class="bouton_logoff"><a href="../logoff.php">Déconnection</a></li>
             </ul>
         </nav>
 

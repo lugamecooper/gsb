@@ -59,6 +59,14 @@ body {
     background-color: rgba(255, 255, 255, 1); /* Changement de fond au survol */
 }
 
+.bouton_logoff {
+    background-color: #f86464;
+}
+
+.bouton_logoff:hover {
+    background-color: #FF0000;
+    transition: background-color 0.3s ease;
+}
 
 .container {
     max-width: 800px;
