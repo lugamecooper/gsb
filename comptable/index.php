@@ -31,7 +31,7 @@
         <ul class="nav-bar">
             <li><a href=".\">Acceuil</a></li>
             <li><a href=".\suivi_paiments">Suivi paiements</a></li>
-            <li><a href=".\validation_frais">Validation fiche de frais</a></li>
+            <li><a href=".\validation_frais">Validation des fiches de frais</a></li>
             <div class="user-info">
                 <li style="float:right">
                     <a class="active"href="#logo">LOGO</a>
