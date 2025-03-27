@@ -63,7 +63,7 @@ body {
     background-color: #f86464;
 }
 
-.bouton_logoff::after {
+.bouton_logoff:hover {
     background-color: #FF0000;
     transition: background-color 0.3s ease;
 }
