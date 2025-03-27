@@ -12,68 +12,45 @@
             <h1>Intranet visiteurs médicaux</h1>
         </div>
 
-        <ul>
+        <ul class="nav-bar">
             <li><a href=".\">Acceuil</a></li>
             <li><a href=".\saisie_frais">Saisi de frais</a></li>
-            <li><a href=".\saisie_frais">Consultation fiche de frais</a></li>
-            <li style="float:right"><a class="active"
-                    href="#logo">LOGO</a></li>
-            <li style="float:right"><a class="active" href="#utilisateur">Nom
-                    d'utilisateur</a></li>
-            <li style="float:right"><a class="active" href="#fonction">Visiteur médical</a></li>
-            <li style="float:right"><a class="active"
-                    href="#logout">Déconnection</a></li>
+            <li><a href=".\consultation_frais">Consultation fiche de frais</a></li>
+            <div class="user-info">
+                <li style="float:right">
+                    <p>LOGO</p>
+                </li>
+                <li style="float:right">
+                    <p>Nom d'utilisateur</p>
+                </li>
+                <li style="float:right">
+                    <a href="#fonction">Visiteur médical</a>
+                </li>
+                <li style="float:right">
+                    <a href="../logoff.php">Déconnection</a>
+                </li>
+            </div>
         </ul>
 
         <div class="container">
+            <form action="#" method="post">
+                <label for="nom">Nom du visiteur:</label>
+                <input type="text" id="nom" name="nom" required><br><br>
 
-            <form action="/action_page.php">
-                <div class="row">
-                    <div class="col-25">
-                        <label for="fname">First Name</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" id="fname" name="firstname"
-                            placeholder="Your name..">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="lname">Last Name</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" id="lname" name="lastname"
-                            placeholder="Your last name..">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="country">Country</label>
-                    </div>
-                    <div class="col-75">
-                        <select id="country" name="country">
-                            <option value="australia">Australia</option>
-                            <option value="canada">Canada</option>
-                            <option value="usa">USA</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="subject">Subject</label>
-                    </div>
-                    <div class="col-75">
-                        <textarea id="subject" name="subject"
-                            placeholder="Write something.."
-                            style="height:200px"></textarea>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <input type="submit" value="Submit">
-                </div>
+                <label for="date_frais">Date des frais:</label>
+                <input type="date" id="date_frais" name="date_frais"
+                    required><br><br>
+
+                <label for="montant">Montant:</label>
+                <input type="number" step="0.01" id="montant" name="montant"
+                    required><br><br>
+
+                <label for="description">Description des frais:</label><br>
+                <textarea id="description" name="description" rows="4" cols="50"
+                    required></textarea><br><br>
+
+                <button type="submit">Enregistrer</button>
             </form>
-
         </div>
     </body>
 </html>
