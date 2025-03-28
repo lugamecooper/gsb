@@ -2,7 +2,7 @@
 <?php
     include './connect.php';
     session_start();
-    if (isset($_SESSION["IdVisiteur"])) {
+    if (!isset($_SESSION["IdVisiteur"])) {
         header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
     }
     else{
