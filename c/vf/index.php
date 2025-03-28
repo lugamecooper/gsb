@@ -22,7 +22,7 @@
                 <li><p>LOGO</p></li>
                 <li><p>Nom d'utilisateur</p></li>
                 <li><a href="#fonction">Comptable</a></li>
-                <li class="bouton_logoff"><a href="../logoff.php">Déconnection</a></li>
+                <li class="bouton_logoff"><a href="./../logoff.php">Déconnection</a></li>
             </ul>
         </nav>
 
