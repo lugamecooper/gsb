@@ -27,51 +27,22 @@
         </nav>
 
         <div class="container">
-            <form action="/action_page.php">
-                <div class="row">
-                    <div class="col-25">
-                        <label for="fname">First Name</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" id="fname" name="firstname"
-                            placeholder="Your name..">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="lname">Last Name</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" id="lname" name="lastname"
-                            placeholder="Your last name..">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="country">Country</label>
-                    </div>
-                    <div class="col-75">
-                        <select id="country" name="country">
-                            <option value="australia">Australia</option>
-                            <option value="canada">Canada</option>
-                            <option value="usa">USA</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="subject">Subject</label>
-                    </div>
-                    <div class="col-75">
-                        <textarea id="subject" name="subject"
-                            placeholder="Write something.."
-                            style="height:200px"></textarea>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <input type="submit" value="Submit">
-                </div>
+        <h2>Valider une fiche de frais</h2>
+            <form>
+                <label>Sélection du visiteur</label>
+                <select>
+                    <option>Visiteur 1</option>
+                    <option>Visiteur 2</option>
+                </select>
+                
+                <label>Liste des frais soumis</label>
+                <textarea disabled>Affichage des frais en attente...</textarea>
+                
+                <label>Commentaire</label>
+                <textarea></textarea>
+                
+                <button type="submit">Accepter</button>
+                <button type="submit">Refuser</button>
             </form>
         </div>
     </body>

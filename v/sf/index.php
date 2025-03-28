@@ -27,23 +27,29 @@
         </nav>
 
         <div class="container">
-            <form action="#" method="post">
-                <label for="nom">Nom du visiteur:</label>
-                <input type="text" id="nom" name="nom" required><br><br>
-
-                <label for="date_frais">Date des frais:</label>
-                <input type="date" id="date_frais" name="date_frais"
-                    required><br><br>
-
-                <label for="montant">Montant:</label>
-                <input type="number" step="0.01" id="montant" name="montant"
-                    required><br><br>
-
-                <label for="description">Description des frais:</label><br>
-                <textarea id="description" name="description" rows="4" cols="50"
-                    required></textarea><br><br>
-
-                <button type="submit">Enregistrer</button>
+            <h2>Renseigner une fiche de frais</h2>
+            <form>
+                <label>Date de la dépense</label>
+                <input type="date" required>
+                
+                <label>Montant (€)</label>
+                <input type="number" required>
+                
+                <label>Type de dépense</label>
+                <select>
+                    <option>Hébergement</option>
+                    <option>Transport</option>
+                    <option>Restauration</option>
+                    <option>Autre</option>
+                </select>
+                
+                <label>Justificatif</label>
+                <input type="file" accept=".pdf,.jpg,.png">
+                
+                <label>Commentaire</label>
+                <textarea></textarea>
+                
+                <button type="submit">Soumettre</button>
             </form>
         </div>
     </body>
