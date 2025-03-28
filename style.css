@@ -41,7 +41,7 @@ label {
     /* Saddle Brown */
 }
 
-input[type="text"],
+input[type="login"],
 input[type="password"] {
     width: calc(100% - 20px);
     padding: 10px;
@@ -54,7 +54,7 @@ input[type="password"] {
     color: #333;
 }
 
-input[type="text"]:focus,
+input[type="login"]:focus,
 input[type="password"]:focus {
     outline: none;
     border-bottom-color: #5c4033;
