@@ -14,10 +14,10 @@
             <h1>Bienvenue chez GSB !</h1>
 
             <form id="login-form" action="login.php" method="post">
-                <label for="username">Nom d'utilisateur:</label>
+                <label for="username">Nom d'utilisateur :</label>
                 <input type="login" id="username" name="login" required>
 
-                <label for="password">Mot de passe:</label>
+                <label for="password">Mot de passe :</label>
                 <input type="password" id="password" name="password" required>
 
                 <button type="submit">Connexion</button>
