@@ -8,11 +8,34 @@
         <title> Intranet GSB </title>
     </head>
     <body>
+            <div class="login_form">
+                <form action="login.php" method="post">
+                    <img class="logo" alt="logo GSB" src="./src/logo-gsb.png">
+                    <p>Bienvenue chez GSB</p>
+                    <input type="login" name="login" placeholder="Nom d'utilisateur" autocapitalize="false" ><br>
+                    <input type="password" name="password" placeholder="Mot de passe"><br>
+                    <input type="submit" value="Connexion"><br>
+                    <?php
+                        session_start();
+                        $_SESSION["idRole"] = NULL;
+                        $_SESSION["idUser"] = NULL;
+                        error_reporting(E_ERROR | E_PARSE);
+                        try{
+                            if ($_GET["erreur"]){
+                                echo "<p>$_GET[erreur]</p>";
+                            }
+                        }catch(Error){
+                            NULL;
+                        }
+                    ?>
+                </form>
+            </div>
 
     <div class="login-container">
         <img src="logo.png" alt="Logo GSB" class="logo">
         <img class="logo" alt="logo GSB" src="./src/logo-gsb.png">
         <h1>Bienvenue chez GSB !</h1>
+        
         <form id="login-form" action="login.php" method="post">
             <label for="username">Nom d'utilisateur:</label>
             <input type="login" id="username" name="login" required>
@@ -21,7 +44,7 @@
             <input type="password" id="password" name="password" required>
 
             <button type="submit">Connexion</button>
-
+        
             <?php
                         session_start();
                         $_SESSION["idRole"] = NULL;
