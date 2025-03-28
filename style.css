@@ -1,6 +1,12 @@
 body {
-    background: #D9D1B8;
-    font-family: arial, sans-serif;
+    font-family: 'Georgia', serif;
+    background-color: #f5deb3; /* Wheat */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 
