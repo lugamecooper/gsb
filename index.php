@@ -10,7 +10,7 @@
     <body>
 
         <div class="login-container">
-            <img src="logo.png" alt="Logo GSB" class="logo">
+            <img src="logo.png" class="logo">
             <img class="logo" alt="logo GSB" src="./src/logo-gsb.png">
             <h1>Bienvenue chez GSB !</h1>
 
