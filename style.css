@@ -1,6 +1,7 @@
 body {
     font-family: 'Georgia', serif;
-    background-color: #f5deb3; /* Wheat */
+    background-color: #f5deb3;
+    /* Wheat */
     margin: 0;
     padding: 0;
     display: flex;
@@ -8,7 +9,6 @@ body {
     align-items: center;
     height: 100vh;
 }
-
 
 .login-container {
     background-color: #fff;
@@ -26,7 +26,8 @@ body {
 }
 
 h1 {
-    color: #8b4513; /* Saddle Brown */
+    color: #8b4513;
+    /* Saddle Brown */
     font-size: 2em;
     margin-bottom: 20px;
 }
@@ -36,7 +37,8 @@ label {
     text-align: left;
     margin-top: 10px;
     font-weight: bold;
-    color: #8b4513; /* Saddle Brown */
+    color: #8b4513;
+    /* Saddle Brown */
 }
 
 input[type="text"],
@@ -45,7 +47,8 @@ input[type="password"] {
     padding: 10px;
     margin-top: 5px;
     border: none;
-    border-bottom: 1px solid #8b4513; /* Saddle Brown */
+    border-bottom: 1px solid #8b4513;
+    /* Saddle Brown */
     box-sizing: border-box;
     background-color: transparent;
     color: #333;
@@ -54,11 +57,13 @@ input[type="password"] {
 input[type="text"]:focus,
 input[type="password"]:focus {
     outline: none;
-    border-bottom-color: #5c4033; /* Darker Saddle Brown */
+    border-bottom-color: #5c4033;
+    /* Darker Saddle Brown */
 }
 
 button {
-    background-color: #8b4513; /* Saddle Brown */
+    background-color: #8b4513;
+    /* Saddle Brown */
     color: white;
     padding: 10px 20px;
     margin-top: 20px;
@@ -69,9 +74,9 @@ button {
 }
 
 button:hover {
-    background-color: #5c4033; /* Darker Saddle Brown */
+    background-color: #5c4033;
+    /* Darker Saddle Brown */
 }
-
 
 
 /*---------------------------------*/
@@ -83,37 +88,41 @@ button:hover {
 /* HTML: <div class="loader"></div> */
 .loader {
     --s: 25px;
-    --g :5px;  
-    
+    --g: 5px;
+
     width: calc(3*(1.353*var(--s) + var(--g)));
     display: grid;
     justify-items: end;
     aspect-ratio: 3;
     overflow: hidden;
-    --_m: linear-gradient(90deg,#0000,#000 15px calc(100% - 15px),#0000);
+    --_m: linear-gradient(90deg, #0000, #000 15px calc(100% - 15px), #0000);
     -webkit-mask: var(--_m);
     mask: var(--_m);
 }
-.loader:before { 
+
+.loader:before {
     content: "";
     width: 200%;
     background:
-        linear-gradient(90deg,#ff1818 50%,#0000 0),
+        linear-gradient(90deg, #ff1818 50%, #0000 0),
         conic-gradient(from -90deg at var(--s) calc(0.353*var(--s)),
-        #fff 135deg,#666 0 270deg,#aaa 0); 
+            #fff 135deg, #666 0 270deg, #aaa 0);
     background-blend-mode: multiply;
     --_m:
-        linear-gradient(to bottom right,#0000 calc(0.25*var(--s)),#000 0 calc(100% - calc(0.25*var(--s)) - 1.414*var(--g)),#0000 0),
-        conic-gradient(from -90deg at right var(--g) bottom var(--g),#000 90deg,#0000 0);
+        linear-gradient(to bottom right, #0000 calc(0.25*var(--s)), #000 0 calc(100% - calc(0.25*var(--s)) - 1.414*var(--g)), #0000 0),
+        conic-gradient(from -90deg at right var(--g) bottom var(--g), #000 90deg, #0000 0);
     -webkit-mask: var(--_m);
-        mask: var(--_m);
-    background-size:   calc(100%/3) 100%, calc(100%/6) 100%;
+    mask: var(--_m);
+    background-size: calc(100%/3) 100%, calc(100%/6) 100%;
     -webkit-mask-size: calc(100%/6) 100%;
-        mask-size: calc(100%/6) 100%;
+    mask-size: calc(100%/6) 100%;
     -webkit-mask-composite: source-in;
-        mask-composite: intersect;
+    mask-composite: intersect;
     animation: l10 1s infinite linear;
 }
+
 @keyframes l10 {
-    to {transform:translate(calc(100%/3))}
+    to {
+        transform: translate(calc(100%/3))
+    }
 }
