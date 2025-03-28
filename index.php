@@ -30,5 +30,20 @@
                     ?>
                 </form>
             </div>
+
+    <div class="login-container">
+        <img src="logo.png" alt="Logo GSB" class="logo">
+        <img class="logo" alt="logo GSB" src="./src/logo-gsb.png">
+        <h1>Bienvenue chez GSB !</h1>
+        <form id="login-form" action="login.php" method="post">
+            <label for="username">Nom d'utilisateur:</label>
+            <input type="login" id="username" name="login" required>
+
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Connexion</button>
+        </form>
+    </div>
     </body>
 </html>
