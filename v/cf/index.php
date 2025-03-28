@@ -29,8 +29,8 @@
         <div class="container">
         <h2>Consulter mes fiches de frais</h2>
             <form>
-                <label>Période</label>
-                <input type="month">
+                <label>Période</label> <br>
+                <input type="month"> <br>
                 
                 <button type="submit">Afficher mes fiches</button>
             </form>

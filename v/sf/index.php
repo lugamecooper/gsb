@@ -30,10 +30,10 @@
             <h2>Renseigner une fiche de frais</h2>
             <form>
                 <label>Date de la dépense</label>
-                <input type="date" required>
+                <input type="date" required> <br>
                 
                 <label>Montant (€)</label>
-                <input type="number" required>
+                <input type="number" required> <br>
                 
                 <label>Type de dépense</label>
                 <select>
@@ -41,14 +41,14 @@
                     <option>Transport</option>
                     <option>Restauration</option>
                     <option>Autre</option>
-                </select>
+                </select> <br>
                 
                 <label>Justificatif</label>
                 <input type="file" accept=".pdf,.jpg,.png">
-                
+                <br>
                 <label>Commentaire</label>
                 <textarea></textarea>
-                
+                 <br>
                 <button type="submit">Soumettre</button>
             </form>
         </div>
