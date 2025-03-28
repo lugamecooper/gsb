@@ -1,9 +1,8 @@
-
 <?php
     include './connect.php';
     session_start();
-    if (!isset($_SESSION["IdVisiteur"])) {
-        header("Location: https://gsb.lucas-lestiennes.fr/?erreur=1");
+    if (!isset($_SESSION["idUser"])) {
+        header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
     }
     else{
         if ($_SESSION["idRole"] == 1 || $_SESSION["idRole"] == 3) {
