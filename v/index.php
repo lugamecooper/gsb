@@ -3,7 +3,7 @@
     include './connect.php';
     session_start();
     if (!isset($_SESSION["IdVisiteur"])) {
-        header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
+        header("Location: https://gsb.lucas-lestiennes.fr/?erreur=1");
     }
     else{
         if ($_SESSION["idRole"] == 1 || $_SESSION["idRole"] == 3) {
