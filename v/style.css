@@ -86,3 +86,57 @@ p {
     line-height: 1.5;
     color: #000000;
 }
+
+/* Pour le fomulaire */
+form {
+    width: 100%;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+select, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+button {
+    background: #F2A30F;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #2f87e5;
+}
+
+button:nth-of-type(2) {
+    background: #1d84f1;
+}
+
+button:nth-of-type(2):hover {
+    background: #007bff;
+}
