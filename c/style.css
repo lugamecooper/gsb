@@ -126,7 +126,7 @@ textarea {
 }
 
 button {
-    background: #007bff;
+    background: #099077;
     color: white;
     border: none;
     cursor: pointer;
@@ -134,13 +134,13 @@ button {
 }
 
 button:hover {
-    background: #0056b3;
+    background: #02735E;
 }
 
 button:nth-of-type(2) {
-    background: #dc3545;
+    background: #0c6767;
 }
 
 button:nth-of-type(2):hover {
-    background: #a71d2a;
+    background: #014040;
 }
