@@ -4,5 +4,5 @@
     $_SESSION["idUser"] = NULL;
     session_abort();
     session_destroy();
-    echo '<script>window.location.replace("https://gsb.lucas-lestiennes.fr/?erreur=vous avez été déconecter")</script>';
+    header("Location: https://gsb.lucas-lestiennes.fr/?erreur=vous avez été déconnecter");
 ?>

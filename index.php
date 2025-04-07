@@ -23,16 +23,12 @@
                 <button type="submit">Connexion</button>
 
                 <?php
-                session_start();
-                $_SESSION["idRole"] = NULL;
-                $_SESSION["idUser"] = NULL;
-                error_reporting(E_ERROR | E_PARSE);
-                try{
-                    if ($_GET["erreur"]){
+                    session_start();
+                    $_SESSION["idRole"] = NULL;
+                    $_SESSION["idUser"] = NULL;
+                    error_reporting(E_ERROR | E_PARSE);
+                    if (isset($_GET["erreur"])){
                         echo "<p>$_GET[erreur]</p>";
-                    }
-                    }catch(Error){
-                        NULL;
                     }
                 ?>
             </form>
