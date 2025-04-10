@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="style.css">
         <title>Intranet GSB</title>
     </head>
-    <div class="loader"></div> 
+    <div class="loader"></div>
     <br>
     <br>
     <br>
@@ -16,25 +16,29 @@
             include './connect.php';
             $res = $connexion -> query("SELECT * FROM Visiteur WHERE nom = '$_POST[login]' AND password = '$_POST[password]'");
             $res = $res -> fetch();
-            if ($res["idRole"] == 2){
+	    if ($res["idRole"] == 2){
                 session_start();
                 $_SESSION["idRole"]= 2;
                 $_SESSION["idUser"]= $res["IdVisiteur"];
-                header("Location: https://gsb.lucas-lestiennes.fr/c");
+                header("Location: ./c/");
+                exit();
             }
             if ($res["idRole"] == 1){
                 session_start();
                 $_SESSION["idRole"]= 1;
                 $_SESSION["idUser"]= $res["IdVisiteur"];
-                header("Location: https://gsb.lucas-lestiennes.fr/v");
+                header("Location: https://gsb.lucas-lestiennes.fr/v/");
+	        exit();
             }
             if ($res["idRole"] == 3){
                 session_start();
                 $_SESSION["idRole"]= 3;
                 $_SESSION["idUser"]= $res["IdVisiteur"];
-                header("Location: https://gsb.lucas-lestiennes.fr/c");
+                header("Location: ./c/");
+                exit();
             }
-            header("Location: https://gsb.lucas-lestiennes.fr/?erreur=mots de passe ou login incorect");
+	    sleep(3);
+	    header("Location: https://gsb.lucas-lestiennes.fr/?erreur=login ou mots de passe incorecte");
         ?>
     </body>
 </html>
