@@ -59,11 +59,11 @@ body {
     background-color: rgba(255, 255, 255, 1); /* Changement de fond au survol */
 }
 
-.bouton_logoff:hover {
+.right-aligned .bouton_logoff:hover {
     background-color: #f86464;
 }
 
-.bouton_logoff {
+.right-aligned .bouton_logoff {
     background-color: #FF0000;
     transition: background-color 0.3s ease;
 }
