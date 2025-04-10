@@ -7,11 +7,11 @@
         <link rel="stylesheet" href="style.css">
         <title>Intranet GSB</title>
     </head>
-    <div class="loader"></div> 
-    <br>
-    <br>
-    <br>
     <body>
+        <div class="loader"></div>
+        <br>
+        <br>
+        <br>
         <?php
             include './connect.php';
             $res = $connexion -> query("SELECT * FROM Visiteur WHERE nom = '$_POST[login]' AND password = '$_POST[password]'");
@@ -21,18 +21,21 @@
                 $_SESSION["idRole"]= 2;
                 $_SESSION["idUser"]= $res["IdVisiteur"];
                 header("Location: https://gsb.lucas-lestiennes.fr/c");
+                exit();
             }
             if ($res["idRole"] == 1){
                 session_start();
                 $_SESSION["idRole"]= 1;
                 $_SESSION["idUser"]= $res["IdVisiteur"];
                 header("Location: https://gsb.lucas-lestiennes.fr/v");
+                exit();
             }
             if ($res["idRole"] == 3){
                 session_start();
                 $_SESSION["idRole"]= 3;
                 $_SESSION["idUser"]= $res["IdVisiteur"];
                 header("Location: https://gsb.lucas-lestiennes.fr/c");
+                exit();
             }
             header("Location: https://gsb.lucas-lestiennes.fr/?erreur=mots de passe ou login incorect");
         ?>
