@@ -39,12 +39,12 @@
                 header("Location: https://gsb2.lucas-lestiennes.fr/comptable");
                 exit();
             }
-<<<<<<< HEAD
             header("Location: https://gsb2.lucas-lestiennes.fr/?erreur=mots de passe ou login incorect");
-=======
+                header("Location: ./c/");
+                exit();
+            }
 	    sleep(3);
 	    header("Location: https://gsb.lucas-lestiennes.fr/?erreur=login ou mots de passe incorecte");
->>>>>>> 3b36bd3 (.)
         ?>
     </body>
 </html>
