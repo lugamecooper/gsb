@@ -7,11 +7,11 @@
         <link rel="stylesheet" href="style.css">
         <title>Intranet GSB</title>
     </head>
+    <div class="loader"></div> 
+    <br>
+    <br>
+    <br>
     <body>
-        <div class="loader"></div>
-        <br>
-        <br>
-        <br>
         <?php
             include './connect.php';
             $name = htmlspecialchars($_POST['login']);
@@ -39,12 +39,8 @@
                 header("Location: https://gsb2.lucas-lestiennes.fr/comptable");
                 exit();
             }
-            header("Location: https://gsb2.lucas-lestiennes.fr/?erreur=mots de passe ou login incorect");
-                header("Location: ./c/");
-                exit();
-            }
 	    sleep(3);
-	    header("Location: https://gsb.lucas-lestiennes.fr/?erreur=login ou mots de passe incorecte");
+	    header("Location: https://gsb2.lucas-lestiennes.fr/?erreur=login ou mots de passe incorecte");
         ?>
     </body>
 </html>
