@@ -23,8 +23,11 @@
         function add()
         {
             include './connect.php';
+            var_dump($_POST);
+            /*
             $hash = password_hash(password_hash($_POST["username"], PASSWORD_ARGON2I).password_hash($_POST["password"], PASSWORD_ARGON2I), PASSWORD_ARGON2I);
             $connexion-> exec("INSERT INTO visiteur VALUES(null, \"$_POST[nom]\", \"$_POST[prenom]\", \"$_POST[addresse]\", \"$_POST[ville]\", \"$_POST[cp]\", \"$_POST[dateEmbauche]\", \"$hash\",$_POST[role])");
+            */
         }
         
         if(isset($_POST['submit']))
