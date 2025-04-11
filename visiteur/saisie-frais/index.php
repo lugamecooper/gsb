@@ -9,7 +9,7 @@
         if ($_SESSION["idRole"] == 1 || $_SESSION["idRole"] == 3) {
             NULL;
         } elseif ($_SESSION["idRole"] == 2) {
-            header("Location: https://gsb.lucas-lestiennes.fr/c");
+            header("Location: https://gsb.lucas-lestiennes.fr/comptable");
         } else {
             header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
         }
@@ -32,7 +32,7 @@
             <ul class="centered-links">
                 <li><a href="../">Acceuil</a></li>
                 <li><a href="./">Saisi de frais</a></li>
-                <li><a href="../cf">Consultation fiche de frais</a></li>
+                <li><a href="../consultation-frais">Consultation fiche de frais</a></li>
             </ul>
             <ul class="right-aligned">
                 <li><p>LOGO</p></li>

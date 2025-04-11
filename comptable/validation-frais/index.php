@@ -9,7 +9,7 @@
         if ($_SESSION["idRole"] == 2 || $_SESSION["idRole"] == 3) {
             NULL;
         } elseif ($_SESSION["idRole"] == 1) {
-            header("Location: https://gsb.lucas-lestiennes.fr/v");
+            header("Location: https://gsb.lucas-lestiennes.fr/visiteur");
         } else {
             header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
         }
@@ -30,9 +30,9 @@
 
         <nav class="navbar">
             <ul class="centered-links">
-                <li><a href="../">Acceuil</a></li>
-                <li><a href="./">Suivi des paiements</a></li>
-                <li><a href="../vf">Validation des fiches de frais</a></li>
+            <li><a href="../">Acceuil</a></li>
+            <li><a href="../suivie-paiment">Suivi des paiements</a></li>
+            <li><a href="./">Validation des fiches de frais</a></li>
             </ul>
             <ul class="right-aligned">
                 <li><p>LOGO</p></li>
@@ -43,12 +43,22 @@
         </nav>
 
         <div class="container">
-        <h2>Suivre le paiement des fiches de frais</h2>
-            <form>
-                <label>Numéro de fiche de frais</label>
-                <input type="text" required> <br>
-                
-                <button type="submit">Vérifier l'état du paiement</button>
+        <h2>Valider une fiche de frais</h2>
+            <form> <br>
+                <label>Sélection du visiteur</label>
+                <select>
+                    <option>Visiteur 1</option>
+                    <option>Visiteur 2</option>
+                </select>
+                <br>
+                <label>Liste des frais soumis</label>
+                <textarea disabled>Affichage des frais en attente...</textarea>
+                <br>
+                <label>Commentaire</label>
+                <textarea></textarea>
+                <br>
+                <button type="submit">Accepter</button>
+                <button type="submit">Refuser</button>
             </form>
         </div>
     </body>

@@ -20,21 +20,21 @@
                 session_start();
                 $_SESSION["idRole"]= 2;
                 $_SESSION["idUser"]= $res["IdVisiteur"];
-                header("Location: https://gsb.lucas-lestiennes.fr/c");
+                header("Location: https://gsb.lucas-lestiennes.fr/comptable");
                 exit();
             }
             if ($res["idRole"] == 1){
                 session_start();
                 $_SESSION["idRole"]= 1;
                 $_SESSION["idUser"]= $res["IdVisiteur"];
-                header("Location: https://gsb.lucas-lestiennes.fr/v");
+                header("Location: https://gsb.lucas-lestiennes.fr/visiteur");
                 exit();
             }
             if ($res["idRole"] == 3){
                 session_start();
                 $_SESSION["idRole"]= 3;
                 $_SESSION["idUser"]= $res["IdVisiteur"];
-                header("Location: https://gsb.lucas-lestiennes.fr/c");
+                header("Location: https://gsb.lucas-lestiennes.fr/comptable");
                 exit();
             }
             header("Location: https://gsb.lucas-lestiennes.fr/?erreur=mots de passe ou login incorect");
