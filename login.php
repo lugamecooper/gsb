@@ -14,30 +14,33 @@
         <br>
         <?php
             include './connect.php';
-            $res = $connexion -> query("SELECT * FROM Visiteur WHERE nom = '$_POST[login]' AND password = '$_POST[password]'");
+            $name = htmlspecialchars($_POST['login']);
+            $password = htmlspecialchars($_POST['password']);
+            $res = $connexion -> query("SELECT * FROM Visiteur WHERE nom = '$name' AND password = '$password'");
             $res = $res -> fetch();
+            exit();
             if ($res["idRole"] == 2){
                 session_start();
                 $_SESSION["idRole"]= 2;
                 $_SESSION["idUser"]= $res["IdVisiteur"];
-                header("Location: https://gsb.lucas-lestiennes.fr/comptable");
+                header("Location: https://gsb2.lucas-lestiennes.fr/comptable");
                 exit();
             }
             if ($res["idRole"] == 1){
                 session_start();
                 $_SESSION["idRole"]= 1;
                 $_SESSION["idUser"]= $res["IdVisiteur"];
-                header("Location: https://gsb.lucas-lestiennes.fr/visiteur");
+                header("Location: https://gsb2.lucas-lestiennes.fr/visiteur");
                 exit();
             }
             if ($res["idRole"] == 3){
                 session_start();
                 $_SESSION["idRole"]= 3;
                 $_SESSION["idUser"]= $res["IdVisiteur"];
-                header("Location: https://gsb.lucas-lestiennes.fr/comptable");
+                header("Location: https://gsb2.lucas-lestiennes.fr/comptable");
                 exit();
             }
-            header("Location: https://gsb.lucas-lestiennes.fr/?erreur=mots de passe ou login incorect");
+            header("Location: https://gsb2.lucas-lestiennes.fr/?erreur=mots de passe ou login incorect");
         ?>
     </body>
 </html>
