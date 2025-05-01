@@ -37,7 +37,7 @@
                 header("Location: https://gsb2.lucas-lestiennes.fr/comptable");
                 exit();
             }
-            echo "<script>setTimeout(3000);</script>"
+            //echo "<script>setTimeout(3000);</script>"
             header("Location: https://gsb2.lucas-lestiennes.fr/?erreur=mots de passe ou login incorect");
         ?>
     </body>
