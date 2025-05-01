@@ -38,7 +38,7 @@
             </ul>
             <ul class="right-aligned">
                 <li><p>LOGO</p></li>
-                <li><?php echo "<p>$nom $prenom</p>"; ?></li>
+                <li><?php echo "<p>$name $prenom</p>"; ?></li>
                 <li><a href="#fonction">Visiteur médical</a></li>
                 <li class="bouton_logoff"><a href="../logoff.php">Déconnection</a></li>
             </ul>
