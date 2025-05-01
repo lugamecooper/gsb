@@ -18,7 +18,7 @@
             $password = htmlspecialchars($_POST['password']);
             $res = $connexion -> query("SELECT * FROM Visiteur WHERE nom = '$name' AND password = '$password'");
             $res = $res -> fetch();
-	    if ($res["idRole"] == 2){
+	        if ($res["idRole"] == 2){
                 session_start();
                 $_SESSION["idRole"]= 2;
                 $_SESSION["idUser"]= $res["IdVisiteur"];
