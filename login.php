@@ -37,13 +37,13 @@
                 header("Location: https://gsb2.lucas-lestiennes.fr/comptable");
                 exit();
             }
-            header("Location: https://gsb2.lucas-lestiennes.fr/?erreur=mots de passe ou login incorect");
             echo "
             <script>
                 function sleep(ms) {
                     return new Promise(resolve => setTimeout(resolve, ms));
                 }
                 await sleep(3000);
+                window.location.replace('https://gsb2.lucas-lestiennes.fr/?erreur=mots de passe ou login incorrecte');
             </script>
             ";
         ?>
