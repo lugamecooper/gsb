@@ -8,8 +8,8 @@
         <title>Intranet GSB</title>
     </head>
     <body>
-        <div class="loader-overlay">
-            <div class="loader"></div>
+        <div class="animation-overlay">
+            <div class="pulse-circle"></div>
         </div>
         <br>
         <br>
