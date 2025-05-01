@@ -18,7 +18,7 @@
             $password = htmlspecialchars($_POST['password']);
             $res = $connexion -> query("SELECT * FROM Visiteur WHERE nom = '$name' AND password = '$password'");
             $res = $res -> fetch();
-	    if ($res["idRole"] == 2){
+	        if ($res["idRole"] == 2){
                 session_start();
                 $_SESSION["idRole"]= 2;
                 $_SESSION["idUser"]= $res["IdVisiteur"];
@@ -39,12 +39,8 @@
                 header("Location: https://gsb2.lucas-lestiennes.fr/comptable");
                 exit();
             }
-            header("Location: https://gsb2.lucas-lestiennes.fr/?erreur=mots de passe ou login incorect");
-                header("Location: ./c/");
-                exit();
-            }
-	    sleep(3);
-	    header("Location: https://gsb.lucas-lestiennes.fr/?erreur=login ou mots de passe incorecte");
+	        sleep(3);
+	        header("Location: https://gsb.lucas-lestiennes.fr/?erreur=login ou mots de passe incorecte");
         ?>
     </body>
 </html>
