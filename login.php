@@ -42,7 +42,10 @@
                 function sleep(ms) {
                     return new Promise(resolve => setTimeout(resolve, ms));
                 }
-                await sleep(3000);
+                async function demo() {
+                    await sleep(3000);
+                }
+                demo();
                 window.location.replace('https://gsb2.lucas-lestiennes.fr/?erreur=mots de passe ou login incorrecte');
             </script>
             ";
