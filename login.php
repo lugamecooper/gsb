@@ -31,9 +31,9 @@
             if ($res["idRole"] == 1){
                 $_SESSION["idRole"]= 1;
                 $_SESSION["idUser"]= $res["IdVisiteur"];
-                header("Location: https://gsb2.lucas-lestiennes.fr/visiteur");
+                //header("Location: https://gsb2.lucas-lestiennes.fr/visiteur");
                 close($res["IdVisiteur"]);
-                exit();
+                //exit();
             }
             if ($res["idRole"] == 3){
                 $_SESSION["idRole"]= 3;
