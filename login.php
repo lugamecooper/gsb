@@ -39,19 +39,28 @@
                 header("Location: https://gsb2.lucas-lestiennes.fr/comptable");
                 exit();
             }
+            /*
             echo "
             <script>
                 function sleep(ms) {
                     return new Promise(resolve => setTimeout(resolve, ms));
                 }
                 async function relocate() {
-                    await sleep(3000);
+                    await sleep(2000);
                     window.location.replace('https://gsb2.lucas-lestiennes.fr/?erreur=mots de passe ou login incorrecte');
                 }
                 relocate();
             </script>
             ";
-            sleep(1);
+            */
+            //sleep(1);
+            $res = $connexion -> query("SELECT * FROM FicheFrais;") -> fetchAll();
+            if ($res != FALSE){
+                echo "test";
+            }
+            else{
+                echo "bonjour";
+            }
         ?>
     </body>
 </html>
