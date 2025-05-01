@@ -1,14 +1,11 @@
 <?php
-    include '../connect.php';
     session_start();
     if (!isset($_SESSION["idUser"])) {
         header("Location: https://gsb2.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
     }
     else{
         if ($_SESSION["idRole"] == 1 || $_SESSION["idRole"] == 3) {
-            $res = $connexion -> query("SELECT * FROM Visiteur WHERE IdVisiteur = $_SESSION[idUser];") -> fetch();
-            $name = $res["nom"];
-            $prenom = $res["prenom"];
+            NULL;
         } elseif ($_SESSION["idRole"] == 2) {
             header("Location: https://gsb2.lucas-lestiennes.fr/comptable");
         } else {
@@ -29,7 +26,6 @@
         <div class="header">
             <h1>Intranet visiteurs médicaux</h1>
         </div>
-
         <nav class="navbar">
             <ul class="centered-links">
                 <li><a href="./">Acceuil</a></li>
@@ -38,7 +34,7 @@
             </ul>
             <ul class="right-aligned">
                 <li><p>LOGO</p></li>
-                <li><?php echo "<p>$name $prenom</p>"; ?></li>
+                <li><?php echo "<p>$nom $prenom</p>"; ?></li>
                 <li class="bouton_logoff"><a href="../logoff.php">Déconnection</a></li>
             </ul>
         </nav>
