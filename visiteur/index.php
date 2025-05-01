@@ -6,7 +6,9 @@
     }
     else{
         if ($_SESSION["idRole"] == 1 || $_SESSION["idRole"] == 3) {
-            NULL;
+            $res = $connexion -> query("SELECT * FROM Visiteur WHERE IdVisiteur = $_SESSION[idUser]");
+            $name = $res["nom"]
+            $prenom = $res["prenom"]
         } elseif ($_SESSION["idRole"] == 2) {
             header("Location: https://gsb2.lucas-lestiennes.fr/comptable");
         } else {
@@ -35,7 +37,7 @@
             </ul>
             <ul class="right-aligned">
                 <li><p>LOGO</p></li>
-                <li><p>Nom d'utilisateur</p></li>
+                <li><?php echo "<p>$nom $prenom</p>"; ?></li>
                 <li><a href="#fonction">Visiteur médical</a></li>
                 <li class="bouton_logoff"><a href="../logoff.php">Déconnection</a></li>
             </ul>
