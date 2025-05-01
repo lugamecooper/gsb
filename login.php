@@ -8,7 +8,9 @@
         <title>Intranet GSB</title>
     </head>
     <body>
-        <div class="loader"></div>
+        <div class="loader-overlay">
+            <div class="loader"></div>
+        </div>
         <br>
         <br>
         <br>

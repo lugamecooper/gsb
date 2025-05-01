@@ -1,8 +1,6 @@
-/* bonjour */
 body {
     font-family: 'Georgia', serif;
     background-color: #25ccbe;
-    /* Wheat */
     margin: 0;
     padding: 0;
     display: flex;
@@ -28,7 +26,6 @@ body {
 
 h1 {
     color: #8b4513;
-    /* Saddle Brown */
     font-size: 2em;
     margin-bottom: 20px;
 }
@@ -39,7 +36,6 @@ label {
     margin-top: 10px;
     font-weight: bold;
     color: #8b4513;
-    /* Saddle Brown */
 }
 
 input[type="login"],
@@ -49,7 +45,6 @@ input[type="password"] {
     margin-top: 5px;
     border: none;
     border-bottom: 1px solid #8b4513;
-    /* Saddle Brown */
     box-sizing: border-box;
     background-color: transparent;
     color: #333;
@@ -59,12 +54,10 @@ input[type="login"]:focus,
 input[type="password"]:focus {
     outline: none;
     border-bottom-color: #5c4033;
-    /* Darker Saddle Brown */
 }
 
 button {
     background-color: #8b4513;
-    /* Saddle Brown */
     color: white;
     padding: 10px 20px;
     margin-top: 20px;
@@ -76,7 +69,6 @@ button {
 
 button:hover {
     background-color: #5c4033;
-    /* Darker Saddle Brown */
 }
 
 
@@ -127,3 +119,32 @@ button:hover {
         transform: translate(calc(100%/3))
     }
 }
+
+/* === LOADER CSS === */
+.loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.8); /* Customisable */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  /* Loader animation style */
+  .loader {
+    width: 64px;    /* Customisable */
+    height: 64px;
+    border: 8px solid #ccc;          /* Outer ring color */
+    border-top: 8px solid #3498db;   /* Animated ring color */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Animation keyframes */
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
