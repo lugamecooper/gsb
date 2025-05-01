@@ -23,25 +23,7 @@
         <link rel="stylesheet" href="..\style.css">
     </head>
     <body>
-
-        <div class="header">
-            <h1>Intranet Comptable</h1>
-        </div>
-
-        <nav class="navbar">
-            <ul class="centered-links">
-                <li><a href="../">Acceuil</a></li>
-                <li><a href="./">Suivi des paiements</a></li>
-                <li><a href="../validation-frais">Validation des fiches de frais</a></li>
-            </ul>
-            <ul class="right-aligned">
-                <li><p>LOGO</p></li>
-                <li><p>Nom d'utilisateur</p></li>
-                <li><a href="#fonction">Comptable</a></li>
-                <li class="bouton_logoff"><a href="../../logoff.php">Déconnection</a></li>
-            </ul>
-        </nav>
-
+        <?php include "../include/header.inc.php"; header_element("..", "..", "..", "../..");?>
         <div class="container">
         <h2>Suivre le paiement des fiches de frais</h2>
             <form>
