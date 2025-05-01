@@ -79,7 +79,7 @@ button:hover {
 /*---------------------------------*/
 
 /* HTML: <div class="loader"></div> */
-.loader {
+.test {
     --s: 25px;
     --g: 5px;
 
@@ -93,7 +93,7 @@ button:hover {
     mask: var(--_m);
 }
 
-.loader:before {
+.test:before {
     content: "";
     width: 200%;
     background:
