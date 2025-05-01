@@ -1,6 +1,10 @@
 <?php
     session_start();
     function header_element($acceuil = ".", $saisie_frais = ".", $consultation_frais = ".", $logoff = "..", ){
+        $comptable = "";
+        if ($_SESSION["idRole"] == 3){
+            $comptable = "<li><a href=\"https://gsb2.lucas-lestiennes.fr/comptable/\">Comptable</a></li>";
+        }
         echo "
             <div class=\"header\">
                 <h1>Intranet visiteurs médicaux</h1>
@@ -15,6 +19,7 @@
                 <ul class=\"right-aligned\">
                     <li><p>LOGO</p></li>
                     <li><p>$_SESSION[nom] $_SESSION[prenom]</p></li>
+                    $comptable
                     <li class=\"bouton_logoff\"><a href=\"$logoff/logoff.php\">Déconnection</a></li>
                 </ul>
             </nav>
