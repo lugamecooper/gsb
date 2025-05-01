@@ -7,6 +7,7 @@
     else{
         if ($_SESSION["idRole"] == 1 || $_SESSION["idRole"] == 3) {
             $res = $connexion -> query("SELECT * FROM Visiteur WHERE IdVisiteur = $_SESSION[idUser];") -> fetch();
+            var_dump($res);
             $name = $res["nom"];
             $prenom = $res["prenom"];
         } elseif ($_SESSION["idRole"] == 2) {
