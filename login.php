@@ -55,7 +55,7 @@
             */
             //sleep(1);
             $month = date('n');
-            $res = $connexion -> query("SELECT * FROM FicheFrais WHERE IdEtat = 1 AND Mois = $month;") -> fetchAll();
+            $res = $connexion -> query("SELECT * FROM FicheFrais WHERE IdEtat = 1 AND Mois != $month;") -> fetchAll();
             if ($res != FALSE){
                 echo "test";
             }
