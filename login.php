@@ -49,6 +49,7 @@
                 relocate();
             </script>
             ";
+            sleep(1);
         ?>
     </body>
 </html>
