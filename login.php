@@ -18,9 +18,9 @@
             session_start();
             include './connect.php';
             include './closeOpenFiche.php';
-            $name = htmlspecialchars($_POST['login']);
+            $login = htmlspecialchars($_POST['login']);
             $password = htmlspecialchars($_POST['password']);
-            $res = $connexion -> query("SELECT * FROM Visiteur WHERE nom = '$name' AND password = '$password'");
+            $res = $connexion -> query("SELECT * FROM Visiteur WHERE login = '$login' AND password = '$password'");
             $res = $res -> fetch();
             if ($res["idRole"] == 2){
                 $_SESSION["idRole"]= 2;
