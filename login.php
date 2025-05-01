@@ -57,7 +57,9 @@
             $month = date('n');
             $res = $connexion -> query("SELECT * FROM FicheFrais WHERE IdEtat = 1 AND Mois != $month;") -> fetchAll();
             if ($res != FALSE){
-                echo "test";
+                foreach ($res as $x) {
+                    $connexion -> exec("UPDATE FicheFrais SET IdEtat = 2 WHERE IdVisiteur = $x[IdVisiteur] AND $x[Mois] != $month");
+                }
             }
             else{
                 echo "bonjour";
