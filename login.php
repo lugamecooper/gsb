@@ -23,9 +23,8 @@
             $res = $connexion -> query("SELECT * FROM Visiteur WHERE login = '$login' AND password = '$password'");
             $res = $res -> fetch();
             if ($res){
-                $res2 = $connexion -> query("SELECT * FROM Visiteur WHERE IdVisiteur = $res["IdVisiteur"];") -> fetch();
-                $name = $res2["nom"];
-                $prenom = $res2["prenom"];
+                $_SESSION["nom"] = $res["nom"];
+                $_SESSION["prenom"] = $res["prenom"];
                 if ($res["idRole"] == 2){
                     $_SESSION["idRole"]= 2;
                     $_SESSION["idUser"]= $res["IdVisiteur"];
