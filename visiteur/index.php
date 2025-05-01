@@ -23,7 +23,7 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <?php include "./include/header.inc.php"; header();?>
+        <?php include "./include/header.inc.php"; header_element();?>
         <div class="container">
             <h3>Saisie des frais</h3>
             <p>

@@ -1,6 +1,6 @@
 <?php
     session_start();
-    function header($acceuil = "./", $saisie_frais = "./", $consultation_frais = "./", $logoff = "../", ){
+    function header_element($acceuil = "./", $saisie_frais = "./", $consultation_frais = "./", $logoff = "../", ){
         echo "
             <div class=\"header\">
                 <h1>Intranet visiteurs médicaux</h1>
