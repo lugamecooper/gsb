@@ -1,4 +1,5 @@
 <?php 
+    include './connect.php';
     function close($idUser = NULL){
         $month = date('n');
             if ($idUser){
