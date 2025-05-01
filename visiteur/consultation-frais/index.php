@@ -23,7 +23,7 @@
         <link rel="stylesheet" href="..\style.css">
     </head>
     <body>
-        <?php include "../include/header.inc.php"; ?>
+        <?php include "../include/header.inc.php"; header("../", "../", "../", "../../");?>
         <div class="container">
         <h2>Consulter mes fiches de frais</h2>
             <form>
