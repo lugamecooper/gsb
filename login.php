@@ -17,6 +17,7 @@
         <?php
             session_start();
             include './connect.php';
+            include './closeOpenFiche.php';
             $name = htmlspecialchars($_POST['login']);
             $password = htmlspecialchars($_POST['password']);
             $res = $connexion -> query("SELECT * FROM Visiteur WHERE nom = '$name' AND password = '$password'");
@@ -31,15 +32,16 @@
                 $_SESSION["idRole"]= 1;
                 $_SESSION["idUser"]= $res["IdVisiteur"];
                 header("Location: https://gsb2.lucas-lestiennes.fr/visiteur");
+                close($res["IdVisiteur"]);
                 exit();
             }
             if ($res["idRole"] == 3){
                 $_SESSION["idRole"]= 3;
                 $_SESSION["idUser"]= $res["IdVisiteur"];
                 header("Location: https://gsb2.lucas-lestiennes.fr/comptable");
+                close($res["IdVisiteur"]);
                 exit();
             }
-            /*
             echo "
             <script>
                 function sleep(ms) {
@@ -52,18 +54,7 @@
                 relocate();
             </script>
             ";
-            */
-            //sleep(1);
-            $month = date('n');
-            $res = $connexion -> query("SELECT * FROM FicheFrais WHERE IdEtat = 1 AND Mois != $month;") -> fetchAll();
-            if ($res != FALSE){
-                foreach ($res as $x) {
-                    $connexion -> exec("UPDATE FicheFrais SET IdEtat = 2 WHERE IdVisiteur = $x[IdVisiteur] AND $x[Mois] != $month");
-                }
-            }
-            else{
-                echo "bonjour";
-            }
+            sleep(1);
         ?>
     </body>
 </html>
