@@ -1,6 +1,5 @@
-<?php 
-    include './connect.php';
-    function close($idUser = NULL){
+<?php
+    function close($connexion,$idUser = NULL){
         $month = date('n');
             if ($idUser){
                 $res = $connexion -> query("SELECT * FROM FicheFrais WHERE IdEtat = 1 AND Mois != $month AND IdVisiteur = $idUser;") -> fetchAll();

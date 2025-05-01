@@ -32,14 +32,14 @@
                 $_SESSION["idRole"]= 1;
                 $_SESSION["idUser"]= $res["IdVisiteur"];
                 header("Location: https://gsb2.lucas-lestiennes.fr/visiteur");
-                close($res["IdVisiteur"]);
+                close($connexion,$res["IdVisiteur"]);
                 exit();
             }
             if ($res["idRole"] == 3){
                 $_SESSION["idRole"]= 3;
                 $_SESSION["idUser"]= $res["IdVisiteur"];
                 header("Location: https://gsb2.lucas-lestiennes.fr/comptable");
-                close($res["IdVisiteur"]);
+                close($connexion,$res["IdVisiteur"]);
                 exit();
             }
             echo "
