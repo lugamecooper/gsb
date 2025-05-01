@@ -22,25 +22,30 @@
             $password = htmlspecialchars($_POST['password']);
             $res = $connexion -> query("SELECT * FROM Visiteur WHERE login = '$login' AND password = '$password'");
             $res = $res -> fetch();
-            if ($res["idRole"] == 2){
-                $_SESSION["idRole"]= 2;
-                $_SESSION["idUser"]= $res["IdVisiteur"];
-                header("Location: https://gsb2.lucas-lestiennes.fr/comptable");
-                exit();
-            }
-            if ($res["idRole"] == 1){
-                $_SESSION["idRole"]= 1;
-                $_SESSION["idUser"]= $res["IdVisiteur"];
-                header("Location: https://gsb2.lucas-lestiennes.fr/visiteur");
-                close($connexion,$res["IdVisiteur"]);
-                exit();
-            }
-            if ($res["idRole"] == 3){
-                $_SESSION["idRole"]= 3;
-                $_SESSION["idUser"]= $res["IdVisiteur"];
-                header("Location: https://gsb2.lucas-lestiennes.fr/comptable");
-                close($connexion,$res["IdVisiteur"]);
-                exit();
+            if ($res){
+                $res2 = $connexion -> query("SELECT * FROM Visiteur WHERE IdVisiteur = $_SESSION[idUser];") -> fetch();
+                $name = $res2["nom"];
+                $prenom = $res2["prenom"];
+                if ($res["idRole"] == 2){
+                    $_SESSION["idRole"]= 2;
+                    $_SESSION["idUser"]= $res["IdVisiteur"];
+                    header("Location: https://gsb2.lucas-lestiennes.fr/comptable");
+                    exit();
+                }
+                if ($res["idRole"] == 1){
+                    $_SESSION["idRole"]= 1;
+                    $_SESSION["idUser"]= $res["IdVisiteur"];
+                    header("Location: https://gsb2.lucas-lestiennes.fr/visiteur");
+                    close($connexion,$res["IdVisiteur"]);
+                    exit();
+                }
+                if ($res["idRole"] == 3){
+                    $_SESSION["idRole"]= 3;
+                    $_SESSION["idUser"]= $res["IdVisiteur"];
+                    header("Location: https://gsb2.lucas-lestiennes.fr/comptable");
+                    close($connexion,$res["IdVisiteur"]);
+                    exit();
+                }
             }
             echo "
             <script>
