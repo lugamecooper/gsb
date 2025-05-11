@@ -87,7 +87,7 @@ button:hover {
     height: 100px;
     border-radius: 50%;
     animation: pulse 1.5s ease-in-out infinite;
-    opacity: 0.7;
+    opacity: 0.8;
   }
   
   @keyframes pulse {
