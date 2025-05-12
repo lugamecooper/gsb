@@ -55,12 +55,15 @@ input[type="password"] {
 input[type="login"]:focus,
 input[type="password"]:focus {
     outline: none;
-    border-bottom-color: gold;
+    border-bottom-color: #947e00;
 }
 
 button {
-    background-color: gold;
-    color: white;
+    background-color: rgba(255, 217, 0, 0);
+    color: gold;
+    border: 1px;
+    border-color: gold;
+    border-style: solid;
     padding: 10px 20px;
     margin-top: 20px;
     border: none;
@@ -70,19 +73,8 @@ button {
 }
 
 button:hover {
-    background-color: gold;
+    background-color: #947e00;
 }
-
-.animation-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   
 /*--------------------------------------------------------------------------*/
 /*---------------------------ne pas toucher---------------------------------*/
