@@ -11,7 +11,7 @@ body{
 }
 
 .login-container {
-    color: #1702db;
+    color: gold;
     background-color: #ffffff00;
     padding: 40px;
     border-radius: 10px;
@@ -27,7 +27,7 @@ body{
 }
 
 h1 {
-    color: #1702db;
+    color: gold;
     font-size: 2em;
     margin-bottom: 20px;
 }
@@ -37,7 +37,7 @@ label {
     text-align: left;
     margin-top: 10px;
     font-weight: bold;
-    color: #1702db;
+    color: gold;
 }
 
 input[type="login"],
@@ -46,7 +46,7 @@ input[type="password"] {
     padding: 10px;
     margin-top: 5px;
     border: none;
-    border-bottom: 1px solid #1702db;
+    border-bottom: 1px solid gold;
     box-sizing: border-box;
     background-color: transparent;
     color: #333;
@@ -55,11 +55,11 @@ input[type="password"] {
 input[type="login"]:focus,
 input[type="password"]:focus {
     outline: none;
-    border-bottom-color: #1702db;
+    border-bottom-color: gold;
 }
 
 button {
-    background-color: #1702db;
+    background-color: gold;
     color: white;
     padding: 10px 20px;
     margin-top: 20px;
@@ -70,7 +70,7 @@ button {
 }
 
 button:hover {
-    background-color: #1702db;
+    background-color: gold;
 }
 
 .animation-overlay {
@@ -99,11 +99,11 @@ button:hover {
     0%, 100% {
       transform: scale(1);
       opacity: 0.8;
-      background-color: #1702db;
+      background-color: #ffd700;
     }
     50% {
       transform: scale(3.5);
       opacity: 0.3;
-      background-color: #0e0277;
+      background-color: #947e00;
     }
   }
