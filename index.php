@@ -10,8 +10,7 @@
     <body>
 
         <div class="login-container">
-            <img class="logo" alt="logo GSB" src="./src/logo-gsb.png">
-            <h1>Bienvenue chez GSB !</h1>
+            <h1>Bienvenue chez GSB</h1>
 
             <form id="login-form" action="login.php" method="post">
                 <label for="username">Nom d'utilisateur :</label>
