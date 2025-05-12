@@ -10,8 +10,6 @@
     <body>
 
         <div class="login-container">
-            <h1>Bienvenue chez GSB</h1>
-
             <form id="login-form" action="login.php" method="post">
                 <label for="username">Nom d'utilisateur :</label>
                 <input type="login" id="username" name="login" required>
