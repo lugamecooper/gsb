@@ -4,6 +4,7 @@ body{
     background-size: 150vh;
     background-position-x: center;
     background-position-y: 30px;
+    margin-top: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
