@@ -91,11 +91,11 @@ button:hover {
     0%, 100% {
       transform: scale(1);
       opacity: 0.8;
-      background-color: #ffd700;
+      background-color: #947e00;
     }
     50% {
       transform: scale(3.5);
       opacity: 0.3;
-      background-color: #947e00;
+      background-color: #524500;
     }
   }
