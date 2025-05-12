@@ -65,10 +65,12 @@ body {
 
 .bouton_logoff:hover {
     background-color: #f86464;
+    border: #f86464;
 }
 
 .bouton_logoff {
     background-color: #FF0000;
+    border: #FF0000;
     transition: background-color 0.3s ease;
 }
 
