@@ -4,10 +4,30 @@
     margin: 0px;
 }
 
+body{
+    background-image: url("../src/logo-gsb.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .header{
     background-color: #014040;
     color: #ffffffb3;
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
+    position: sticky;
+}
+
+.navbar{
+    background-color: #F2A30F; /* Couleur de fond plus claire avec texture */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    border-bottom: 2px solid #731D55; /* Bordure basse pour séparation */
+
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
 }
