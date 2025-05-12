@@ -83,6 +83,7 @@ button:hover {
     border-radius: 50%;
     animation: pulse 1.5s ease-in-out infinite;
     opacity: 0.8;
+    margin-top: -20vh;
   }
   
   @keyframes pulse {
