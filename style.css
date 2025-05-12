@@ -1,12 +1,9 @@
-body {
-    font-family: 'Georgia', serif;
-    background-color: #25ccbe;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+body{
+    background-image: url("../src/logo-gsb.png");
+    background-repeat: no-repeat;
+    background-size: 150vh;
+    background-position-x: center;
+    background-position-y: 30px;
 }
 
 .login-container {
