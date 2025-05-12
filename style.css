@@ -4,6 +4,9 @@ body{
     background-size: 150vh;
     background-position-x: center;
     background-position-y: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .login-container {
