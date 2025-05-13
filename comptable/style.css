@@ -40,5 +40,5 @@ body{
 
 .right-aligned{
     align-self:flex-end - 2vh;
-    justify-content: left;
+    justify-content: right;
 }
