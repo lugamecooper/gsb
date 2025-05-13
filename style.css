@@ -1,7 +1,7 @@
 body {
     background-image: url("../src/logo-gsb.png");
     background-repeat: no-repeat;
-    background-size: 50%; /* Réduit la taille de l'image d'arrière-plan */
+    background-size: 25%; /* Réduit la taille de l'image d'arrière-plan */
     background-position: center top 30px;
     margin-top: 20vh;
     display: flex;
@@ -35,8 +35,9 @@ body {
     left: -20px;
     right: -20px;
     background-color: rgba(255, 217, 0, 0.1);
-    border-radius: 40px; /* Forme plus arrondie avec des ondulations */
+    border-radius: 30px; /* Même arrondi que le formulaire */
     z-index: -1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Ombre légère pour les ondulations */
 }
 
 label {
