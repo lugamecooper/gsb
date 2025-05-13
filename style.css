@@ -18,9 +18,10 @@ body {
     background-color: rgba(255, 255, 255, 0.05);
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 400px; /* Pour éviter qu'il devienne trop large */
+    backdrop-filter: blur(8px); /* Ajoute un effet de flou sur l'arrière-plan */
 }
 
 label {
