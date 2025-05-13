@@ -1,9 +1,8 @@
-body{
+body {
     background-image: url("../src/logo-gsb.png");
     background-repeat: no-repeat;
-    background-size: 150vh;
-    background-position-x: center;
-    background-position-y: 30px;
+    background-size: contain;
+    background-position: center top 30px;
     margin-top: 20vh;
     display: flex;
     align-items: center;
@@ -12,7 +11,7 @@ body{
 
 .login-container {
     color: #947e00;
-    background-color: #00000010;
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -20,22 +19,9 @@ body{
     text-align: center;
 }
 
-.logo {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-h1 {
-    color: #947e00;
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
 label {
     display: block;
-    text-align: left;
-    margin-top: 10px;
+    margin-top: 15px;
     font-weight: bold;
     color: #947e00;
 }
@@ -55,23 +41,22 @@ input[type="password"] {
 input[type="login"]:focus,
 input[type="password"]:focus {
     outline: none;
-    border-bottom-color: #947e00;
+    border-bottom-color: #ffda00;
 }
 
 button {
     background-color: rgba(255, 217, 0, 0);
     color: #947e00;
-    border: 1px;
-    border-color: #947e00;
-    border-style: solid;
+    border: 1px solid #947e00;
     padding: 10px 20px;
-    margin-top: 20px;
+    margin-top: 25px;
     border-radius: 4px;
     font-size: 20px;
+    cursor: pointer;
 }
 
 button:hover {
-    border-color: #947e00;
+    background-color: rgba(255, 217, 0, 0.1);
 }
 
 /*--------------------------------------------------------------------------*/
