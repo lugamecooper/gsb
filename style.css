@@ -1,128 +1,288 @@
-/* bonjour */
-body {
-    font-family: 'Georgia', serif;
-    background-color: #25cccc;
-    margin: 0;
-    padding: 0;
+body{
+
+
+
+    background-image: url("../src/logo-gsb.png");
+
+
+    background-repeat: no-repeat;
+
+
+    background-size: 150vh;
+
+
+    background-position-x: center;
+
+
+    background-position-y: 30px;
+
+
+    margin-top: 20vh;
+
+
     display: flex;
-    justify-content: center;
+
+
     align-items: center;
-    height: 100vh;
+
+
+    justify-content: center;
+
 }
+
+
+
 
 .login-container {
-    background-color: #fff;
+
+
+    color: #947e00;
+
+
+    background-color: #00000010;
+
+
     padding: 40px;
+
+
     border-radius: 10px;
+
+
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    width: 300px;
+
+
+    width: 350px;
+
+
     text-align: center;
+
 }
+
+
+
 
 .logo {
+
+
     max-width: 100%;
+
+
     height: auto;
+
+
     margin-bottom: 20px;
+
+
+
 }
+
+
+
 
 h1 {
-    color: #8b4513;
-    /* Saddle Brown */
+
+
+    color: #947e00;
+
+
     font-size: 2em;
+
+
     margin-bottom: 20px;
+
 }
+
+
 
 label {
+
+
     display: block;
+
+
     text-align: left;
+
+
     margin-top: 10px;
+
+
     font-weight: bold;
-    color: #8b4513;
-    /* Saddle Brown */
+
+
+    color: #947e00;
+
 }
+
+
 
 input[type="login"],
+
 input[type="password"] {
+
+
     width: calc(100% - 20px);
+
+
     padding: 10px;
+
+
     margin-top: 5px;
+
+
     border: none;
-    border-bottom: 1px solid #8b4513;
-    /* Saddle Brown */
+
+
+    border-bottom: 1px solid #947e00;
+
+
     box-sizing: border-box;
+
+
     background-color: transparent;
+
+
     color: #333;
+
+
 }
+
+
+
+
 
 input[type="login"]:focus,
+
+
 input[type="password"]:focus {
+
+
     outline: none;
-    border-bottom-color: #5c4033;
-    /* Darker Saddle Brown */
+
+
+    border-bottom-color: #947e00;
+
 }
+
+
 
 button {
-    background-color: #8b4513;
-    /* Saddle Brown */
-    color: white;
+
+
+    background-color: rgba(255, 217, 0, 0);
+
+
+    color: #947e00;
+
+
+    border: 1px;
+
+
+    border-color: #947e00;
+
+
+    border-style: solid;
+
+
     padding: 10px 20px;
+
+
     margin-top: 20px;
-    border: none;
+
+
     border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
+
+
+    font-size: 20px;
+
 }
+
+
 
 button:hover {
-    background-color: #5c4033;
-    /* Darker Saddle Brown */
+
+
+    border-color: #947e00;
+
 }
 
 
-/*---------------------------------*/
-/*---------------------------------*/
-/*----------ne pas toucher---------*/
-/*---------------------------------*/
-/*---------------------------------*/
+  
 
-/* HTML: <div class="loader"></div> */
-.loader {
-    --s: 25px;
-    --g: 5px;
+/*--------------------------------------------------------------------------*/
 
-    width: calc(3*(1.353*var(--s) + var(--g)));
-    display: grid;
-    justify-items: end;
-    aspect-ratio: 3;
-    overflow: hidden;
-    --_m: linear-gradient(90deg, #0000, #000 15px calc(100% - 15px), #0000);
-    -webkit-mask: var(--_m);
-    mask: var(--_m);
-}
+/*---------------------------ne pas toucher---------------------------------*/
 
-.loader:before {
-    content: "";
-    width: 200%;
-    background:
-        linear-gradient(90deg, #ff1818 50%, #0000 0),
-        conic-gradient(from -90deg at var(--s) calc(0.353*var(--s)),
-            #fff 135deg, #666 0 270deg, #aaa 0);
-    background-blend-mode: multiply;
-    --_m:
-        linear-gradient(to bottom right, #0000 calc(0.25*var(--s)), #000 0 calc(100% - calc(0.25*var(--s)) - 1.414*var(--g)), #0000 0),
-        conic-gradient(from -90deg at right var(--g) bottom var(--g), #000 90deg, #0000 0);
-    -webkit-mask: var(--_m);
-    mask: var(--_m);
-    background-size: calc(100%/3) 100%, calc(100%/6) 100%;
-    -webkit-mask-size: calc(100%/6) 100%;
-    mask-size: calc(100%/6) 100%;
-    -webkit-mask-composite: source-in;
-    mask-composite: intersect;
-    animation: l10 1s infinite linear;
-}
+/*--------------------------------------------------------------------------*/
 
-@keyframes l10 {
-    to {
-        transform: translate(calc(100%/3))
+
+  .pulse-circle {
+
+
+    width: 100px;
+
+
+    height: 100px;
+
+
+    border-radius: 50%;
+
+
+    animation: pulse 1.5s ease-in-out infinite;
+
+
+opacity: 0.8;
+
+
+
+    justify-self: center;
+
+
+    align-self: center;
+
+
+    margin-top: 20vh;
+
+
+
+
+
+  }
+
+
+  
+
+
+  @keyframes pulse {
+
+
+    0%, 100% {
+
+
+      transform: scale(1);
+
+
+      opacity: 0.8;
+
+
+      background-color: #947e00;
+
+
     }
-}
+
+
+    50% {
+
+
+      transform: scale(3.5);
+
+
+      opacity: 0.3;
+
+
+      background-color: #524500;
+
+
+    }
+
+
+  }
