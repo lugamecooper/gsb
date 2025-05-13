@@ -32,3 +32,11 @@ body{
     position: sticky;
     top: 0px;
 }
+
+.centered-links{
+    float: top;
+}
+
+.right-aligned{
+    float: bottom;
+}
