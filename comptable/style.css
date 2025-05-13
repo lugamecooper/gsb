@@ -43,3 +43,7 @@ body{
     align-self:flex-end - 2vh;
     justify-content: right;
 }
+
+.container{
+    display: flex;
+}
