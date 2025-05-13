@@ -32,7 +32,7 @@ body{
     align-items: space-between;
     padding: 20px 20px;
     border-bottom: 2px solid #731D55;
-    position: sticky fixed;
+    position: absolute;
     top: 0px;
 }
 
