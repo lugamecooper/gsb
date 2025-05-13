@@ -1,7 +1,7 @@
 body {
     background-image: url("../src/logo-gsb.png");
     background-repeat: no-repeat;
-    background-size: cover; /* Redimensionne l'image pour couvrir toute la page */
+    background-size: 25%; /* Réduit la taille de l'image d'arrière-plan */
     background-position: center top 30px;
     margin-top: 20vh;
     display: flex;
@@ -11,6 +11,8 @@ body {
     color: #947e00;
     height: 100vh;
     margin: 0;
+    background-color: #f0f0f0; /* Couleur de fond pour le dégradé */
+    background: linear-gradient(135deg, #f0f0f0 20%, #e0e0e0 40%, #d0d0d0 60%, #c0c0c0 80%);
 }
 
 .login-container {
@@ -22,6 +24,19 @@ body {
     width: 90%;
     max-width: 400px; /* Pour éviter qu'il devienne trop large */
     backdrop-filter: blur(8px); /* Effet de flou sur l'arrière-plan */
+    position: relative;
+}
+
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    bottom: -20px;
+    left: -20px;
+    right: -20px;
+    background-color: rgba(255, 217, 0, 0.1);
+    border-radius: 40px; /* Forme plus arrondie avec des ondulations */
+    z-index: -1;
 }
 
 label {
