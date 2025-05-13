@@ -11,8 +11,6 @@ body {
     color: #947e00;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0; /* Couleur de fond pour le dégradé */
-    background: linear-gradient(135deg, #f0f0f0 20%, #e0e0e0 40%, #d0d0d0 60%, #c0c0c0 80%);
 }
 
 .login-container {
