@@ -9,15 +9,18 @@ body {
     justify-content: center;
     font-family: Arial, sans-serif;
     color: #947e00;
+    height: 100vh;
+    margin: 0;
 }
 
 .login-container {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 90%;
+    max-width: 400px; /* Pour éviter qu'il devienne trop large */
 }
 
 label {
@@ -47,7 +50,7 @@ input[type="password"]:focus {
 }
 
 button {
-    background-color: #ffda00;
+    background-color: rgba(255, 217, 0, 0.8);
     color: #333;
     border: none;
     padding: 10px 20px;
@@ -59,7 +62,7 @@ button {
 }
 
 button:hover {
-    background-color: #e6c700;
+    background-color: rgba(255, 217, 0, 0.6);
 }
 
 /*--------------------------------------------------------------------------*/
