@@ -7,6 +7,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: Arial, sans-serif;
 }
 
 .login-container {
@@ -36,6 +37,7 @@ input[type="password"] {
     box-sizing: border-box;
     background-color: transparent;
     color: #333;
+    transition: border-bottom-color 0.3s ease;
 }
 
 input[type="login"]:focus,
@@ -45,18 +47,19 @@ input[type="password"]:focus {
 }
 
 button {
-    background-color: rgba(255, 217, 0, 0);
-    color: #947e00;
-    border: 1px solid #947e00;
+    background-color: #ffda00;
+    color: #333;
+    border: none;
     padding: 10px 20px;
     margin-top: 25px;
     border-radius: 4px;
     font-size: 20px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: rgba(255, 217, 0, 0.1);
+    background-color: #e6c700;
 }
 
 /*--------------------------------------------------------------------------*/
