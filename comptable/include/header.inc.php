@@ -9,7 +9,7 @@
             <div class=\"header\">
                 <h1>Intranet Comptable</h1>
             </div>
-            <img alt=\"Logo\">
+            <img alt=\"Logo\" src='https://t3.ftcdn.net/jpg/01/94/26/24/360_F_194262466_1TSWxJyR1SIKB8MEvExE8Beond075APw.jpg'>
             <nav class=\"navbar\">
                 <ul class=\"centered-links\">
                     <br>
