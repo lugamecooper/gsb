@@ -38,7 +38,7 @@ body{
     align-items: space-between;
     padding: 20px 20px;
     border-bottom: 2px solid #731D55;
-    position: absolute;
+    position: sticky;
     top: 0px;
 }
 
