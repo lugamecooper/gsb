@@ -5,6 +5,7 @@
 }
 
 li *{
+    z-index: 3;
     background-color: #014040;
     border-radius: 20px;
     text-decoration: none;
@@ -16,6 +17,7 @@ body{
 }
 
 .header{
+    z-index: 2;
     background-color: #014040;
     color: #ffffffb3;
     padding-top: 20px;
@@ -26,6 +28,7 @@ body{
 }
 
 .navbar{
+    z-index: 1;
     height: 100%;
     width: 20vh;
     background-color: #F2A30F;
