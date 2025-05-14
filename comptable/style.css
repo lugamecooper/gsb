@@ -4,6 +4,12 @@
     margin: 0px;
 }
 
+li{
+    background-color: #014040;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
 body{
     background-image: url("../src/logo-gsb.png");
     background-repeat: no-repeat;

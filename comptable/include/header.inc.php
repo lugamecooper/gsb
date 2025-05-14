@@ -12,10 +12,11 @@
 
             <nav class=\"navbar\">
                 <ul class=\"centered-links\">
+                    <li><p>LOGO</p></li>
+                    <br>
                     <li><a href=\"$acceuil/\">Acceuil</a></li>
                     <li><a href=\"$suivi_paiment/suivie-paiment\">Suivi des paiements</a></li>
                     <li><a href=\"$validation_frais/validation-frais\">Validation des fiches de frais</a></li>
-                    <li><p>LOGO</p></li>
                     <li><p>$_SESSION[nom] $_SESSION[prenom]</p></li>
                     $visiteur
                     <li class=\"bouton_logoff\"><a href=\"$logoff/logoff.php\">Déconnection</a></li>
