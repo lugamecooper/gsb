@@ -4,7 +4,7 @@
     margin: 0px;
 }
 
-li{
+li *{
     background-color: #014040;
     border-radius: 20px;
     text-decoration: none;
