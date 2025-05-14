@@ -17,7 +17,6 @@ body{
     background-position-x: center;
     background-position-y: 30px;
     background-attachment: fixed;
-    display: flex;
 }
 
 .header{
