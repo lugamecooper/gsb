@@ -13,11 +13,13 @@ img{
     z-index: 3;
 }
 
-li *{
+li{
     background-color: #014040;
-    border-radius: 5px;
-    text-decoration: none;
+    border-radius: 20px;
     margin-bottom: 2vh;
+}
+li *{
+    text-decoration: none;
 }
 
 body{
