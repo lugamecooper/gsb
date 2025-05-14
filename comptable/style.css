@@ -30,7 +30,7 @@ body{
 }
 
 .navbar{
-    height: 100vh;
+    height: 100%;
     width: 20vh;
     background-color: #F2A30F;
     display: flex;
