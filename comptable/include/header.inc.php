@@ -15,8 +15,6 @@
                     <li><a href=\"$acceuil/\">Acceuil</a></li>
                     <li><a href=\"$suivi_paiment/suivie-paiment\">Suivi des paiements</a></li>
                     <li><a href=\"$validation_frais/validation-frais\">Validation des fiches de frais</a></li>
-                </ul>
-                <ul class=\"right-aligned\">
                     <li><p>LOGO</p></li>
                     <li><p>$_SESSION[nom] $_SESSION[prenom]</p></li>
                     $visiteur
