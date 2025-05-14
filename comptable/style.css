@@ -4,8 +4,10 @@
     margin: 0px;
 }
 
-li *{
+li{
     z-index: 3;
+}
+li *{
     background-color: #014040;
     border-radius: 20px;
     text-decoration: none;

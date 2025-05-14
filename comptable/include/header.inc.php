@@ -12,7 +12,7 @@
 
             <nav class=\"navbar\">
                 <ul class=\"centered-links\">
-                    <li><p>LOGO</p></li>
+                    <li><img alt=\"Logo\"></li>
                     <br>
                     <li><a href=\"$acceuil/\">Acceuil</a></li>
                     <li><a href=\"$suivi_paiment/suivie-paiment\">Suivi des paiements</a></li>
