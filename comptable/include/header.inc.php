@@ -9,10 +9,9 @@
             <div class=\"header\">
                 <h1>Intranet Comptable</h1>
             </div>
-
+            <img alt=\"Logo\">
             <nav class=\"navbar\">
                 <ul class=\"centered-links\">
-                    <li><img alt=\"Logo\"></li>
                     <br>
                     <li><a href=\"$acceuil/\">Acceuil</a></li>
                     <li><a href=\"$suivi_paiment/suivie-paiment\">Suivi des paiements</a></li>

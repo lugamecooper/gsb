@@ -4,9 +4,6 @@
     margin: 0px;
 }
 
-ul{
-    z-index: 3;
-}
 li *{
     background-color: #014040;
     border-radius: 20px;
