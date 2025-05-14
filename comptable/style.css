@@ -26,7 +26,7 @@ body{
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
-    position: sticky fixed;
+    position: sticky;
 }
 
 .navbar{
