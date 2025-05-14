@@ -4,6 +4,10 @@
     margin: 0px;
 }
 
+img{
+    z-index: 3;
+}
+
 li *{
     background-color: #014040;
     border-radius: 20px;
