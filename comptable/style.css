@@ -1,146 +1,58 @@
-/* Réinitialiser les styles par défaut */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    border : 0px;
+    padding : 0px;
+    margin: 0px;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f9;
-    color: #000000;
+img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 10vh;
+    height: 10vh;
+    z-index: 3;
 }
 
-.header {
+li{
     background-color: #014040;
-    color: white;
-    padding: 20px 0;
+    border-radius: 20px;
+    margin-bottom: 2vh;
+}
+li *{
+    text-decoration: none;
+}
+
+body{
+    background-color: #092b2b;
+}
+
+.header{
+    z-index: 2;
+    background-color: #014040;
+    color: #ffffffb3;
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
-}
+    position: sticky;
+    top: 0px;
 
-
-.navbar {
-    background-color: #02735E; /* Couleur de fond plus claire avec texture */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.navbar{
+    z-index: 1;
+    height: 100%;
+    width: 20vh;
+    background-color: #F2A30F;
+    justify-content: left;
+    align-items: space-between;
     padding: 20px 20px;
-    border-bottom: 2px solid #731702; /* Bordure basse pour séparation */
+    position: fixed;
+    top: 0px;
 }
 
-.centered-links {
-    list-style: none;
+.centered-links{
+    align-self:flex-start;
+}
+
+.container{
     display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.right-aligned {
-    list-style: none;
-    display: flex;
-    margin-left: auto;
-    gap: 20px;
-}
-
-.centered-links li a,
-.right-aligned li a {
-    color: #614d30; /* Couleur sombre pour les liens */
-    text-decoration: none; /* Supprimer le soulignement */
-    font-weight: bold;
-    padding: 8px 16px;
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.7); /* Fond semi-transparent pour détacher les liens */
-    transition: background-color 0.3s ease;
-}
-
-.centered-links li a:hover,
-.right-aligned li a:hover {
-    background-color: rgba(255, 255, 255, 1); /* Changement de fond au survol */
-}
-
-.right-aligned .bouton_logoff:hover {
-    background-color: #f86464;
-}
-
-.right-aligned .bouton_logoff {
-    background-color: #FF0000;
-    transition: background-color 0.3s ease;
-}
-
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-h3 {
-    color: #007bff;
-    margin-bottom: 10px;
-}
-
-li p {
-    color: #614d30;
-}
-p {
-    line-height: 1.5;
-    color: #000000;
-}
-
-
-/* Pour le fomulaire */
-form {
-    width: 100%;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
-}
-
-select, textarea, button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box;
-}
-
-textarea {
-    resize: vertical;
-    min-height: 80px;
-}
-
-button {
-    background: #099077;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease; 
-}
-
-button:hover {
-    background: #02735E;
-}
-
-button:nth-of-type(2) {
-    background: #0c6767;
-}
-
-button:nth-of-type(2):hover {
-    background: #014040;
+    justify-self: right;
 }

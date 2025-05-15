@@ -12,35 +12,57 @@
     <br>
     <br>
     <body>
+        <div class="animation-overlay">
+            <div class="pulse-circle"></div>
+        </div>
+        <br>
+        <br>
+        <br>
         <?php
+            session_start();
             include './connect.php';
-            $name = htmlspecialchars($_POST['login']);
+            include './closeOpenFiche.php';
+            $login = htmlspecialchars($_POST['login']);
             $password = htmlspecialchars($_POST['password']);
-            $res = $connexion -> query("SELECT * FROM Visiteur WHERE nom = '$name' AND password = '$password'");
+            $res = $connexion -> query("SELECT * FROM Visiteur WHERE login = '$login' AND password = '$password'");
             $res = $res -> fetch();
-	        if ($res["idRole"] == 2){
-                session_start();
-                $_SESSION["idRole"]= 2;
-                $_SESSION["idUser"]= $res["IdVisiteur"];
-                header("Location: https://gsb2.lucas-lestiennes.fr/comptable");
-                exit();
+            if ($res){
+                $_SESSION["nom"] = $res["nom"];
+                $_SESSION["prenom"] = $res["prenom"];
+                if ($res["idRole"] == 2){
+                    $_SESSION["idRole"]= 2;
+                    $_SESSION["idUser"]= $res["IdVisiteur"];
+                    header("Location: https://gsb2.lucas-lestiennes.fr/comptable");
+                    exit();
+                }
+                if ($res["idRole"] == 1){
+                    $_SESSION["idRole"]= 1;
+                    $_SESSION["idUser"]= $res["IdVisiteur"];
+                    header("Location: https://gsb2.lucas-lestiennes.fr/visiteur");
+                    close($connexion,$res["IdVisiteur"]);
+                    exit();
+                }
+                if ($res["idRole"] == 3){
+                    $_SESSION["idRole"]= 3;
+                    $_SESSION["idUser"]= $res["IdVisiteur"];
+                    header("Location: https://gsb2.lucas-lestiennes.fr/comptable");
+                    close($connexion,$res["IdVisiteur"]);
+                    exit();
+                }
             }
-            if ($res["idRole"] == 1){
-                session_start();
-                $_SESSION["idRole"]= 1;
-                $_SESSION["idUser"]= $res["IdVisiteur"];
-                header("Location: https://gsb2.lucas-lestiennes.fr/visiteur");
-                exit();
-            }
-            if ($res["idRole"] == 3){
-                session_start();
-                $_SESSION["idRole"]= 3;
-                $_SESSION["idUser"]= $res["IdVisiteur"];
-                header("Location: https://gsb2.lucas-lestiennes.fr/comptable");
-                exit();
-            }
-	    sleep(3);
-	    header("Location: https://gsb2.lucas-lestiennes.fr/?erreur=login ou mots de passe incorecte");
+            echo "
+            <script>
+                function sleep(ms) {
+                    return new Promise(resolve => setTimeout(resolve, ms));
+                }
+                async function relocate() {
+                    await sleep(2000);
+                    window.location.replace('https://gsb2.lucas-lestiennes.fr/?erreur=mots de passe ou login incorrecte');
+                }
+                relocate();
+            </script>
+            ";
+            sleep(1);
         ?>
     </body>
 </html>

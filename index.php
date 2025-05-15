@@ -6,13 +6,11 @@
         <link rel="icon" type="image/x-icon" href="./src/logo.ico">
         <link rel="stylesheet" href="style.css">
         <title> Intranet GSB </title>
+        <title> Intranet GSB </title>
     </head>
     <body>
 
         <div class="login-container">
-            <img class="logo" alt="logo GSB" src="./src/logo-gsb.png">
-            <h1>Bienvenue chez GSB !</h1>
-
             <form id="login-form" action="login.php" method="post">
                 <label for="username">Nom d'utilisateur :</label>
                 <input type="login" id="username" name="login" required>
