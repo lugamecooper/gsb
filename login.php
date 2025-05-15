@@ -7,6 +7,10 @@
         <link rel="stylesheet" href="style.css">
         <title>Intranet GSB</title>
     </head>
+    <div class="loader"></div> 
+    <br>
+    <br>
+    <br>
     <body>
         <div class="animation-overlay">
             <div class="pulse-circle"></div>
