@@ -3,15 +3,15 @@
     include './connect.php';
     session_start();
     if (!isset($_SESSION["idUser"])) {
-        header("Location: https://gsb2.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
+        header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
     }
     else{
         if ($_SESSION["idRole"] == 1 || $_SESSION["idRole"] == 3) {
             NULL;
         } elseif ($_SESSION["idRole"] == 2) {
-            header("Location: https://gsb2.lucas-lestiennes.fr/comptable");
+            header("Location: https://gsb.lucas-lestiennes.fr/comptable");
         } else {
-            header("Location: https://gsb2.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
+            header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
         }
     }
 ?>
