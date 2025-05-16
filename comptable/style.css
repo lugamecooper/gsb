@@ -29,6 +29,8 @@ li a:hover{
     border-radius: 15px;
     background-color: #092b2b;
     position: absolute;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
 body{
     background-color: #092b2b;
