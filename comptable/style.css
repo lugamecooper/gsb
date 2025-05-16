@@ -24,7 +24,7 @@ li *{
     color: #ffffffb3;
     font-size: medium;
 }
-li *:hover{
+li:hover{
     background-color: #092b2b;
 }
 body{
