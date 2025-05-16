@@ -28,6 +28,7 @@ li a:hover{
     padding: 10px;
     border-radius: 15px;
     background-color: #092b2b;
+    background-blend-mode: overlay;
 }
 body{
     background-color: #092b2b;
@@ -47,7 +48,7 @@ body{
     z-index: 1;
     height: 100%;
     width: 22vw;
-    max-width: 190px;
+    max-width: 220px;
     background-color: #014040;
     justify-content: left;
     align-items: space-between;
