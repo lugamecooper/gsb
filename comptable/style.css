@@ -36,8 +36,8 @@ body{
 .header{
     z-index: 2;
     background-color: #014040;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
     text-align: center;
     position: sticky;
     top: 0px;
