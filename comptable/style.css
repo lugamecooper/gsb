@@ -72,5 +72,7 @@ body{
     flex-direction: row;
 }
 .container *{
+    display: flex;
+    flex-direction: row;
     color: #bebebeb3;
 }
