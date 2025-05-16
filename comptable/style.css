@@ -25,9 +25,10 @@ li *{
     font-size: medium;
 }
 li a:hover{
-    margin: 10px;
+    padding: 10px;
     border-radius: 15px;
     background-color: #092b2b;
+    background-;
 }
 body{
     background-color: #092b2b;
@@ -47,7 +48,7 @@ body{
 .navbar{
     z-index: 1;
     height: 100%;
-    width: 20vh;
+    width: 25vh;
     background-color: #014040;
     justify-content: left;
     align-items: space-between;
