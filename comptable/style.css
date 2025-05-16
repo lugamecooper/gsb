@@ -38,6 +38,7 @@ body{
 .header{
     z-index: 2;
     background-color: #014040;
+    width: 100vw;
     padding-top: 3vh;
     padding-bottom: 3vh;
     text-align: center;
