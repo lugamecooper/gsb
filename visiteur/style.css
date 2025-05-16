@@ -67,7 +67,7 @@ body{
     display: flex;
     justify-self: right;
     padding-left: 30vw;
-    padding-top: 5vh;
+    padding-top: 25vh;
     flex-direction: column;
 }
 .container *{
