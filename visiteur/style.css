@@ -39,7 +39,7 @@ body{
     padding-top: 3vh;
     padding-bottom: 3vh;
     text-align: center;
-    position: sticky;
+    position: fixed;
     top: 0px;
 }
 
