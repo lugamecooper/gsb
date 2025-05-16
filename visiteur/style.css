@@ -67,3 +67,6 @@ body{
     padding-left: 30vh;
     padding-top: 5vh;
 }
+.container *{
+    color: #731d55c9;
+}
