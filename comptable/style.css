@@ -65,6 +65,6 @@ body{
 .container{
     display: flex;
     justify-self: right;
-    padding-left: 10vh;
+    padding-left: 24vh;
     padding-top: 5vh;
 }
