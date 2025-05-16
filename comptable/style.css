@@ -25,7 +25,7 @@ li *{
     font-size: medium;
 }
 li a:hover{
-    margin: 10px;
+    padding: 10px;
     border-radius: 15px;
     background-color: #092b2b;
 }
