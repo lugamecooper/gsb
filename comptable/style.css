@@ -17,6 +17,7 @@ li{
     background-color: #014040;
     border-radius: 20px;
     margin-bottom: 2vh;
+    list-style-type: none;
 }
 li *{
     text-decoration: none;
