@@ -70,6 +70,7 @@ body{
     justify-self: right;
     padding-left: 30vw;
     padding-top: 5vh;
+    flex-direction: row;
 }
 .container *{
     color: #bebebeb3;
