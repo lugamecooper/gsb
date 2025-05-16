@@ -45,6 +45,8 @@ body{
     justify-content: left;
     align-items: space-between;
     padding-top: 10vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
     position: fixed;
     top: 0px;
 }
