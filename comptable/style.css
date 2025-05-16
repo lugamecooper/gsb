@@ -2,6 +2,7 @@
     border : 0px;
     padding : 0px;
     margin: 0px;
+    color: #ffffffb3;
 }
 
 img{
@@ -21,7 +22,6 @@ li{
 }
 li *{
     text-decoration: none;
-    color: #ffffffb3;
     font-size: medium;
 }
 li a:hover{
@@ -36,7 +36,6 @@ body{
 .header{
     z-index: 2;
     background-color: #014040;
-    color: #ffffffb3;
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
