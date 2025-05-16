@@ -7,18 +7,19 @@
         }
         echo "
             <div class=\"header\">
-                <h1>Intranet visiteurs médicaux</h1>
+                <h1>Intranet Visiteur Médical</h1>
             </div>
-
+            <img alt=\"Logo\" src='https://t3.ftcdn.net/jpg/01/94/26/24/360_F_194262466_1TSWxJyR1SIKB8MEvExE8Beond075APw.jpg'>
             <nav class=\"navbar\">
                 <ul class=\"centered-links\">
+                    <br>
+                    <br>
+                    <br>
+                    <li><p>$_SESSION[nom] $_SESSION[prenom]</p></li>
+                    <br>
                     <li><a href=\"$acceuil/\">Acceuil</a></li>
                     <li><a href=\"$saisie_frais/saisie-frais\">Saisi de frais</a></li>
                     <li><a href=\"$consultation_frais/consultation-frais\">Consultation fiche de frais</a></li>
-                </ul>
-                <ul class=\"right-aligned\">
-                    <li><p>LOGO</p></li>
-                    <li><p>$_SESSION[nom] $_SESSION[prenom]</p></li>
                     $comptable
                     <li class=\"bouton_logoff\"><a href=\"$logoff/logoff.php\">Déconnection</a></li>
                 </ul>
