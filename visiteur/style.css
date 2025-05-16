@@ -67,7 +67,7 @@ body{
     justify-self: right;
     padding-left: 30vw;
     padding-top: 5vh;
-    flex-direction: row;
+    flex-direction: column;
 }
 .container *{
     color: #731d55c9;
