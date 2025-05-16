@@ -47,7 +47,7 @@ body{
 .navbar{
     z-index: 1;
     height: 100%;
-    width: 25vh;
+    width: 22vh;
     background-color: #014040;
     justify-content: left;
     align-items: space-between;
