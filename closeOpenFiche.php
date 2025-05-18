@@ -2,7 +2,7 @@
     session_start();
     function close($connexion,$idUser = NULL){
         $month = date('n');
-        $day = date("d-m-Y");
+        $day = date("Y-m-d");
         if ($idUser){
             $res = $connexion -> query("SELECT * FROM FicheFrais WHERE IdEtat = 1 AND Mois != $month AND IdVisiteur = $idUser;") -> fetchAll();
         }
