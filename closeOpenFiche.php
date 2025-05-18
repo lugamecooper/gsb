@@ -1,5 +1,4 @@
 <?php
-    session_start();
     function close($connexion,$idUser = NULL){
         $month = date('n');
         $day = date("Y-m-d");
