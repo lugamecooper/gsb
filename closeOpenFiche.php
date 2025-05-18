@@ -3,7 +3,11 @@
         $month = date('n');
         $day = date("Y-m-d");
         if ($idUser){
-            $res = $connexion -> query("SELECT * FROM FicheFrais WHERE IdEtat = 1 AND Mois != $month AND IdVisiteur = $idUser;") -> fetchAll();
+            try{
+                $res = $connexion -> query("SELECT * FROM FicheFrais WHERE IdEtat = 1 AND Mois != $month AND IdVisiteur = $idUser;") -> fetchAll();
+            }catch{
+                $res = FALSE;
+            }
         }
         else{
             $res = $connexion -> query("SELECT * FROM FicheFrais WHERE IdEtat = 1 AND Mois != $month;") -> fetchAll();
@@ -14,6 +18,7 @@
             }
         }
         else{
+            if(!$connexion -> query())
             $connexion -> exec("INSERT INTO FicheFrais(IdVisiteur, Mois, nbJustificatifs, dateModif, montantValide, IdEtat) VALUES('$_SESSION[idUser]', '$month', 0, '$day', 0, 1)");
         }
     }
