@@ -49,8 +49,6 @@
                     return;
                     exit();
                     header("Location: https://gsb.lucas-lestiennes.fr/comptable");
-                    
-                    
                     return;
                     exit();
                 }
