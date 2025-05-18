@@ -2,7 +2,7 @@
     border : 0px;
     padding : 0px;
     margin: 0px;
-    color: #731d55c9;
+    color: #2b731dc9;
 }
 
 img{
@@ -71,5 +71,5 @@ body{
     flex-direction: column;
 }
 .container *{
-    color: #731d55c9;
+    color: #2b731dc9;
 }
