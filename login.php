@@ -47,7 +47,6 @@
                     $_SESSION["idUser"]= $res["IdVisiteur"];
                     close($connexion,$res["IdVisiteur"]);
                     header("Location: https://gsb.lucas-lestiennes.fr/comptable");
-                    return;
                     exit();
                 }
             }
