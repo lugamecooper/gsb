@@ -28,7 +28,7 @@
             <h2>Consulter mes fiches de frais</h2>
             <form>
                 <label>Période</label> <br>
-                <input type="date" placeholder="selectioner la date"><br>
+                <input type="month" placeholder="selectioner la date"><br>
                 <button type="submit">Afficher mes fiches</button>
             </form>
         </div>
