@@ -25,10 +25,10 @@
     <body>
         <?php include "../include/header.inc.php"; header_element("..", "..", "..", "../..");?>
         <div class="container">
-        <h2>Consulter mes fiches de frais</h2>
+            <h2>Consulter mes fiches de frais</h2>
             <form>
                 <label>Période</label> <br>
-                <input type="month"> <br>
+                <input type="date" placeholder="selectioner la date"><br>
                 <button type="submit">Afficher mes fiches</button>
             </form>
         </div>
