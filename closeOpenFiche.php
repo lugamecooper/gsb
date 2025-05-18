@@ -5,7 +5,7 @@
         if ($idUser){
             try{
                 $res = $connexion -> query("SELECT * FROM FicheFrais WHERE IdEtat = 1 AND Mois != $month AND IdVisiteur = $idUser;") -> fetchAll();
-            }catch{
+            }catch(){
                 $res = FALSE;
             }
         }
