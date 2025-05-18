@@ -46,7 +46,9 @@
                     $_SESSION["idRole"]= 3;
                     $_SESSION["idUser"]= $res["IdVisiteur"];
                     header("Location: https://gsb.lucas-lestiennes.fr/comptable");
+                    
                     close($connexion,$res["IdVisiteur"]);
+                    return;
                     exit();
                 }
             }
