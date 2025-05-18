@@ -2,13 +2,12 @@
     session_start();
     function close($connexion,$idUser = NULL){
         $month = date('n');
-        $year = date('Y');
         $day = date();
         if ($idUser){
-            $res = $connexion -> query("SELECT * FROM FicheFrais WHERE IdEtat = 1 AND Mois != $month AND année = $year AND IdVisiteur = $idUser;") -> fetchAll();
+            $res = $connexion -> query("SELECT * FROM FicheFrais WHERE IdEtat = 1 AND Mois != $month AND IdVisiteur = $idUser;") -> fetchAll();
         }
         else{
-            $res = $connexion -> query("SELECT * FROM FicheFrais WHERE IdEtat = 1 AND Mois != $month AND année = $year;") -> fetchAll();
+            $res = $connexion -> query("SELECT * FROM FicheFrais WHERE IdEtat = 1 AND Mois != $month;") -> fetchAll();
         }
         if ($res != FALSE){
             foreach ($res as $x) {
@@ -16,7 +15,7 @@
             }
         }
         else{
-            $connexion -> exec("INSERT INTO FicheFrais VALUES('$_SESSION[idUser]', '$month', '$year', 0, )");
+            $connexion -> exec("INSERT INTO FicheFrais(IdVisiteur, Mois, nbJustificatifs, dateModif, montantValide, IdEtat) VALUES('$_SESSION[idUser]', '$month', 0, '$day', 0, 1)");
         }
     }
 ?>
