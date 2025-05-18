@@ -2,7 +2,7 @@
     border : 0px;
     padding : 0px;
     margin: 0px;
-    color: #2b731dc9;
+    color: #ffffffb3;
 }
 
 img{
@@ -15,7 +15,7 @@ img{
 }
 
 li{
-    background-color: #F2620F;
+    background-color: #ad5303;
     border-radius: 20px;
     margin-bottom: 2vh;
     list-style-type: none;
@@ -27,15 +27,15 @@ li *{
 li a:hover{
     padding: 10px;
     border-radius: 15px;
-    background-color: #8b370769;
+    background-color: #73170269;
 }
 body{
-    background-color: #8b3707;
+    background-color: #731702;
 }
 
 .header{
     z-index: 2;
-    background-color: #F2620F;
+    background-color: #ad5303;
     padding-top: 3vh;
     padding-bottom: 3vh;
     text-align: center;
@@ -49,7 +49,7 @@ body{
     height: 100%;
     width: 22vw;
     max-width: 220px;
-    background-color: #F2620F;
+    background-color: #ad5303;
     justify-content: left;
     align-items: space-between;
     padding-top: 10vh;
@@ -71,5 +71,5 @@ body{
     flex-direction: column;
 }
 .container *{
-    color: #2b731dc9;
+    color: #ffffffb3;
 }
