@@ -69,10 +69,11 @@ body{
     padding-top: 15vh;
     flex-direction: column;
 }
-.container *{
-    color: #ffffffb3;
-}
 
 input{
     color: black;
+}
+
+.container *{
+    color: #ffffffb3;
 }
