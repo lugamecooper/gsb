@@ -100,5 +100,6 @@ table td{
     align-self: center;
 }
 table .pseudo_title{
+    text-align: center;
     font-size: 16px;
 }
