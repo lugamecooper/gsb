@@ -86,7 +86,7 @@ body{
     padding: 5px;
 }
 
-table{
+table *{
     text-align: center;
 }
 table th{
