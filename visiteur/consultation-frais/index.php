@@ -45,6 +45,9 @@
                         echo "<table>";
                         echo "</table>";
                     }
+                    else{
+                        echo "aucune fiche n'existe pour le mois séléctionner";
+                    }
                 }
             ?>
         </div>
