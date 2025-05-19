@@ -70,10 +70,10 @@ body{
     flex-direction: column;
 }
 
-input{
-    color: black;
-}
-
 .container *{
     color: #ffffffb3;
+}
+
+.container input{
+    color: black;
 }
