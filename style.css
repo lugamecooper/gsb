@@ -8,8 +8,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-
-
+}
 
 .login-container {
     color: #947e00;
@@ -21,35 +20,17 @@ body{
     text-align: center;
 }
 
-
-
-
 .logo {
-
-
     max-width: 100%;
-
-
     height: auto;
-
-
     margin-bottom: 20px;
-
-
-
 }
-
-
-
 
 h1 {
     color: #947e00;
     font-size: 2em;
     margin-bottom: 20px;
-
 }
-
-
 
 label {
     display: block;
@@ -58,8 +39,6 @@ label {
     font-weight: bold;
     color: #947e00;
 }
-
-
 
 input[type="login"],
 input[type="password"] {
@@ -73,17 +52,11 @@ input[type="password"] {
     color: #333;
 }
 
-
-
-
-
-input[type="login"]:focus,
+input[type="text"]:focus,
 input[type="password"]:focus {
     outline: none;
     border-bottom-color: #947e00;
 }
-
-
 
 button {
     background-color: rgba(255, 217, 0, 0);
@@ -96,8 +69,6 @@ button {
     border-radius: 4px;
     font-size: 20px;
 }
-
-
 
 button:hover {
     border-color: #947e00;
