@@ -14,6 +14,12 @@
             header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
         }
     }
+    if (isset($_POST["number"])){
+        $number = $_POST["number"];
+    }
+    else{
+        $number = 1;
+    }
 ?>
 <html lang="fr">
     <head>
@@ -28,7 +34,7 @@
             <h2>Consulter mes fiches de frais</h2>
             <form action="./" method="post">
                 <label for="number">Sélectionner le mois par son numéro</label>
-                <input type="number" id="number" name="number" min="1" max="12" value="1">
+                <?php echo "<input type=\"number\" id=\"number\" name=\"number\" min=\"1\" max=\"12\" value=\"$number\">"; ?>
                 <input type="submit" value="Afficher les fiches">
             </form>
             <?php 
