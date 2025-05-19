@@ -28,8 +28,9 @@
             <h2>Consulter mes fiches de frais</h2>
             <form>
                 <label>Période</label> <br>
+                </label for="password" value="Mot de passe :">
                 <input type="number"><br>
-                <input type="submit" value="Afficher mes fiches">
+                <input type="submit" value="Afficher les fiches">
             </form>
         </div>
     </body>
