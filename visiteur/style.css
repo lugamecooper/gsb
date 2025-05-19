@@ -79,5 +79,8 @@ body{
     background-color: #833d00cc;
     border: none;
     border-radius: 4px;
-    appearance: textfield none;
+    appearance: textfield;
+}
+.container input[type=submit]{
+    padding: 5px;
 }
