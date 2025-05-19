@@ -80,6 +80,7 @@ body{
     border: none;
     border-radius: 4px;
     appearance: textfield;
+    margin-right: 5px;
 }
 .container input[type=submit]{
     padding: 5px;
