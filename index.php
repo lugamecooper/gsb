@@ -12,10 +12,10 @@
 
         <div class="login-container">
             <form id="login-form" action="login.php" method="post">
-                </label for="login" value="Nom d'utilisateur :">
+                <label for="login">Nom d'utilisateur :</label>
                 <input type="text" id="login-username" name="login" required autocomplete="username" autocapitalize="none" autocorrect="off">
 
-                </label for="password" value="Mot de passe :">
+                <label for="password">Mot de passe :</label>
                 <input type="password" id="password" name="password" required autocomplete="current-password" autocapitalize="none" autocorrect="off">
 
                 <button type="submit">Connexion</button>

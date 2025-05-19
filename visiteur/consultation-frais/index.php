@@ -28,8 +28,8 @@
             <h2>Consulter mes fiches de frais</h2>
             <form>
                 <label>Période</label> <br>
-                </label for="password" value="Mot de passe :">
-                <input type="number"><br>
+                <label for="password">Sélectionner le mois par son numéro</label>
+                <input type="number" min="1" max="12"><br>
                 <input type="submit" value="Afficher les fiches">
             </form>
         </div>
