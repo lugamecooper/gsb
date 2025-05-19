@@ -88,7 +88,6 @@ body{
 }
 
 table{
-    display: flex;
     margin-left: -20vw;
 }
 table *{
