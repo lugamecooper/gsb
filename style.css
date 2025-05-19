@@ -40,7 +40,7 @@ label {
     color: #947e00;
 }
 
-input[type="login"],
+input[type="text"],
 input[type="password"] {
     width: calc(100% - 20px);
     padding: 10px;
