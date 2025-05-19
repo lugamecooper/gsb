@@ -41,12 +41,12 @@
                 if (isset($_POST["number"])){
                     $res = $connexion -> query("SELECT * FROM FicheFrais WHERE IdVisiteur = $_SESSION[idUser] AND Mois = '$_POST[number]'; ") -> fetch();
                     if ($res){
-                        echo "statut de la fiche : ".$connexion -> query("SELECT Libelle FROM Etat WHERE '$res[IdEtat]' = IdEtat;") -> fetch()[0];
+                        echo "<p>statut de la fiche : ".$connexion -> query("SELECT Libelle FROM Etat WHERE '$res[IdEtat]' = IdEtat;") -> fetch()[0]."</p>";
                         echo "<table>";
                         echo "</table>";
                     }
                     else{
-                        echo "aucune fiche n'existe pour le mois séléctionner";
+                        echo "<br><p>aucune fiche n'existe pour le mois séléctionner</p>";
                     }
                 }
             ?>
