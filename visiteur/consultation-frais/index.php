@@ -44,7 +44,7 @@
                         echo "<p>statut de la fiche : ".$connexion -> query("SELECT Libelle FROM Etat WHERE '$res[IdEtat]' = IdEtat;") -> fetch()[0]."</p>";
                         echo "<table>";
                         echo "<tr><th colspan='2'>Fiche du mois numéros $number</th></tr>";
-                        echo "<tr><td colspan='2'>frais forfait</td>";
+                        echo "<tr><td colspan='2' class=\"pseudo_title\">frais forfait</td>";
                         $res_2 = $connexion -> query("SELECT libelle, quantite FROM LigneFraisForfait INNER JOIN FraisForfais ON FraisForfais.idFrais = LigneFraisForfait.idFrais WHERE Mois = $number AND IdVisiteur = $_SESSION[idUser]; ") -> fetchAll();
                         foreach ($res_2 as $e){
                             echo "<tr><td>$e[0]</td><td>$e[1]</td>";
