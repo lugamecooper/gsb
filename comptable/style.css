@@ -87,6 +87,9 @@ body{
     padding: 5px;
 }
 
+table{
+    margin-left: -20vw;
+}
 table *{
     text-align: center;
 }
