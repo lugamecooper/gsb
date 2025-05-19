@@ -12,7 +12,7 @@
 
         <div class="login-container">
             <form id="login-form" action="login.php" method="post">
-                <label for="login-username">Nom d'utilisateur :</label>
+                <label for="login">Nom d'utilisateur :</label>
                 <input type="text" id="login-username" name="login" required autocomplete="username" autocapitalize="none" autocorrect="off">
 
                 <label for="password">Mot de passe :</label>
