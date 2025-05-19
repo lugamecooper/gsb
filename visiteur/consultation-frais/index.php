@@ -41,8 +41,8 @@
                 if (isset($_POST["number"])){
                     $res = $connexion -> query("SELECT * FROM FicheFrais WHERE IdVisiteur = $_SESSION[idUser] AND Mois = '$_POST[number]'; ") -> fetch();
                     if ($res){
-                        echo $connexion -> query("SELECT Libelle FROM Etat WHERE '$res[IdEtat]' = IdEtat;") -> fetch()[0];
-                        echo "<table>"; 
+                        echo "statut de la fiche : ".$connexion -> query("SELECT Libelle FROM Etat WHERE '$res[IdEtat]' = IdEtat;") -> fetch()[0];
+                        echo "<table>";
                         echo "</table>";
                     }
                 }
