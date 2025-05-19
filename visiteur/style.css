@@ -72,3 +72,7 @@ body{
 .container *{
     color: #ffffffb3;
 }
+
+input{
+    color: black;
+}
