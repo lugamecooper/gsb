@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-    include './connect.php';
+    include '../connect.php';
     session_start();
     if (!isset($_SESSION["idUser"])) {
         header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");

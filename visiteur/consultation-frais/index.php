@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-    include './connect.php';
+    include '../../connect.php';
     session_start();
     if (!isset($_SESSION["idUser"])) {
         header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
@@ -31,6 +31,11 @@
                 <input type="number" id="number" name="number" min="1" max="12" value="1">
                 <input type="submit" value="Afficher les fiches">
             </form>
+            <?php 
+                if (isset($_POST["number"])){
+                    echo $connexion -> query("SELECT ")
+                }
+            ?>
         </div>
     </body>
 </html>
