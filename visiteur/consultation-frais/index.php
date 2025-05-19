@@ -26,7 +26,7 @@
         <?php include "../include/header.inc.php"; header_element("..", "..", "..", "../..");?>
         <div class="container">
             <h2>Consulter mes fiches de frais</h2>
-            <form>
+            <form action="./" method="post">
                 <label for="number">Sélectionner le mois par son numéro</label>
                 <input type="number" id="number" name="number" min="1" max="12" value="1">
                 <input type="submit" value="Afficher les fiches">
