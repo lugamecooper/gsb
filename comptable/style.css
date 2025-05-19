@@ -98,6 +98,7 @@ table th{
     font-size: 18px;
 }
 table td{
+    text-align: left;
     align-self: center;
 }
 table .pseudo_title{
