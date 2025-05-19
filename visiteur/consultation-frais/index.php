@@ -39,7 +39,12 @@
             </form>
             <?php 
                 if (isset($_POST["number"])){
-                    echo var_dump( $connexion -> query("SELECT * FROM FicheFrais WHERE IdVisiteur = $_SESSION[idUser] AND Mois = '$_POST[number]'; ") -> fetch());
+                    $res = $connexion -> query("SELECT * FROM FicheFrais WHERE IdVisiteur = $_SESSION[idUser] AND Mois = '$_POST[number]'; ") -> fetch();
+                    if ($res){
+                        echo $connexion -> query("SELECT Libelle FROM Etat WHERE $res = IdEtat;") -> fetch()[0];
+                        echo "<table>"; 
+                        echo "</table>";
+                    }
                 }
             ?>
         </div>
