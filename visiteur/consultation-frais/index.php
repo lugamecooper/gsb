@@ -51,10 +51,10 @@
                         }
                         echo "</table>";
                         echo "<table>";
-                        echo "<tr><td colspan='2' class=\"pseudo_title\">frais hors forfait</td>";
+                        echo "<tr><td colspan='4' class=\"pseudo_title\">frais hors forfait</td>";
                         $res_2 = $connexion -> query("SELECT LigneFraisHorsForfait.libelle as LF_libelle, dateHorsFrais, montant, Etat.Libelle as E_libelle FROM LigneFraisHorsForfait INNER JOIN Etat ON Etat.IdEtat = LigneFraisHorsForfait.IdEtat WHERE LigneFraisHorsForfait.Mois = $number AND LigneFraisHorsForfait.IdVisiteur = $_SESSION[idUser];") -> fetchAll();
                         foreach ($res_2 as $e){
-                            echo "<tr><td>$e[0]</td><td>$e[1]</td>";
+                            echo "<tr><td>$e[0]</td><td>$e[1]</td><td>$e[2]</td><td>$e[3]</td>";
                         }
                         echo "</table>";
                     }
