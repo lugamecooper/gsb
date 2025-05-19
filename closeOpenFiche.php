@@ -18,7 +18,7 @@
             }
         }
         else{
-            if(!$connexion -> query("SELECT * FROM FicheFrais WHERE Mois = $month AND IdVisiteur = $_SESSION[idUser]"))
+            if(!$connexion -> query("SELECT * FROM FicheFrais WHERE Mois = $month AND IdVisiteur = $_SESSION[idUser]") -> fetch())
                 $connexion -> exec("INSERT INTO FicheFrais(IdVisiteur, Mois, nbJustificatifs, dateModif, montantValide, IdEtat) VALUES('$_SESSION[idUser]', '$month', 0, '$day', 0, 1)");
         }
     }
