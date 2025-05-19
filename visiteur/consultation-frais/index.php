@@ -29,7 +29,7 @@
             <form>
                 <label>Période</label> <br>
                 <input type="number"><br>
-                <button type="submit">Afficher mes fiches</button>
+                <input type="submit" value="Afficher mes fiches">
             </form>
         </div>
     </body>
