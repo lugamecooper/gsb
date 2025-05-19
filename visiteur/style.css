@@ -87,6 +87,7 @@ body{
 }
 
 table{
+    width: 30vw;
     margin-left: -20vw;
 }
 table *{
