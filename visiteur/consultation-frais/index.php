@@ -33,7 +33,7 @@
             </form>
             <?php 
                 if (isset($_POST["number"])){
-                    echo $connexion -> query("SELECT * FROM FicheFrais;");
+                    echo $connexion -> query("SELECT * FROM FicheFrais;") -> fetch();
                 }
             ?>
         </div>
