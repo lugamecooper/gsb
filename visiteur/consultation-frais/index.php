@@ -34,7 +34,7 @@
             <h2>Consulter mes fiches de frais</h2>
             <form action="./" method="post">
                 <label for="number">Sélectionner le mois par son numéro</label>
-                <?php var_dump($_POST["number"]) ;echo "<input type=\"number\" id=\"number\" name=\"number\" min=\"1\" max=\"12\" value=\"$number\">"; ?>
+                <?php echo "<input type=\"number\" id=\"number\" name=\"number\" min=\"1\" max=\"12\" value=\"$number\">"; ?>
                 <input type="submit" value="Afficher les fiches">
             </form>
             <?php 
