@@ -88,14 +88,14 @@ body{
 }
 
 table{
-    margin-left: -30vw;
+    display: flex;
+    margin-left: -20vw;
 }
 table *{
-    text-align: left;
+    text-align: center;
 }
 table th{
     font-size: 18px;
-    text-align: center;
 }
 table td{
     text-align: left;
@@ -103,5 +103,4 @@ table td{
 }
 table .pseudo_title{
     font-size: 16px;
-    text-align: center;
 }
