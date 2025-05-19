@@ -89,6 +89,7 @@ body{
 
 table{
     width: 30vw;
+    max-width: 300px;
     display: flex;
     margin-left: -20vw;
 }
