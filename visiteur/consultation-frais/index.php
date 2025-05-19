@@ -44,7 +44,7 @@
                         echo "<p>statut de la fiche : ".$connexion -> query("SELECT Libelle FROM Etat WHERE '$res[IdEtat]' = IdEtat;") -> fetch()[0]."</p>";
                         echo "<table>";
                         echo "<tr><th colspan='5'>Fiche du mois numéros $number</th></tr>";
-                        echo "<tr><th/><th colspan='3'>frais forfait</th><th/>";
+                        echo "<tr><th/><td colspan='3'>frais forfait</td><th/>";
                         echo "</table>";
                     }
                     else{
