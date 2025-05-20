@@ -20,5 +20,6 @@
     if (isset($_POST["Id"])){
         $connexion -> exec("DELETE LigneFraisHorsForfait WHERE Id=$_POST[Id]");
     }
+    return;
     header("Location: https://gsb.lucas-lestiennes.fr/visiteur/saisie-frais");
 ?>
