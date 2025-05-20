@@ -21,6 +21,9 @@
         $connexion -> exec("UPDATE LigneFraisForfait SET quantite = $_POST[number_NUI] WHERE IdVisiteur = $_SESSION[idUser] AND Mois = $month AND idFrais = 'NUI'");
         $connexion -> exec("UPDATE LigneFraisForfait SET quantite = $_POST[number_REP] WHERE IdVisiteur = $_SESSION[idUser] AND Mois = $month AND idFrais = 'REP'");
     }
+    if (isset($_POST["new_libelle"])){
+        $connexion -> exec("INSERT INTO LigneFraisHorsForfait(IdEtat, IdVisiteur, Mois, dateHorsFrais, montant, libelle) VALUES('CR', $_SESSION[idUser], $month, $_POST[new_date], $_POST[new_price], $_POST[new_libelle])");
+    }
 ?>
 <html lang="fr">
     <head>
