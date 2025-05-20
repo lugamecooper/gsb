@@ -63,6 +63,7 @@
                             }
                             echo "</table><table>";
                             echo "<tr><td>libelle</td><td>montant</td><td>dateHorsFrais</td><td>Etat</td></tr>";
+                            echo "<form method='post' action='deleteFiche.php'><input type='hidden' name='None' value='0'><input id='invisible' type='submit' value=''></form>";
                             foreach($res_3 as $e){
                                 echo "<tr>
                                         <td>$e[0]</td>
