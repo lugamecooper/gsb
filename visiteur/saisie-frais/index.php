@@ -60,6 +60,7 @@
                                         <td>$e[libelle]</td>
                                         <td>$e[dateHorsFrais]</td>
                                         <td>$e[montant]</td>
+                                        <td><input type='submit' value='supprimer'></td>
                                     </form>";
                         }
                     ?>
