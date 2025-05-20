@@ -32,7 +32,7 @@
                     $month = date('n');
                     $res_2 = $connexion -> query("SELECT libelle, quantite FROM LigneFraisForfait INNER JOIN FraisForfais ON FraisForfais.idFrais = LigneFraisForfait.idFrais WHERE Mois = $month AND IdVisiteur = $_SESSION[idUser]; ") -> fetchAll();
                     foreach ($res_2 as $e){
-                        echo "<label for=\"number\">$e[0]</label><input type=\"number\" id=\"number\" name=\"number\" value=\"$e[1]\"><br>";
+                        echo "<label for=\"number\">$e[0]</label><input style=\"margin-left:5px;\" type=\"number\" id=\"number\" name=\"number\" value=\"$e[1]\"><br>";
                     }
                 ?>
                 <button type="submit">Soumettre</button>
