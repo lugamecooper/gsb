@@ -59,7 +59,7 @@
                                     <td>$e[libelle]</td>
                                     <td>$e[dateHorsFrais]</td>
                                     <td>$e[montant]</td>
-                                    <td><form method='post' action='deleteFiche.php' name=$e[Id] value=$e[Id]><input type='submit' value='supprimer'></form></td>
+                                    <td><form method='post' action='deleteFiche.php' ><input type='hidden' name=$e[Id] value=$e[Id]><input type='submit' value='supprimer'></form></td>
                                 </tr>";
                         }
                     ?>
