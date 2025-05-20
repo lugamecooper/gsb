@@ -14,6 +14,7 @@
             header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
         }
     }
+    $month = date('n');
     if (isset($_POST["number_ETP"])){
         $connexion -> exec("UPDATE LigneFraisForfait SET quantite = number_ETP WHERE IdVisiteur = $_SESSION[idUser] AND Mois = $month");
         $connexion -> exec("UPDATE LigneFraisForfait SET quantite = number_KM WHERE IdVisiteur = $_SESSION[idUser] AND Mois = $month");
