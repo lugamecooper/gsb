@@ -14,6 +14,12 @@
             header("Location: https://gsb.lucas-lestiennes.fr/?erreur=veuillez vous connecter");
         }
     }
+    if (isset($_POST["number_ETP"])){
+        $connexion -> exec("UPDATE LigneFraisForfait SET quantite = number_ETP WHERE IdVisiteur = $_SESSION[idUser] AND Mois = $month");
+        $connexion -> exec("UPDATE LigneFraisForfait SET quantite = number_KM WHERE IdVisiteur = $_SESSION[idUser] AND Mois = $month");
+        $connexion -> exec("UPDATE LigneFraisForfait SET quantite = number_NUI WHERE IdVisiteur = $_SESSION[idUser] AND Mois = $month");
+        $connexion -> exec("UPDATE LigneFraisForfait SET quantite = number_REP WHERE IdVisiteur = $_SESSION[idUser] AND Mois = $month");
+    }
 ?>
 <html lang="fr">
     <head>
@@ -33,7 +39,7 @@
                         $month = date('n');
                         $res_2 = $connexion -> query("SELECT libelle, quantite FROM LigneFraisForfait INNER JOIN FraisForfais ON FraisForfais.idFrais = LigneFraisForfait.idFrais WHERE Mois = $month AND IdVisiteur = $_SESSION[idUser]; ") -> fetchAll();
                         foreach ($res_2 as $e){
-                            echo "<tr><td><label for=\"number\">$e[0]</label></td><td><input style=\"margin-left:5px;\" required=\"required\" type=\"number\" id=\"number\" name=\"number\" value=\"$e[1]\"></td>";
+                            echo "<tr><td><label for=\"number_$e[0]\">$e[0]</label></td><td><input style=\"margin-left:5px;\" required=\"required\" type=\"number_$e[0]\" id=\"number_$e[0]\" name=\"number_$e[0]\" value=\"$e[1]\"></td>";
                         }
                     ?>
                 </table>
