@@ -49,7 +49,7 @@
             </form>
             <?php 
                 if(isset($_POST["visiteur"])){
-                    var_dump($connexion->query("SELECT * FROM FicheFrais WHERE Mois = $_POST[mois] AND $_POST[visiteur]"));
+                    var_dump($connexion->query("SELECT * FROM FicheFrais WHERE Mois = $_POST[mois] AND $_POST[visiteur]")->fetchAll());
                 }
             ?>
         </div>
