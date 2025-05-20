@@ -51,14 +51,18 @@
                     if(isset($_POST["visiteur"])){
                         $res_1 = $connexion->query("SELECT * FROM FicheFrais WHERE Mois = $_POST[mois] AND $_POST[visiteur]")->fetch();
                         $res_2 = $connexion->query("SELECT libelle, IdEtat, quantite FROM LigneFraisForfait INNER JOIN FraisForfais ON FraisForfais.idFrais = LigneFraisForfait.idFrais WHERE Mois = $_POST[mois] AND $_POST[visiteur]")->fetchAll();
-                        $res_3 = $connexion->query("SELECT * FROM LigneFraisHorsForfait WHERE Mois = $_POST[mois] AND $_POST[visiteur]")->fetchAll();
+                        $res_3 = $connexion->query("SELECT libelle, montant, dateHorsFrais, IdEtat FROM LigneFraisHorsForfait WHERE Mois = $_POST[mois] AND $_POST[visiteur]")->fetchAll();
                         echo "<form method=\"post\" action=\"modificationEtat.php\"><h1>Fiche de Frais</h1><table>";
                         echo "<tr><td>libelle</td><td>Etat</td><td>quantité</td></tr>";
                         foreach($res_2 as $e){
                             echo "<tr><td>$e[0]</td><td>$e[1]</td><td>$e[2]</td></tr>";
                         }
-                        echo "</table></form>
-                        ";
+                        echo "</table><table>";
+                        echo "<tr><td>libelle</td><td>montant</td><td>dateHorsFrais</td><td>Etat</td></tr>";
+                        foreach($res_3 as $e){
+                            echo "<tr><td>$e[0]</td><td>$e[1]</td><td>$e[2]</td><td>$e[3]</td></tr>";
+                        }
+                        echo "</table></form>";
                     }
                 ?>
         </div>
