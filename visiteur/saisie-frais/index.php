@@ -25,28 +25,15 @@
     <body>
         <?php include "../include/header.inc.php"; header_element("..", "..", "..", "../..");?>
         <div class="container">
-            <h2>Renseigner une fiche de frais</h2>
+            <h1>Compléter la fiche de frais</h1>
+            <h2>Compléter les Frais compris</h2>
             <form>
-                <label>Date de la dépense</label>
-                <input type="date" required> <br>
-                
-                <label>Montant (€)</label>
-                <input type="number" required> <br>
-                
-                <label>Type de dépense</label>
-                <select>
-                    <option>Hébergement</option>
-                    <option>Transport</option>
-                    <option>Restauration</option>
-                    <option>Autre</option>
-                </select> <br>
-                
-                <label>Justificatif</label>
-                <input type="file" accept=".pdf,.jpg,.png">
-                <br>
-                <label>Commentaire</label>
-                <textarea></textarea>
-                <br>
+                <?php
+                    $res_2 = $connexion -> query("SELECT libelle, quantite FROM LigneFraisForfait INNER JOIN FraisForfais ON FraisForfais.idFrais = LigneFraisForfait.idFrais WHERE Mois = $number AND IdVisiteur = $_SESSION[idUser]; ") -> fetchAll();
+                    foreach ($res_2 as $e){
+                        echo "<label for=\"number\">$e[0]</label><input type=\"number\" id=\"number\" name=\"number\" value=\"$e[1]\">";
+                    }
+                ?>
                 <button type="submit">Soumettre</button>
             </form>
         </div>
