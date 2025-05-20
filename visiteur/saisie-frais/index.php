@@ -43,7 +43,7 @@
                         $month = date('n');
                         $res_2 = $connexion -> query("SELECT libelle, quantite, LigneFraisForfait.idFrais FROM LigneFraisForfait INNER JOIN FraisForfais ON FraisForfais.idFrais = LigneFraisForfait.idFrais WHERE Mois = $month AND IdVisiteur = $_SESSION[idUser]; ") -> fetchAll();
                         foreach ($res_2 as $e){
-                            echo "<tr><td><label for=\"number_$e[2]\">$e[0]</label></td><td><input style=\"margin-left:5px;\" required=\"required\" type=\"number_$e[2]\" id=\"number_$e[2]\" name=\"number_$e[2]\" value=\"$e[1]\"></td>";
+                            echo "<tr><td><label for=\"number_$e[2]\">$e[0]</label></td><td><input style=\"margin-left:5px;\" required=\"required\" type=\"number_$e[2]\" id=\"number_$e[2]\" name=\"number_$e[2]\" value=\"$e[1]\"></td></tr>";
                         }
                     ?>
                 </table>
@@ -53,9 +53,14 @@
                 <table style="width: 41vw;">
                     <?php
                         $month = date('n');
-                        $res_2 = $connexion -> query("SELECT libelle , dateHorsFrais, montant FROM LigneFraisHorsForfait WHERE LigneFraisHorsForfait.Mois = $month AND LigneFraisHorsForfait.IdVisiteur = $_SESSION[idUser];") -> fetchAll();
+                        $res_2 = $connexion -> query("SELECT libelle , dateHorsFrais, montant, Id FROM LigneFraisHorsForfait WHERE LigneFraisHorsForfait.Mois = $month AND LigneFraisHorsForfait.IdVisiteur = $_SESSION[idUser];") -> fetchAll();
                         foreach ($res_2 as $e){
-                            echo "<tr><td><label for=\"number\">$e[0]</label></td><td><input style=\"margin-left:5px;\" required=\"required\" type=\"date\" id=\"date\" name=\"date\" value=\"$e[1]\"></td>";
+                            echo "<tr>
+                                    <form method='post' action='deleteFiche.php' name=$e[Id]>
+                                        <td>$e[libelle]</td>
+                                        <td>$e[dateHorsFrais]</td>
+                                        <td>$e[montant]</td>
+                                    </form>";
                         }
                     ?>
                     <tr><td><input placeholder="entrer le libelle" name="new_libelle"/></td><td>Sélectionner la date:<input type="date" name="new_date"></td><td>Montant:<input type="number" name="new_price"></td>
