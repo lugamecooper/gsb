@@ -32,8 +32,7 @@
                     <?php
                         $res = $connexion -> query("SELECT IdVisiteur, nom, prenom FROM Visiteur WHERE idRole = 1 OR idRole = 3");
                         while ($row = $res->fetch()) {
-                            var_dump($row);
-                            echo "<option value=\"$row[id]\">{$row['prenom']} {$row['nom']}</option>";
+                            echo "<option value=\"$row[IdVisiteur]\">{$row['prenom']} {$row['nom']}</option>";
                         }
                     ?>
                 </select><br>
@@ -49,7 +48,6 @@
                 <input type="submit" value="vallidez la séléction">
             </form>
             <?php 
-                var_dump($_POST);
                 if(isset($_POST["visiteur"])){
                     var_dump($connexion->query("SELECT * FROM FicheFrais WHERE Mois = $_POST[mois] AND $_POST[visiteur]")->fetchAll());
                 }
