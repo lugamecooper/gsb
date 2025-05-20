@@ -75,7 +75,7 @@ body{
     color: #bebebeb3;
 }
 
-.container input{
+.container input,select{
     color: #bebebeb3;
     background-color: #062424cc;
     border: none;
