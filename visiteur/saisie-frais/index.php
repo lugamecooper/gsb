@@ -37,6 +37,17 @@
                         }
                     ?>
                 </table>
+                <br>
+                <br>
+                <table>
+                    <?php
+                        $month = date('n');
+                        $res_2 = $connexion -> query("SELECT libelle, quantite FROM LigneFraisForfait INNER JOIN FraisForfais ON FraisForfais.idFrais = LigneFraisForfait.idFrais WHERE Mois = $month AND IdVisiteur = $_SESSION[idUser]; ") -> fetchAll();
+                        foreach ($res_2 as $e){
+                            echo "<tr><td><label for=\"number\">$e[0]</label></td><td><input style=\"margin-left:5px;\" required=\"required\" type=\"number\" id=\"number\" name=\"number\" value=\"$e[1]\"></td>";
+                        }
+                    ?>
+                </table>
                 <input type="submit" value="Soumettre"/>
             </form>
         </div>
