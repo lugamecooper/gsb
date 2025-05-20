@@ -32,7 +32,7 @@
                     <?php
                         $res = $connexion -> query("SELECT IdVisiteur, nom, prenom FROM Visiteur WHERE idRole = 1 OR idRole = 3");
                         while ($row = $res->fetch()) {
-                            echo "<option value=\"{$row['id']}\">{$row['prenom']} {$row['nom']}</option>";
+                            echo "<option value=\"'{$row['id']}'\">{$row['prenom']} {$row['nom']}</option>";
                         }
                     ?>
                 </select><br>
