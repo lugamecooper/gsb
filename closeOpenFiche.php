@@ -18,12 +18,13 @@
             }
         }
         else{
-            if($connexion -> query("SELECT * FROM FicheFrais WHERE Mois = $month AND IdVisiteur = $_SESSION[idUser]") -> fetch())
+            if(!$connexion -> query("SELECT * FROM FicheFrais WHERE Mois = $month AND IdVisiteur = $_SESSION[idUser]") -> fetch()){
                 $connexion -> exec("INSERT INTO FicheFrais(IdVisiteur, Mois, nbJustificatifs, dateModif, montantValide, IdEtat) VALUES($_SESSION[idUser], '$month', 0, '$day', 0, 'CR')");
                 $connexion -> exec("INSERT INTO LigneFraisForfait(idFrais, IdEtat, IdVisiteur, Mois, quantite) VALUES('ETP', 'CR', $_SESSION[idUser], $month, 0)");
                 $connexion -> exec("INSERT INTO LigneFraisForfait(idFrais, IdEtat, IdVisiteur, Mois, quantite) VALUES('KM',  'CR', $_SESSION[idUser], $month, 0)");
                 $connexion -> exec("INSERT INTO LigneFraisForfait(idFrais, IdEtat, IdVisiteur, Mois, quantite) VALUES('NUI', 'CR', $_SESSION[idUser], $month, 0)");
                 $connexion -> exec("INSERT INTO LigneFraisForfait(idFrais, IdEtat, IdVisiteur, Mois, quantite) VALUES('REP', 'CR', $_SESSION[idUser], $month, 0)");
-        }
+                }
+            }
     }
 ?>
