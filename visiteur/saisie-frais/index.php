@@ -37,7 +37,7 @@
                         }
                     ?>
                 </table>
-                <button type="submit">Soumettre</button>
+                <input type="submit">Soumettre</input>
             </form>
         </div>
     </body>
