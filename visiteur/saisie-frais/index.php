@@ -27,7 +27,7 @@
         <div class="container">
             <h1>Compléter la fiche de frais</h1>
             <h2>Compléter les Frais compris</h2>
-            <form>
+            <form method="post" action="./">
                 <table>
                     <?php
                         $month = date('n');
@@ -43,12 +43,12 @@
                 <table>
                     <?php
                         $month = date('n');
-                        $res_2 = $connexion -> query("SELECT LigneFraisHorsForfait.libelle as LF_libelle, dateHorsFrais, montant, Etat.Libelle as E_libelle FROM LigneFraisHorsForfait INNER JOIN Etat ON Etat.IdEtat = LigneFraisHorsForfait.IdEtat WHERE LigneFraisHorsForfait.Mois = $month AND LigneFraisHorsForfait.IdVisiteur = $_SESSION[idUser];") -> fetchAll();
+                        $res_2 = $connexion -> query("SELECT libelle , dateHorsFrais, montant FROM LigneFraisHorsForfait WHERE LigneFraisHorsForfait.Mois = $month AND LigneFraisHorsForfait.IdVisiteur = $_SESSION[idUser];") -> fetchAll();
                         foreach ($res_2 as $e){
                             echo "<tr><td><label for=\"number\">$e[0]</label></td><td><input style=\"margin-left:5px;\" required=\"required\" type=\"date\" id=\"date\" name=\"date\" value=\"$e[1]\"></td>";
                         }
                     ?>
-                    <tr><td><input placeholder="entrer le libelle" name="new_libelle"/></td><td><input type="date"></td>
+                    <tr><td><input placeholder="entrer le libelle" name="new_libelle"/></td><td>Sélectionner la date:<input type="date" name="new_date"></td><td>Montant:<input type="number" name="new_price"></td>
                 </table>
                 <input type="submit" value="Soumettre"/>
             </form>
