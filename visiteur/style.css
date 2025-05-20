@@ -104,3 +104,6 @@ table .pseudo_title{
     text-align: center;
     font-size: 16px;
 }
+#invisible{
+    visibility: hidden;
+}
