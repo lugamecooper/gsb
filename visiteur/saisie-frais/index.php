@@ -16,10 +16,10 @@
     }
     $month = date('n');
     if (isset($_POST["number_ETP"])){
-        $connexion -> exec("UPDATE LigneFraisForfait SET quantite = number_ETP WHERE IdVisiteur = $_SESSION[idUser] AND Mois = $month AND idFrais = 'ETP'");
-        $connexion -> exec("UPDATE LigneFraisForfait SET quantite = number_KM WHERE IdVisiteur = $_SESSION[idUser] AND Mois = $month AND idFrais = 'KM'");
-        $connexion -> exec("UPDATE LigneFraisForfait SET quantite = number_NUI WHERE IdVisiteur = $_SESSION[idUser] AND Mois = $month AND idFrais = 'NUI'");
-        $connexion -> exec("UPDATE LigneFraisForfait SET quantite = number_REP WHERE IdVisiteur = $_SESSION[idUser] AND Mois = $month AND idFrais = 'REP'");
+        $connexion -> exec("UPDATE LigneFraisForfait SET quantite = $_POST[number_ETP] WHERE IdVisiteur = $_SESSION[idUser] AND Mois = $month AND idFrais = 'ETP'");
+        $connexion -> exec("UPDATE LigneFraisForfait SET quantite = $_POST[number_KM] WHERE IdVisiteur = $_SESSION[idUser] AND Mois = $month AND idFrais = 'KM'");
+        $connexion -> exec("UPDATE LigneFraisForfait SET quantite = $_POST[number_NUI] WHERE IdVisiteur = $_SESSION[idUser] AND Mois = $month AND idFrais = 'NUI'");
+        $connexion -> exec("UPDATE LigneFraisForfait SET quantite = $_POST[number_REP] WHERE IdVisiteur = $_SESSION[idUser] AND Mois = $month AND idFrais = 'REP'");
     }
 ?>
 <html lang="fr">
