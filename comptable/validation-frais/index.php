@@ -30,7 +30,7 @@
                 <select name="visiteur" id="visiteur" required>
                     <option value="">-- Choisir --</option>
                     <?php
-                        $res = $connexion -> query("SELECT IdVisiteur, nom, prenom FROM Visiteur AND idRole = 1");
+                        $res = $connexion -> query("SELECT IdVisiteur, nom, prenom FROM Visiteur WHERE idRole = 1");
                         while ($row = $res->fetch()) {
                             echo "<option value=\"{$row['id']}\">{$row['prenom']} {$row['nom']}</option>";
                         }
