@@ -47,11 +47,18 @@
                 </select>
                 <input type="submit" value="vallidez la séléction">
             </form>
-            <?php 
-                if(isset($_POST["visiteur"])){
-                    var_dump($connexion->query("SELECT * FROM FicheFrais WHERE Mois = $_POST[mois] AND $_POST[visiteur]")->fetchAll());
-                }
-            ?>
+            <form method="post" action="modificationEtat.php">
+                <?php 
+                    if(isset($_POST["visiteur"])){
+                        $res_1 = $connexion->query("SELECT * FROM FicheFrais WHERE Mois = $_POST[mois] AND $_POST[visiteur]")->fetch();
+                        $res_2 = $connexion->query("SELECT * FROM LigneFraisForfait WHERE Mois = $_POST[mois] AND $_POST[visiteur]")->fetchAll();
+                        $res_3 = $connexion->query("SELECT * FROM LigneFraisHorsForfait WHERE Mois = $_POST[mois] AND $_POST[visiteur]")->fetchAll();
+                        var_dump($res_1);echo"<br>";
+                        var_dump($res_2);echo"<br>";
+                        var_dump($res_3);echo"<br>";
+                    }
+                ?>
+            </form>
         </div>
     </body>
 </html>
