@@ -39,10 +39,11 @@
                 </table>
                 <br>
                 <br>
+                <h2>Compléter les Frais Hors Forfait</h2>
                 <table>
                     <?php
                         $month = date('n');
-                        $res_2 = $connexion -> query("SELECT libelle, quantite FROM LigneFraisForfait INNER JOIN FraisForfais ON FraisForfais.idFrais = LigneFraisForfait.idFrais WHERE Mois = $month AND IdVisiteur = $_SESSION[idUser]; ") -> fetchAll();
+                        $res_2 = $connexion -> query("SELECT LigneFraisHorsForfait.libelle as LF_libelle, dateHorsFrais, montant, Etat.Libelle as E_libelle FROM LigneFraisHorsForfait INNER JOIN Etat ON Etat.IdEtat = LigneFraisHorsForfait.IdEtat WHERE LigneFraisHorsForfait.Mois = $month AND LigneFraisHorsForfait.IdVisiteur = $_SESSION[idUser];") -> fetchAll();
                         foreach ($res_2 as $e){
                             echo "<tr><td><label for=\"number\">$e[0]</label></td><td><input style=\"margin-left:5px;\" required=\"required\" type=\"number\" id=\"number\" name=\"number\" value=\"$e[1]\"></td>";
                         }
