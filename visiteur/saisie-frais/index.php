@@ -55,12 +55,12 @@
                         $month = date('n');
                         $res_2 = $connexion -> query("SELECT libelle , dateHorsFrais, montant, Id FROM LigneFraisHorsForfait WHERE LigneFraisHorsForfait.Mois = $month AND LigneFraisHorsForfait.IdVisiteur = $_SESSION[idUser];") -> fetchAll();
                         foreach ($res_2 as $e){
-                            echo "<tr>
+                            echo "<form method='post' action='deleteFiche.php'><tr>
                                     <td>$e[libelle]</td>
                                     <td>$e[dateHorsFrais]</td>
                                     <td>$e[montant]</td>
-                                    <td><form method='post' action='deleteFiche.php'><input type='hidden' name='Id' value='".$e["Id"]."'><input type='submit' value='supprimer'></form></td>
-                                </tr>";
+                                    <td><input type='hidden' name='Id' value='".$e["Id"]."'><input type='submit' value='supprimer'></td>
+                                </tr></form>";
                         }
                     ?>
                     <tr></tr>
