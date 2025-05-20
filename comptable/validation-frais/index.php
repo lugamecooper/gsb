@@ -56,7 +56,7 @@
                             echo "pas de fiche pour cette utilisateur et cette période";
                         }
                         else{
-                            echo "<form method=\"post\" action=\"modificationEtat.php\"><h1>Fiche de Frais</h1><table>";
+                            echo "<h1>Fiche de Frais</h1><table>";
                             echo "<tr><td>libelle</td><td>Etat</td><td>quantité</td></tr>";
                             foreach($res_2 as $e){
                                 echo "<tr><td>$e[0]</td><td>$e[1]</td><td>$e[2]</td></tr>";
@@ -73,7 +73,8 @@
                                         <td><form method='post' action='deleteFiche.php'><input type='hidden' name='Id' value='".$e[4]."'><input type='submit' value='supprimer'></form></td>
                                     </tr>";
                             }
-                            echo "</table></form>";
+                            echo "</table>";
+                            echo "<form method='post' action='modificationEtat.php'><input type='hidden' name='None' value=1><input type='submit' value='Vallidez'></form>";
                         }
                     }
                 ?>
