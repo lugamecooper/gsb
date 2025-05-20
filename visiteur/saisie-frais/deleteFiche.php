@@ -18,7 +18,8 @@
     }
     $month = date('n');
     if (isset($_POST["Id"])){
-        $connexion -> exec("DELETE LigneFraisHorsForfait WHERE Id=$_POST[Id]");
+        $res = $connexion -> exec("DELETE LigneFraisHorsForfait WHERE Id=$_POST[Id]");
+        var_dump($res);
     }
     return;
     header("Location: https://gsb.lucas-lestiennes.fr/visiteur/saisie-frais");
