@@ -35,7 +35,7 @@
                             echo "<option value=\"{$row['id']}\">{$row['prenom']} {$row['nom']}</option>";
                         }
                     ?>
-                </select>
+                </select><br>
                 <label for="visiteur">Choisissez le mois</label>
                 <select name="visiteur" id="visiteur" required>
                     <option value="">-- Choisir --</option>
