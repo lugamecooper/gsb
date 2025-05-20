@@ -28,7 +28,7 @@
             <h1>Compléter la fiche de frais</h1>
             <h2>Compléter les Frais compris</h2>
             <form method="post" action="./">
-                <table>
+                <table style="width: 41vw;">
                     <?php
                         $month = date('n');
                         $res_2 = $connexion -> query("SELECT libelle, quantite FROM LigneFraisForfait INNER JOIN FraisForfais ON FraisForfais.idFrais = LigneFraisForfait.idFrais WHERE Mois = $month AND IdVisiteur = $_SESSION[idUser]; ") -> fetchAll();
