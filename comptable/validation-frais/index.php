@@ -25,7 +25,7 @@
         <?php include "../include/header.inc.php"; header_element("..", "..", "..", "../..");?>
         <div class="container">
         <h2>Valider une fiche de frais</h2>
-            <form>
+            <form method="post" action="./">
                 <label for="visiteur">Choisissez le visiteur</label>
                 <select name="visiteur" id="visiteur" required>
                     <option value="">-- Choisir --</option>
@@ -36,8 +36,8 @@
                         }
                     ?>
                 </select><br>
-                <label for="visiteur">Choisissez le mois</label>
-                <select name="visiteur" id="visiteur" required>
+                <label for="mois">Choisissez le mois</label>
+                <select name="mois" id="mois" required>
                     <option value="">-- Choisir --</option>
                     <?php
                         for($i =1; $i <= 12; $i ++) {
@@ -46,6 +46,11 @@
                     ?>
                 </select>
             </form>
+            <?php 
+                if(isset($_POST["visiteur"])){
+                    var_dump($connexion->query("SELECT * FROM FicheFrais WHERE Mois = $_POST[mois] AND $_POST[visiteur]"));
+                }
+            ?>
         </div>
     </body>
 </html>
