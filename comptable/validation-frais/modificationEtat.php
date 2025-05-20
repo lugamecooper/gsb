@@ -17,4 +17,5 @@
     if (isset($_POST["Valid"])){
         $connexion -> exec("UPDATE FicheFrais SET IdEtat = 'VA' WHERE idVisiteur = $_SESSION[idUser] AND Mois = $month;");
     }
+    header("Location: https://gsb.lucas-lestiennes.fr/comptable/validation-frais");
 ?>

@@ -17,5 +17,5 @@
     if (isset($_POST["Id"])){
         $res = $connexion -> exec("UPDATE LigneFraisHorsForfait SET libelle =  CONCAT(\"REFUSE :\", libelle) WHERE Id=$_POST[Id];");
     }
-    header("Location: https://gsb.lucas-lestiennes.fr/visiteur/validation-frais");
+    header("Location: https://gsb.lucas-lestiennes.fr/comptable/validation-frais");
 ?>
