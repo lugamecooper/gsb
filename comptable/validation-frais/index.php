@@ -74,7 +74,7 @@
                                     </tr>";
                             }
                             echo "</table>";
-                            echo "<form method='post' action='modificationEtat.php'><input type='hidden' name='None' value=1><input style='margin-top:20px;' type='submit' value='Vallidez'></form>";
+                            echo "<form method='post' action='modificationEtat.php'><input type='hidden' name='Valid' value=1><input style='margin-top:20px;' type='submit' value='Vallidez'></form>";
                         }
                     }
                 ?>
