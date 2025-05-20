@@ -48,6 +48,7 @@
                 <input type="submit" value="vallidez la séléction">
             </form>
             <?php 
+                var_dump($_POST);
                 if(isset($_POST["visiteur"])){
                     var_dump($connexion->query("SELECT * FROM FicheFrais WHERE Mois = $_POST[mois] AND $_POST[visiteur]")->fetchAll());
                 }
