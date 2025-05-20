@@ -47,18 +47,20 @@
                 </select>
                 <input type="submit" value="vallidez la séléction">
             </form>
-            <form method="post" action="modificationEtat.php">
                 <?php 
                     if(isset($_POST["visiteur"])){
                         $res_1 = $connexion->query("SELECT * FROM FicheFrais WHERE Mois = $_POST[mois] AND $_POST[visiteur]")->fetch();
-                        $res_2 = $connexion->query("SELECT * FROM LigneFraisForfait WHERE Mois = $_POST[mois] AND $_POST[visiteur]")->fetchAll();
+                        $res_2 = $connexion->query("SELECT libelle, IdEtat, quantite FROM LigneFraisForfait INNER JOIN FraisForfais ON FraisForfais.idFrais = LigneFraisForfait.idFrais WHERE Mois = $_POST[mois] AND $_POST[visiteur]")->fetchAll();
                         $res_3 = $connexion->query("SELECT * FROM LigneFraisHorsForfait WHERE Mois = $_POST[mois] AND $_POST[visiteur]")->fetchAll();
-                        var_dump($res_1);echo"<br>";
-                        var_dump($res_2);echo"<br>";
-                        var_dump($res_3);echo"<br>";
+                        echo "<form method=\"post\" action=\"modificationEtat.php\"><h1>Fiche de Frais</h1><table>";
+                        echo "<tr><td>libelle</td><td>Etat</td><td>quantité</td></tr>";
+                        foreach($res_2 as $e){
+                            echo "<tr><td>$e[0]</td><td>$e[1]</td><td>$e[2]</td></tr>";
+                        }
+                        echo "</table></form>
+                        ";
                     }
                 ?>
-            </form>
         </div>
     </body>
 </html>
