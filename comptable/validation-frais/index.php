@@ -26,7 +26,15 @@
         <div class="container">
         <h2>Valider une fiche de frais</h2>
             <form>
-                
+                <select name="visiteur" id="visiteur" required>
+                    <option value="">-- Choisir --</option>
+                    <?php
+                    $stmt = $pdo->query("SELECT IdVisiteur, nom, prenom FROM Visiteur");
+                    while ($row = $stmt->fetch()) {
+                        echo "<option value=\"{$row['id']}\">{$row['prenom']} {$row['nom']}</option>";
+                    }
+                    ?>
+                </select>
             </form>
         </div>
     </body>
