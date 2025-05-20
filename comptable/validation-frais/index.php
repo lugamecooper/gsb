@@ -29,8 +29,8 @@
                 <select name="visiteur" id="visiteur" required>
                     <option value="">-- Choisir --</option>
                     <?php
-                    $stmt = $pdo->query("SELECT IdVisiteur, nom, prenom FROM Visiteur");
-                    while ($row = $stmt->fetch()) {
+                    $res = $connexion -> query("SELECT IdVisiteur, nom, prenom FROM Visiteur");
+                    while ($row = $res->fetch()) {
                         echo "<option value=\"{$row['id']}\">{$row['prenom']} {$row['nom']}</option>";
                     }
                     ?>
