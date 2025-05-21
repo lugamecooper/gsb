@@ -1,8 +1,7 @@
 <?php
     $dsn = 'mysql:host=localhost;dbname=GSB;charset=utf8';
-    $user = 'root';
-    //$password = '';
-    $password = "root";
+    $user = 'app';
+    $password = "r^J\$X_Sq&4t4rKu/E.VG";
     try {
         $connexion = new PDO($dsn, $user, $password);
     } catch (PDOException $e) {
