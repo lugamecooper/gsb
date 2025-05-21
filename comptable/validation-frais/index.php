@@ -49,7 +49,7 @@
             </form>
                 <?php 
                     if(isset($_POST["visiteur"])){
-                        $res_1 = $connexion->query("SELECT * FROM FicheFrais WHERE Mois = $_POST[mois] AND $_POST[visiteur]")->fetch();
+                        $res_1 = $connexion->query("SELECT * FROM FicheFrais WHERE Mois = $_POST[mois] AND IdVisiteur = $_POST[visiteur]")->fetch();
                         $res_2 = $connexion->query("SELECT libelle, IdEtat, quantite FROM LigneFraisForfait INNER JOIN FraisForfais ON FraisForfais.idFrais = LigneFraisForfait.idFrais WHERE Mois = $_POST[mois] AND $_POST[visiteur]")->fetchAll();
                         $res_3 = $connexion->query("SELECT libelle, montant, dateHorsFrais, IdEtat, Id FROM LigneFraisHorsForfait WHERE Mois = $_POST[mois] AND $_POST[visiteur]")->fetchAll();
                         if (!$res_1){
