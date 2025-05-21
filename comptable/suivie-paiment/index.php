@@ -42,6 +42,7 @@
                         }
                     ?>
                 </select><br>
+                <input type="submit" value="vallidez la séléction">
             </form>
                 <?php 
                     if(isset($_POST["visiteur"])){
