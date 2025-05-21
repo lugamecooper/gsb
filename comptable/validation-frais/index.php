@@ -30,6 +30,12 @@
                 <select name="visiteur" id="visiteur" required>
                     <option value="">-- Choisir --</option>
                     <?php
+                        if (!isset($_POST["visiteur"]))
+                            echo '<option value="">-- Choisir --</option>';
+                        else{
+                            $res = $connexion -> query("SELECT IdVisiteur, nom, prenom FROM Visiteur WHERE idVisiteur = $_POST[visiteur]") -> fetch();
+                            echo "<option value=\"$res[IdVisiteur]\">{$res['prenom']} {$res['nom']}</option>";
+                        }
                         $res = $connexion -> query("SELECT IdVisiteur, nom, prenom FROM Visiteur WHERE idRole = 1 OR idRole = 3");
                         while ($row = $res->fetch()) {
                             echo "<option value=\"$row[IdVisiteur]\">{$row['prenom']} {$row['nom']}</option>";
@@ -38,8 +44,11 @@
                 </select><br>
                 <label for="mois">Choisissez le mois</label>
                 <select name="mois" id="mois" required>
-                    <option value="">-- Choisir --</option>
-                    <?php
+                    <?php 
+                        if (!isset($_POST["mois"]))
+                            echo '<option value="">-- Choisir --</option>';
+                        else
+                            echo "<option value='$_POST[mois]'>$_POST[mois]</option>";
                         for($i =1; $i <= 12; $i ++) {
                             echo "<option value=\"{$i}\">{$i}</option>";
                         }
