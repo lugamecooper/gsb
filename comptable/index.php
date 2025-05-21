@@ -32,9 +32,9 @@
                 Suppression ou report des frais hors forfait <br>
                 Bouton pour valider la fiche</p>
             <h3>Suivi des paiements</h3>
-            <p>Liste des fiches en attente de paiement <br>
+            <!-- <p>Liste des fiches en attente de paiement <br>
                 Détail des fiches mises en paiement <br>
-                Bouton pour marquer comme "Remboursé"</p>
+                Bouton pour marquer comme "Remboursé"</p> !-->
         </div>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
