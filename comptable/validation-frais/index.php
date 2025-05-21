@@ -28,7 +28,6 @@
             <form method="post" action="./">
                 <label for="visiteur">Choisissez le visiteur</label>
                 <select name="visiteur" id="visiteur" required>
-                    <option value="">-- Choisir --</option>
                     <?php
                         if (!isset($_POST["visiteur"]))
                             echo '<option value="">-- Choisir --</option>';
