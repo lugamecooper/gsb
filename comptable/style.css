@@ -31,6 +31,12 @@ li a:hover{
     margin-top: 2vh;
     margin-bottom: 2vh;
 }
+li #name{
+    border-bottom: 2px;
+    border-style: solid;
+    border-color: #092b2b;
+}
+
 body{
     background-color: #092b2b;
 }

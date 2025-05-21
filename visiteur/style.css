@@ -29,6 +29,12 @@ li a:hover{
     border-radius: 15px;
     background-color: #70350169;
 }
+li #name{
+    border-bottom: 2px;
+    border-style: solid;
+    border-color: #703501;
+}
+
 body{
     background-color: #703501;
 }
