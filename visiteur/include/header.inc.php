@@ -16,7 +16,6 @@
                     <br>
                     <br>
                     <li><p id='name'>$_SESSION[nom] $_SESSION[prenom]</p></li>
-                    <br>
                     <li><a href=\"$acceuil/\">Acceuil</a></li>
                     <li><a href=\"$saisie_frais/saisie-frais\">Saisi de frais</a></li>
                     <li><a href=\"$consultation_frais/consultation-frais\">Consultation fiche de frais</a></li>
