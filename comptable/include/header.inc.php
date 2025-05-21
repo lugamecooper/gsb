@@ -3,13 +3,13 @@
     function header_element($acceuil = ".", $suivi_paiment = ".", $validation_frais = ".", $logoff = "..", ){
         $visiteur = "";
         if ($_SESSION["idRole"] == 3){
-            $visiteur = "<li><a href=\"$logoff/src/logo-gsb.png\">Visiteur</a></li>";
+            $visiteur = "<li><a href=\"https://gsb.lucas-lestiennes.fr/visiteur/\">Visiteur</a></li>";
         }
         echo "
             <div class=\"header\">
                 <h1>Intranet Comptable</h1>
             </div>
-            <img alt=\"Logo\" src='https://t3.ftcdn.net/jpg/01/94/26/24/360_F_194262466_1TSWxJyR1SIKB8MEvExE8Beond075APw.jpg'>
+            <img alt=\"Logo\" src=\"$logoff/src/logo-gsb.png\">
             <nav class=\"navbar\">
                 <ul class=\"centered-links\">
                     <br>
