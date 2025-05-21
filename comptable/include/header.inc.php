@@ -3,7 +3,7 @@
     function header_element($acceuil = ".", $suivi_paiment = ".", $validation_frais = ".", $logoff = "..", ){
         $visiteur = "";
         if ($_SESSION["idRole"] == 3){
-            $visiteur = "<li><a href=\"https://gsb.lucas-lestiennes.fr/visiteur/\">Visiteur</a></li>";
+            $visiteur = "<li><a href=\"$logoff/src/logo-gsb.png\">Visiteur</a></li>";
         }
         echo "
             <div class=\"header\">
