@@ -35,6 +35,7 @@ li #name{
     border-bottom: 2px;
     border-style: solid;
     border-color: #092b2b;
+    padding-bottom: 5px;
 }
 
 body{
