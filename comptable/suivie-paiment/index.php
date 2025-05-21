@@ -42,25 +42,12 @@
                         }
                     ?>
                 </select><br>
-                <label for="mois">Choisissez le mois</label>
-                <select name="mois" id="mois" required>
-                    <?php 
-                        if (!isset($_POST["mois"]))
-                            echo '<option value="">-- Choisir --</option>';
-                        else
-                            echo "<option value='$_POST[mois]'>$_POST[mois]</option>";
-                        for($i =1; $i <= 12; $i ++) {
-                            echo "<option value=\"{$i}\">{$i}</option>";
-                        }
-                    ?>
-                </select>
-                <input type="submit" value="vallidez la séléction">
             </form>
                 <?php 
                     if(isset($_POST["visiteur"])){
-                        $res_1 = $connexion->query("SELECT * FROM FicheFrais WHERE Mois = $_POST[mois] AND IdVisiteur = $_POST[visiteur]")->fetch();
-                        $res_2 = $connexion->query("SELECT libelle, IdEtat, quantite FROM LigneFraisForfait INNER JOIN FraisForfais ON FraisForfais.idFrais = LigneFraisForfait.idFrais WHERE Mois = $_POST[mois] AND IdVisiteur = $_POST[visiteur]")->fetchAll();
-                        $res_3 = $connexion->query("SELECT libelle, montant, dateHorsFrais, IdEtat, Id FROM LigneFraisHorsForfait WHERE Mois = $_POST[mois] AND IdVisiteur = $_POST[visiteur]")->fetchAll();
+                        $res_1 = $connexion->query("SELECT * FROM FicheFrais WHERE IdVisiteur = $_POST[visiteur]")->fetch();
+                        $res_2 = $connexion->query("SELECT libelle, IdEtat, quantite FROM LigneFraisForfait INNER JOIN FraisForfais ON FraisForfais.idFrais = LigneFraisForfait.idFrais WHERE IdVisiteur = $_POST[visiteur]")->fetchAll();
+                        $res_3 = $connexion->query("SELECT libelle, montant, dateHorsFrais, IdEtat, Id FROM LigneFraisHorsForfait WHERE IdVisiteur = $_POST[visiteur]")->fetchAll();
                         if (!$res_1){
                             echo "pas de fiche pour cette utilisateur et cette période";
                         }
