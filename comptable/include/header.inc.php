@@ -15,7 +15,7 @@
                     <br>
                     <br>
                     <br>
-                    <li id='name'><p>$_SESSION[nom] $_SESSION[prenom]</p></li>
+                    <li><p id='name'>$_SESSION[nom] $_SESSION[prenom]</p></li>
                     <br>
                     <li><a href=\"$acceuil/\">Acceuil</a></li>
                     <li><a href=\"$suivi_paiment/suivie-paiment\">Suivi des paiements</a></li>
