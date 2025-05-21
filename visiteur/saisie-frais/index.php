@@ -64,7 +64,10 @@
                                 </tr>";
                         }
                     ?>
-                    <tr><td><input placeholder="entrer le libelle" name="new_libelle"/></td><td>Sélectionner la date:<input type="date" name="new_date"></td><td>Montant:<input type="number" name="new_price"></td></tr>
+                    <?php 
+                        $date_min = date("Y-m-01");
+                        echo "<tr><td><input placeholder=\"entrer le libelle\" name=\"new_libelle\"/></td><td>Sélectionner la date:<input min=\"$date_min\" type=\"date\" name=\"new_date\"></td><td>Montant:<input type=\"number\" name=\"new_price\"></td></tr>"; 
+                    ?>
                 </table>
                 <input type="submit" value="Soumettre"/>
             </form>
